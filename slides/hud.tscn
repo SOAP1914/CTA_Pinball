@@ -1,0 +1,25 @@
+[gd_scene load_steps=1 format=3]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Scores" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1272.0
+offset_bottom = 48.0
+
+[node name="P1" type="Label" parent="Scores"]
+text = "P1: 0"
+
+[node name="P2" type="Label" parent="Scores"]
+text = "P2: 0"
+
+[node name="P3" type="Label" parent="Scores"]
+text = "P3: 0"
+
+[node name="P4" type="Label" parent="Scores"]
+text = "P4: 0"
+

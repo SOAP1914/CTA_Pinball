@@ -1,0 +1,14 @@
+#config_version=6
+
+# Soul Glo feature (stub)
+mode:
+  priority: 400
+
+# Example of overlay trigger and timer (to be filled in later):
+# slide_player:
+#   mode_feature_soul_glo_started: soul_glo_overlay
+# timers:
+#   soul_glo_timer:
+#     start_running: false
+#     tick_interval: 1s
+

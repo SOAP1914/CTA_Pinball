@@ -1,0 +1,14 @@
+#config_version=6
+
+# Centralized display/window configuration for MPF-GMC.
+
+displays:
+  window:
+    width: 1280
+    height: 1024
+    default: true
+
+window:
+  title: CTA Pinball
+  resizable: false
+

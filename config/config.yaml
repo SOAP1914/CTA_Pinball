@@ -11,10 +11,9 @@ config:
   - config_ball_devices.yaml
   - config_coils.yaml
   - config_switches.yaml
-
-modes:
-  - attract
-  - base
+  - config_lights.yaml
+  - config_displays.yaml
+  - modes.yaml
 
 playfields:
   playfield:

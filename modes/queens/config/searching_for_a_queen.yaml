@@ -1,0 +1,6 @@
+#config_version=6
+
+# Searching for a Queen (stub)
+mode:
+  priority: 320
+

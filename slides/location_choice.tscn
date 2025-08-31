@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://slides/scripts/location_choice.gd" id="1_loc"]
+
+[node name="LocationChoice" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_loc")
+
+[node name="Prompt" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1272.0
+offset_bottom = 60.0
+text = "Choose Location"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 600.0
+offset_bottom = 140.0
+
+[node name="OptionA" type="Button" parent="Buttons"]
+text = "Option A"
+
+[node name="OptionB" type="Button" parent="Buttons"]
+text = "Option B"
+

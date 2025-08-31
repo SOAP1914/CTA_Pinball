@@ -1,0 +1,10 @@
+#config_version=6
+
+# Centralized light configuration.
+
+lights:
+  # example:
+  # gi_left:
+  #   number: 1
+  #   subtype: led
+

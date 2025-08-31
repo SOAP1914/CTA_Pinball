@@ -1,0 +1,6 @@
+#config_version=6
+
+# Queens hub mode (stub)
+mode:
+  priority: 300
+

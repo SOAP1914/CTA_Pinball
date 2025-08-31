@@ -1,0 +1,6 @@
+#config_version=6
+
+# Miss Black Awareness (stub)
+mode:
+  priority: 340
+

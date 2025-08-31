@@ -1,0 +1,6 @@
+#config_version=6
+
+# The Barbershop (stub)
+mode:
+  priority: 330
+

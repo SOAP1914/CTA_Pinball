@@ -1,0 +1,6 @@
+#config_version=6
+
+# Zamunda hub mode (stub)
+mode:
+  priority: 300
+
