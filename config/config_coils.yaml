@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 coils:
   # Flippers (dual-wound on pf_lower drivers 0–3)
   c_left_flipper_main:   { number: pf_lower-0, default_pulse_ms: 28 }

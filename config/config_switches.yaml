@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 switches:
   # Cabinet buttons (Cabinet I/O)
   s_start:         { number: cab-0, tags: start }                 # start button
