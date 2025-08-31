@@ -1,4 +1,4 @@
-#config_version=6
+#config_version=8
 
 ## MPF Main Machine Config File
 #
@@ -14,6 +14,39 @@ config:
   - config_lights.yaml
   - config_displays.yaml
   - modes.yaml
+
+# FAST NET hardware (Neuron + Cabinet I/O + IO-3208 + IO-1616 + IO-0804)
+hardware:
+  platform: fast
+
+fast:
+  net:
+    controller: neuron
+    port: /dev/tty.usbmodemNEURON1   # <-- Windows: COM5, etc. Set your real port.
+    baud: 921600
+    io_loop:
+      cab:         { model: FP-I/O-0024, order: 1 }   # Cabinet I/O board
+      pf_lower:    { model: FP-I/O-3208, order: 2 }   # Lower playfield
+      pf_upper:    { model: FP-I/O-1616, order: 3 }   # Upper playfield
+      aux:         { model: FP-I/O-0804, order: 4 }   # Aux node
+
+# Flippers (dual-wound example; change to single-wound if needed)
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper_main
+    hold_coil: c_left_flipper_hold
+    activation_switch: s_left_flipper
+    eos_switch: s_left_eos
+    use_eos: true
+    allow_enable: true
+
+  right_flipper:
+    main_coil: c_right_flipper_main
+    hold_coil: c_right_flipper_hold
+    activation_switch: s_right_flipper
+    eos_switch: s_right_eos
+    use_eos: true
+    allow_enable: true
 
 playfields:
   playfield:

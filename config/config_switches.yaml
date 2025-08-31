@@ -1,19 +1,25 @@
-#config_version=6
-
+#config_version=8
 switches:
-  # Cabinet Switches
-  s_flipper_left:
-    number:
-    tags: left_flipper
-  s_flipper_right:
-    number:
-    tags: right_flipper
-  # Trough
-  s_trough_1:
-    number:
-  s_trough_2:
-    number:
-  s_trough_3:
-    number:
-  s_plunger_lane:
-    number:
+  # Cabinet buttons (Cabinet I/O)
+  s_start:         { number: cab-0, tags: start }                 # start button
+  s_tilt_bob:      { number: cab-1, tags: tilt }                  # plumb-bob tilt
+  s_tilt_warning:  { number: cab-2, tags: tilt_warning }          # optional warn
+  s_coin:          { number: cab-3 }
+
+  s_left_flipper:  { number: cab-4, tags: left_flipper }
+  s_right_flipper: { number: cab-5, tags: right_flipper }
+
+  # EOS (on the lower playfield node)
+  s_left_eos:      { number: pf_lower-20 }
+  s_right_eos:     { number: pf_lower-21 }
+
+  # Trough & shooter (lower playfield 3208)
+  s_trough_1:      { number: pf_lower-0 }
+  s_trough_2:      { number: pf_lower-1 }
+  s_trough_3:      { number: pf_lower-2 }
+  s_trough_jam:    { number: pf_lower-3 }
+  s_shooter_lane:  { number: pf_lower-4 }
+
+  # A couple of playfield switches for testing flips & scoring
+  s_left_inlane:   { number: pf_lower-10 }
+  s_right_inlane:  { number: pf_lower-11 }
