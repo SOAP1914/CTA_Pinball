@@ -1,3 +1,4 @@
+#config_version=6
 # config/modes.yaml
 modes:
   - attract
