@@ -20,3 +20,4 @@ event_player:
   would_you_like_to_dance_complete:
     - stop_mode_would_you_like_to_dance
     - start_mode_pleading_your_case
+

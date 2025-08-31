@@ -23,3 +23,20 @@ switches:
   # A couple of playfield switches for testing flips & scoring
   s_left_inlane:   { number: pf_lower-10 }
   s_right_inlane:  { number: pf_lower-11 }
+
+  # Orbits, ramps, spinner, VUK (placeholders on pf_lower)
+  s_left_orbit_made:  { number: pf_lower-5 }
+  s_right_orbit_made: { number: pf_lower-6 }
+  s_left_ramp_made:   { number: pf_lower-7 }
+  s_right_ramp_made:  { number: pf_lower-8 }
+  s_spinner:          { number: pf_lower-9 }
+  s_center_vuk:       { number: pf_lower-12 }
+
+  # Standups for SOUL / GLO letters (placeholders on pf_lower)
+  s_soul_s: { number: pf_lower-13 }
+  s_soul_o: { number: pf_lower-14 }
+  s_soul_u: { number: pf_lower-15 }
+  s_soul_l: { number: pf_lower-16 }
+  s_glo_g:  { number: pf_lower-17 }
+  s_glo_l:  { number: pf_lower-18 }
+  s_glo_o:  { number: pf_lower-19 }

@@ -19,3 +19,4 @@ shot_groups:
 event_player:
   a_royal_celebration_complete:
     - stop_mode_a_royal_celebration
+

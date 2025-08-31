@@ -20,3 +20,4 @@ event_player:
   miss_black_awareness_complete:
     - stop_mode_miss_black_awareness
     - start_mode_working_at_mcdowells
+
