@@ -1,6 +1,22 @@
 #config_version=6
 
-# The Royal Wedding (stub)
 mode:
-  priority: 340
+  start_events: start_mode_the_royal_wedding
+  priority: 300
+  stop_events: stop_mode_the_royal_wedding
 
+shots:
+  z_wed_1: { switch: s_left_inlane,     profile: single_hit }
+  z_wed_2: { switch: s_right_inlane,    profile: single_hit }
+  z_wed_3: { switch: s_spinner,         profile: single_hit }
+
+shot_groups:
+  z_wed_seq:
+    shots: z_wed_1, z_wed_2, z_wed_3
+    advance_on_complete: true
+    completion_events: the_royal_wedding_complete
+
+event_player:
+  the_royal_wedding_complete:
+    - stop_mode_the_royal_wedding
+    - start_mode_a_royal_celebration

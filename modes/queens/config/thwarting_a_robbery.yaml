@@ -1,6 +1,22 @@
 #config_version=6
 
-# Thwarting a Robbery (stub)
 mode:
-  priority: 370
+  start_events: start_mode_thwarting_a_robbery
+  priority: 300
+  stop_events: stop_mode_thwarting_a_robbery
 
+shots:
+  q_rob_1: { switch: s_right_ramp_made, profile: single_hit }
+  q_rob_2: { switch: s_left_inlane,     profile: single_hit }
+  q_rob_3: { switch: s_center_vuk,      profile: single_hit }
+
+shot_groups:
+  q_rob_seq:
+    shots: q_rob_1, q_rob_2, q_rob_3
+    advance_on_complete: true
+    completion_events: thwarting_a_robbery_complete
+
+event_player:
+  thwarting_a_robbery_complete:
+    - stop_mode_thwarting_a_robbery
+    - start_mode_would_you_like_to_dance

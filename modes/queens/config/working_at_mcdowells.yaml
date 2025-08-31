@@ -1,6 +1,22 @@
 #config_version=6
 
-# Working at McDowell's (stub)
 mode:
-  priority: 350
+  start_events: start_mode_working_at_mcdowells
+  priority: 300
+  stop_events: stop_mode_working_at_mcdowells
 
+shots:
+  q_mcd_1: { switch: s_left_inlane,     profile: single_hit }
+  q_mcd_2: { switch: s_right_ramp_made, profile: single_hit }
+  q_mcd_3: { switch: s_spinner,         profile: single_hit }
+
+shot_groups:
+  q_mcd_seq:
+    shots: q_mcd_1, q_mcd_2, q_mcd_3
+    advance_on_complete: true
+    completion_events: working_at_mcdowells_complete
+
+event_player:
+  working_at_mcdowells_complete:
+    - stop_mode_working_at_mcdowells
+    - start_mode_basketball_date

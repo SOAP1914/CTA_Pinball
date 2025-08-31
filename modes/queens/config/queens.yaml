@@ -1,6 +1,10 @@
 #config_version=6
 
-# Queens hub mode (stub)
+# Queens hub that auto-starts your first Queens sub-mode
 mode:
-  priority: 300
+  start_events: start_mode_queens
+  priority: 200
+  stop_events: stop_mode_queens
 
+event_player:
+  mode_queens_started: start_mode_arriving_in_queens

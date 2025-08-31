@@ -1,6 +1,22 @@
 #config_version=6
 
-# Basketball Date (stub)
 mode:
-  priority: 360
+  start_events: start_mode_basketball_date
+  priority: 300
+  stop_events: stop_mode_basketball_date
 
+shots:
+  q_ball_1: { switch: s_left_orbit_made,  profile: single_hit }
+  q_ball_2: { switch: s_right_orbit_made, profile: single_hit }
+  q_ball_3: { switch: s_left_ramp_made,   profile: single_hit }
+
+shot_groups:
+  q_ball_seq:
+    shots: q_ball_1, q_ball_2, q_ball_3
+    advance_on_complete: true
+    completion_events: basketball_date_complete
+
+event_player:
+  basketball_date_complete:
+    - stop_mode_basketball_date
+    - start_mode_thwarting_a_robbery

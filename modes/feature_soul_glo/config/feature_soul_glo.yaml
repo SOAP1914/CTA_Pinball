@@ -1,14 +1,83 @@
 #config_version=6
 
-# Soul Glo feature (stub)
+# modes/feature_soul_glo/config/feature_soul_glo.yaml
+# Cross-mode scoring doubler started by spelling S-O-U-L and G-L-O
 mode:
-  priority: 400
+  start_events: ball_started
+  priority: 350
+  game_mode: false
 
-# Example of overlay trigger and timer (to be filled in later):
-# slide_player:
-#   mode_feature_soul_glo_started: soul_glo_overlay
-# timers:
-#   soul_glo_timer:
-#     start_running: false
-#     tick_interval: 1s
+# --- Define letter shots (replace switch: with your actual standups) ---
+shots:
+  soul_s: {switch: s_soul_s}
+  soul_o: {switch: s_soul_o}
+  soul_u: {switch: s_soul_u}
+  soul_l: {switch: s_soul_l}
+  glo_g:  {switch: s_glo_g}
+  glo_l:  {switch: s_glo_l}
+  glo_o:  {switch: s_glo_o}
 
+# --- Logic: both halves must complete to start/extend Soul Glo ---
+logic_blocks:
+  counter_soul:
+    type: counter
+    count_events: (soul_s_hit, soul_o_hit, soul_u_hit, soul_l_hit)
+    count_complete_value: 4
+    reset_on_complete: true
+    events_when_complete: soul_half_spelled
+
+  counter_glo:
+    type: counter
+    count_events: (glo_g_hit, glo_l_hit, glo_o_hit)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: glo_half_spelled
+
+  accrual_both:
+    type: accrual
+    events: (soul_half_spelled, glo_half_spelled)
+    reset_on_complete: true
+    events_when_complete: soul_glo_collected
+
+# --- 30s timer; re-collect adds +30s ---
+timers:
+  soul_glo_timer:
+    start_value: 30
+    end_value: 0
+    tick_interval: 1s
+    control_events:
+      - event: soul_glo_collected
+        action: restart
+      - event: soul_glo_collected
+        action: add
+        value: 30
+      - event: ball_ending
+        action: stop
+    end_events: soul_glo_expired
+
+# --- Player flags for other modes to read ---
+variable_player:
+  soul_glo_collected:
+    soul_glo_active: 1
+    score_multiplier: 2
+  soul_glo_expired:
+    soul_glo_active: 0
+    score_multiplier: 1
+  ball_ending:
+    soul_glo_active: 0
+    score_multiplier: 1
+
+# --- Visual + SFX overlay on activation ---
+event_player:
+  soul_glo_collected: show_soul_glo_overlay
+  ball_ending:
+    - double_bonus_award{device.timers.soul_glo_timer.running}
+
+slide_player:
+  show_soul_glo_overlay:
+    soul_glo_overlay:
+      target: overlay
+      expire: 5s
+
+sound_player:
+  soul_glo_collected: soul_glo_sting.wav   # replace with your preferred voice/sfx

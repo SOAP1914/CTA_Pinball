@@ -1,6 +1,22 @@
 #config_version=6
 
-# Miss Black Awareness (stub)
 mode:
-  priority: 340
+  start_events: start_mode_miss_black_awareness
+  priority: 300
+  stop_events: stop_mode_miss_black_awareness
 
+shots:
+  q_mba_1: { switch: s_right_orbit_made, profile: single_hit }
+  q_mba_2: { switch: s_left_ramp_made,   profile: single_hit }
+  q_mba_3: { switch: s_center_vuk,       profile: single_hit }
+
+shot_groups:
+  q_mba_seq:
+    shots: q_mba_1, q_mba_2, q_mba_3
+    advance_on_complete: true
+    completion_events: miss_black_awareness_complete
+
+event_player:
+  miss_black_awareness_complete:
+    - stop_mode_miss_black_awareness
+    - start_mode_working_at_mcdowells

@@ -1,6 +1,22 @@
 #config_version=6
 
-# Sparring with Semmi (stub)
 mode:
-  priority: 330
+  start_events: start_mode_sparring_with_semmi
+  priority: 300
+  stop_events: stop_mode_sparring_with_semmi
 
+shots:
+  z_spar_1: { switch: s_left_ramp_made,   profile: single_hit }
+  z_spar_2: { switch: s_right_ramp_made,  profile: single_hit }
+  z_spar_3: { switch: s_center_vuk,       profile: single_hit }
+
+shot_groups:
+  z_spar_seq:
+    shots: z_spar_1, z_spar_2, z_spar_3
+    advance_on_complete: true
+    completion_events: sparring_with_semmi_complete
+
+event_player:
+  sparring_with_semmi_complete:
+    - stop_mode_sparring_with_semmi
+    - start_mode_the_royal_wedding

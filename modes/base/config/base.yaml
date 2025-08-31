@@ -1,9 +1,73 @@
 #config_version=6
 
-# Base mode that starts at the beginning of each ball
-# and stops at the end of each ball.
+# modes/base/config/base.yaml
+# Base mode starts on game start, shows a blocking location chooser,
+# and launches either Queens or Zamunda based on selection.
 
 mode:
-  start_events: ball_starting
-  stop_events: ball_will_end
+  start_events: game_started
   priority: 100
+  stop_events: base_done
+
+# Block game flow until player picks a location
+queue_event_player:
+  mode_base_started:
+    - events: prompt_location_choice
+      block: true
+      events_when_finished: location_choice_done
+
+# Show the chooser slide; clear the queue when either selection event fires
+queue_relay_player:
+  prompt_location_choice:
+    post: show_location_choice
+    clear_events: (location_queens_selected, location_zamunda_selected)
+
+# Display + audio
+slide_player:
+  show_location_choice: location_choice      # slides/location_choice.tscn (extends MPFSlide)
+
+sound_player:
+  show_location_choice: location_prompt.wav  # optional sting
+
+# Selection state + defaults (0 = queens, 1 = zamunda)
+variable_player:
+  mode_base_started:
+    selected_location:
+      int: 0
+  location_cursor_is_queens:
+    selected_location: 0
+  location_cursor_is_zamunda:
+    selected_location: 1
+
+# Two-state cursor controlled by cabinet inputs (and/or Godot UI)
+state_machines:
+  location_cursor:
+    persist_state: true
+    initial_state: queens
+    states:
+      queens:
+        value: 0
+        events_when_entered: location_cursor_is_queens
+        transitions:
+          set_location_cursor_right: zamunda
+      zamunda:
+        value: 1
+        events_when_entered: location_cursor_is_zamunda
+        transitions:
+          set_location_cursor_left: queens
+
+# Inputs + confirmation and final handoff
+event_player:
+  s_flipper_left_active: set_location_cursor_left
+  s_flipper_right_active: set_location_cursor_right
+  s_start_active: confirm_location_choice
+
+  confirm_location_choice:
+    - location_queens_selected{current_player.selected_location == 0}
+    - location_zamunda_selected{current_player.selected_location == 1}
+
+  # When the blocking queue finishes, launch the chosen branch and end base
+  location_choice_done:
+    - start_mode_queens{current_player.selected_location == 0}
+    - start_mode_zamunda{current_player.selected_location == 1}
+    - base_done

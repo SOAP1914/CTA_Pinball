@@ -1,6 +1,23 @@
 #config_version=6
 
-# Arriving in Queens (stub)
 mode:
-  priority: 310
+  start_events: start_mode_arriving_in_queens
+  priority: 300
+  stop_events: stop_mode_arriving_in_queens
 
+# TODO: wire real shots; placeholders below
+shots:
+  q_arrive_1: { switch: s_left_orbit_made,  profile: single_hit }
+  q_arrive_2: { switch: s_right_orbit_made, profile: single_hit }
+  q_arrive_3: { switch: s_center_vuk,      profile: single_hit }
+
+shot_groups:
+  q_arrive_group:
+    shots: q_arrive_1, q_arrive_2, q_arrive_3
+    advance_on_complete: true
+    completion_events: arriving_in_queens_complete
+
+event_player:
+  arriving_in_queens_complete:
+    - stop_mode_arriving_in_queens
+    - start_mode_searching_for_a_queen

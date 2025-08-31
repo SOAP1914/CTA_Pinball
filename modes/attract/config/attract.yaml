@@ -1,7 +1,9 @@
 #config_version=6
 
-# Attract mode that starts when the machine boots up, stops
-# whenever a game is started, and re-starts after the game ends.
+# modes/attract/config/attract.yaml
+mode:
+  start_events: mode_attract_started
+  priority: 10
 
 mode_settings:
   selectable_items:
@@ -16,18 +18,24 @@ mode_settings:
   previous_item_events: s_flipper_left_active
 
 slide_player:
-  mode_attract_started: attract
+  mode_attract_started: attract   # slides/attract.tscn
 
-# sound_player:
-#   mode_attract_started:
-#     intro_music:
-#       bus: music
+sound_player:
+  mode_attract_started:
+    intro_music:
+      bus: music
+  game_starting:
+    intro_music:
+      action: stop
+  game_started:
+    intro_music:
+      action: stop
 
 timers:
   attract_carousel_timer:
+    start_running: true
     end_value: 1
     tick_interval: 5s
-    start_running: true
     control_events:
       - event: item_highlighted
         action: restart
@@ -35,3 +43,7 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
+
+# NEW: Start button → ask MPF to start a game (credits/free play checks happen automatically)
+event_player:
+  s_start_active: request_to_start_game

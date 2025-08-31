@@ -1,6 +1,10 @@
 #config_version=6
 
-# Zamunda hub mode (stub)
+# Zamunda hub that auto-starts “The Prince Awakens.”
 mode:
-  priority: 300
+  start_events: start_mode_zamunda
+  priority: 200
+  stop_events: stop_mode_zamunda
 
+event_player:
+  mode_zamunda_started: start_mode_the_prince_awakens

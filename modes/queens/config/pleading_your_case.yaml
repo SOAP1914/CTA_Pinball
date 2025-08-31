@@ -1,6 +1,22 @@
 #config_version=6
 
-# Pleading Your Case (stub)
 mode:
-  priority: 390
+  start_events: start_mode_pleading_your_case
+  priority: 300
+  stop_events: stop_mode_pleading_your_case
 
+shots:
+  q_plead_1: { switch: s_left_ramp_made,   profile: single_hit }
+  q_plead_2: { switch: s_right_ramp_made,  profile: single_hit }
+  q_plead_3: { switch: s_spinner,          profile: single_hit }
+
+shot_groups:
+  q_plead_seq:
+    shots: q_plead_1, q_plead_2, q_plead_3
+    advance_on_complete: true
+    completion_events: pleading_your_case_complete
+
+event_player:
+  pleading_your_case_complete:
+    - stop_mode_pleading_your_case
+    - start_mode_king_collects_son

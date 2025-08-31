@@ -1,6 +1,25 @@
 #config_version=6
 
-# The Prince Awakens (stub)
 mode:
-  priority: 310
+  start_events: start_mode_the_prince_awakens
+  priority: 300
+  stop_events: stop_mode_the_prince_awakens
 
+shots:
+  z_awaken_1: { switch: s_left_ramp_made,  profile: single_hit }
+  z_awaken_2: { switch: s_right_ramp_made, profile: single_hit }
+  z_awaken_3: { switch: s_center_vuk,      profile: single_hit }
+  z_awaken_4: { switch: s_spinner,         profile: single_hit }
+  z_awaken_5: { switch: s_left_inlane,     profile: single_hit }
+  z_awaken_6: { switch: s_right_inlane,    profile: single_hit }
+
+shot_groups:
+  z_awaken_seq:
+    shots: z_awaken_1, z_awaken_2, z_awaken_3, z_awaken_4, z_awaken_5, z_awaken_6
+    advance_on_complete: true
+    completion_events: the_prince_awakens_complete
+
+event_player:
+  the_prince_awakens_complete:
+    - stop_mode_the_prince_awakens
+    - start_mode_bubble_bath

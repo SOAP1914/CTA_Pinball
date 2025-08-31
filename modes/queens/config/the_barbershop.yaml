@@ -1,6 +1,22 @@
 #config_version=6
 
-# The Barbershop (stub)
 mode:
-  priority: 330
+  start_events: start_mode_the_barbershop
+  priority: 300
+  stop_events: stop_mode_the_barbershop
 
+shots:
+  q_barber_1: { switch: s_left_orbit_made,  profile: single_hit }
+  q_barber_2: { switch: s_right_inlane,     profile: single_hit }
+  q_barber_3: { switch: s_left_inlane,      profile: single_hit }
+
+shot_groups:
+  q_barber_seq:
+    shots: q_barber_1, q_barber_2, q_barber_3
+    advance_on_complete: true
+    completion_events: the_barbershop_complete
+
+event_player:
+  the_barbershop_complete:
+    - stop_mode_the_barbershop
+    - start_mode_miss_black_awareness

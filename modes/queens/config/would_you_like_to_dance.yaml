@@ -1,6 +1,22 @@
 #config_version=6
 
-# Would You Like to Dance (stub)
 mode:
-  priority: 380
+  start_events: start_mode_would_you_like_to_dance
+  priority: 300
+  stop_events: stop_mode_would_you_like_to_dance
 
+shots:
+  q_dance_1: { switch: s_left_inlane,     profile: single_hit }
+  q_dance_2: { switch: s_right_inlane,    profile: single_hit }
+  q_dance_3: { switch: s_right_orbit_made, profile: single_hit }
+
+shot_groups:
+  q_dance_seq:
+    shots: q_dance_1, q_dance_2, q_dance_3
+    advance_on_complete: true
+    completion_events: would_you_like_to_dance_complete
+
+event_player:
+  would_you_like_to_dance_complete:
+    - stop_mode_would_you_like_to_dance
+    - start_mode_pleading_your_case

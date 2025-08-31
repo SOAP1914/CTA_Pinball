@@ -19,3 +19,9 @@ playfields:
   playfield:
     tags: default
     default_source_device: bd_trough
+
+# Enable Credits mode with permanent free play
+credits:
+  enabled: true
+  free_play: true
+  free_play_string: "FREE PLAY"

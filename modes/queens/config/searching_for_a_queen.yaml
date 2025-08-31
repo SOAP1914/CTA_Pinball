@@ -1,6 +1,22 @@
 #config_version=6
 
-# Searching for a Queen (stub)
 mode:
-  priority: 320
+  start_events: start_mode_searching_for_a_queen
+  priority: 300
+  stop_events: stop_mode_searching_for_a_queen
 
+shots:
+  q_search_1: { switch: s_left_ramp_made,  profile: single_hit }
+  q_search_2: { switch: s_right_ramp_made, profile: single_hit }
+  q_search_3: { switch: s_spinner,         profile: single_hit }
+
+shot_groups:
+  q_search_seq:
+    shots: q_search_1, q_search_2, q_search_3
+    advance_on_complete: true
+    completion_events: searching_for_a_queen_complete
+
+event_player:
+  searching_for_a_queen_complete:
+    - stop_mode_searching_for_a_queen
+    - start_mode_the_barbershop

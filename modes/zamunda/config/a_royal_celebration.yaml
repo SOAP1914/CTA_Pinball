@@ -1,6 +1,21 @@
 #config_version=6
 
-# A Royal Celebration (stub)
 mode:
-  priority: 350
+  start_events: start_mode_a_royal_celebration
+  priority: 300
+  stop_events: stop_mode_a_royal_celebration
 
+shots:
+  z_cele_1: { switch: s_left_orbit_made,  profile: single_hit }
+  z_cele_2: { switch: s_right_ramp_made,  profile: single_hit }
+  z_cele_3: { switch: s_center_vuk,       profile: single_hit }
+
+shot_groups:
+  z_cele_seq:
+    shots: z_cele_1, z_cele_2, z_cele_3
+    advance_on_complete: true
+    completion_events: a_royal_celebration_complete
+
+event_player:
+  a_royal_celebration_complete:
+    - stop_mode_a_royal_celebration

@@ -1,6 +1,21 @@
 #config_version=6
 
-# The King Collects His Son (stub)
 mode:
-  priority: 395
+  start_events: start_mode_king_collects_son
+  priority: 300
+  stop_events: stop_mode_king_collects_son
 
+shots:
+  q_king_1: { switch: s_left_orbit_made,  profile: single_hit }
+  q_king_2: { switch: s_right_orbit_made, profile: single_hit }
+  q_king_3: { switch: s_center_vuk,       profile: single_hit }
+
+shot_groups:
+  q_king_seq:
+    shots: q_king_1, q_king_2, q_king_3
+    advance_on_complete: true
+    completion_events: king_collects_son_complete
+
+event_player:
+  king_collects_son_complete:
+    - stop_mode_king_collects_son
