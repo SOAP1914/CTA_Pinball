@@ -18,23 +18,21 @@ shots:
   glo_o:  {switch: s_glo_o}
 
 # --- Logic: both halves must complete to start/extend Soul Glo ---
-logic_blocks:
+counters:
   counter_soul:
-    type: counter
     count_events: (soul_s_hit, soul_o_hit, soul_u_hit, soul_l_hit)
     count_complete_value: 4
     reset_on_complete: true
     events_when_complete: soul_half_spelled
 
   counter_glo:
-    type: counter
     count_events: (glo_g_hit, glo_l_hit, glo_o_hit)
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: glo_half_spelled
 
+accruals:
   accrual_both:
-    type: accrual
     events: (soul_half_spelled, glo_half_spelled)
     reset_on_complete: true
     events_when_complete: soul_glo_collected

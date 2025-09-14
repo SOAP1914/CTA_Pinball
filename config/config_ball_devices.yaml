@@ -2,21 +2,22 @@
 
 ball_devices:
   bd_trough:
-    ball_switches: [s_trough_1, s_trough_2, s_trough_3]
+    ball_switches:
+      [s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6]
     jam_switch: s_trough_jam
     eject_coil: c_trough_eject
     eject_targets: bd_shooter
     confirm_eject_type: target
-    tags: [home, drain]
+    eject_timeouts: 2s
+    tags: [home, drain, trough]
 
   bd_shooter:
     ball_switches: s_shooter_lane
-    eject_coil: c_autoplunger      # remove if manual plunger
-    mechanical_eject: false
-    eject_timeouts: 1s
+    eject_coil: c_autoplunger # remove if manual plunger
+    mechanical_eject: true
+    eject_timeouts: 5s
     tags: [plunger_lane]
 
 playfields:
   playfield:
     default_source_device: bd_trough
-    ball_search: true

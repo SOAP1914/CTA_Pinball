@@ -10,14 +10,14 @@ shots:
   q_barber_2: { switch: s_right_inlane,     profile: single_hit }
   q_barber_3: { switch: s_left_inlane,      profile: single_hit }
 
-shot_groups:
+counters:
   q_barber_seq:
-    shots: q_barber_1, q_barber_2, q_barber_3
-    advance_on_complete: true
-    completion_events: the_barbershop_complete
+    count_events: (q_barber_1_complete, q_barber_2_complete, q_barber_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: the_barbershop_complete
 
 event_player:
   the_barbershop_complete:
     - stop_mode_the_barbershop
     - start_mode_miss_black_awareness
-

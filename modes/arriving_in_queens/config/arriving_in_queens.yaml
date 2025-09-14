@@ -11,14 +11,14 @@ shots:
   q_arrive_2: { switch: s_right_orbit_made, profile: single_hit }
   q_arrive_3: { switch: s_center_vuk,      profile: single_hit }
 
-shot_groups:
+counters:
   q_arrive_group:
-    shots: q_arrive_1, q_arrive_2, q_arrive_3
-    advance_on_complete: true
-    completion_events: arriving_in_queens_complete
+    count_events: (q_arrive_1_complete, q_arrive_2_complete, q_arrive_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: arriving_in_queens_complete
 
 event_player:
   arriving_in_queens_complete:
     - stop_mode_arriving_in_queens
     - start_mode_searching_for_a_queen
-

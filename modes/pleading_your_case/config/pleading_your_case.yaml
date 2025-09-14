@@ -10,14 +10,14 @@ shots:
   q_plead_2: { switch: s_right_ramp_made,  profile: single_hit }
   q_plead_3: { switch: s_spinner,          profile: single_hit }
 
-shot_groups:
+counters:
   q_plead_seq:
-    shots: q_plead_1, q_plead_2, q_plead_3
-    advance_on_complete: true
-    completion_events: pleading_your_case_complete
+    count_events: (q_plead_1_complete, q_plead_2_complete, q_plead_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: pleading_your_case_complete
 
 event_player:
   pleading_your_case_complete:
     - stop_mode_pleading_your_case
     - start_mode_king_collects_son
-

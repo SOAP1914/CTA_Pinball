@@ -10,13 +10,13 @@ shots:
   z_cele_2: { switch: s_right_ramp_made,  profile: single_hit }
   z_cele_3: { switch: s_center_vuk,       profile: single_hit }
 
-shot_groups:
+counters:
   z_cele_seq:
-    shots: z_cele_1, z_cele_2, z_cele_3
-    advance_on_complete: true
-    completion_events: a_royal_celebration_complete
+    count_events: (z_cele_1_complete, z_cele_2_complete, z_cele_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: a_royal_celebration_complete
 
 event_player:
   a_royal_celebration_complete:
     - stop_mode_a_royal_celebration
-

@@ -1,11 +1,17 @@
 #config_version=6
 coils:
   # Flippers (dual-wound on pf_lower drivers 0–3)
-  c_left_flipper_main:   { number: pf_lower-0, default_pulse_ms: 28 }
-  c_left_flipper_hold:   { number: pf_lower-1, default_pulse_ms: 0, default_hold_power: 0.30 }
-  c_right_flipper_main:  { number: pf_lower-2, default_pulse_ms: 28 }
-  c_right_flipper_hold:  { number: pf_lower-3, default_pulse_ms: 0, default_hold_power: 0.30 }
+  c_left_flipper_main: { number: pf_lower-7, default_pulse_ms: 30 }
+  c_left_flipper_hold:
+    { number: pf_lower-6, default_pulse_ms: 0, default_hold_power: 0.99 }
+  c_right_flipper_main: { number: pf_lower-3, default_pulse_ms: 30 }
+  c_right_flipper_hold:
+    { number: pf_lower-2, default_pulse_ms: 0, default_hold_power: 0.99 }
 
   # Ball devices (pf_lower drivers 4–5)
-  c_trough_eject:  { number: pf_lower-4, default_pulse_ms: 25 }
-  c_autoplunger:   { number: pf_lower-5, default_pulse_ms: 30 }  # remove if manual plunger
+  c_trough_eject: { number: pf_lower-4, default_pulse_ms: 25 }
+  c_autoplunger: { number: pf_lower-5, default_pulse_ms: 30 } # remove if manual plunger
+
+  # Slings
+  c_right_sling: { number: pf_lower-0, default_pulse_ms: 5 }
+  c_left_sling: { number: pf_lower-1, default_pulse_ms: 5 }

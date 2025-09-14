@@ -10,14 +10,14 @@ shots:
   q_mcd_2: { switch: s_right_ramp_made, profile: single_hit }
   q_mcd_3: { switch: s_spinner,         profile: single_hit }
 
-shot_groups:
+counters:
   q_mcd_seq:
-    shots: q_mcd_1, q_mcd_2, q_mcd_3
-    advance_on_complete: true
-    completion_events: working_at_mcdowells_complete
+    count_events: (q_mcd_1_complete, q_mcd_2_complete, q_mcd_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: working_at_mcdowells_complete
 
 event_player:
   working_at_mcdowells_complete:
     - stop_mode_working_at_mcdowells
     - start_mode_basketball_date
-

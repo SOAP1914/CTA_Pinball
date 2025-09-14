@@ -10,14 +10,14 @@ shots:
   z_bath_2: { switch: s_right_orbit_made, profile: single_hit }
   z_bath_3: { switch: s_spinner,          profile: single_hit }
 
-shot_groups:
+counters:
   z_bath_seq:
-    shots: z_bath_1, z_bath_2, z_bath_3
-    advance_on_complete: true
-    completion_events: bubble_bath_complete
+    count_events: (z_bath_1_complete, z_bath_2_complete, z_bath_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: bubble_bath_complete
 
 event_player:
   bubble_bath_complete:
     - stop_mode_bubble_bath
     - start_mode_sparring_with_semmi
-

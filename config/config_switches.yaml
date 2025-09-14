@@ -17,6 +17,9 @@ switches:
   s_trough_1:      { number: pf_lower-0 }
   s_trough_2:      { number: pf_lower-1 }
   s_trough_3:      { number: pf_lower-2 }
+  s_trough_4:      { number: pf_lower-22 }
+  s_trough_5:      { number: pf_lower-23 }
+  s_trough_6:      { number: pf_lower-24 }
   s_trough_jam:    { number: pf_lower-3 }
   s_shooter_lane:  { number: pf_lower-4 }
 

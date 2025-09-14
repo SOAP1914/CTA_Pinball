@@ -10,14 +10,14 @@ shots:
   z_spar_2: { switch: s_right_ramp_made,  profile: single_hit }
   z_spar_3: { switch: s_center_vuk,       profile: single_hit }
 
-shot_groups:
+counters:
   z_spar_seq:
-    shots: z_spar_1, z_spar_2, z_spar_3
-    advance_on_complete: true
-    completion_events: sparring_with_semmi_complete
+    count_events: (z_spar_1_complete, z_spar_2_complete, z_spar_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: sparring_with_semmi_complete
 
 event_player:
   sparring_with_semmi_complete:
     - stop_mode_sparring_with_semmi
     - start_mode_the_royal_wedding
-

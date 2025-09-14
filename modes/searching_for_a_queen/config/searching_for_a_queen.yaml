@@ -10,14 +10,14 @@ shots:
   q_search_2: { switch: s_right_ramp_made, profile: single_hit }
   q_search_3: { switch: s_spinner,         profile: single_hit }
 
-shot_groups:
+counters:
   q_search_seq:
-    shots: q_search_1, q_search_2, q_search_3
-    advance_on_complete: true
-    completion_events: searching_for_a_queen_complete
+    count_events: (q_search_1_complete, q_search_2_complete, q_search_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: searching_for_a_queen_complete
 
 event_player:
   searching_for_a_queen_complete:
     - stop_mode_searching_for_a_queen
     - start_mode_the_barbershop
-

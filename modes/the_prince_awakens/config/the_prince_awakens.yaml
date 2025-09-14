@@ -13,14 +13,14 @@ shots:
   z_awaken_5: { switch: s_left_inlane,     profile: single_hit }
   z_awaken_6: { switch: s_right_inlane,    profile: single_hit }
 
-shot_groups:
+counters:
   z_awaken_seq:
-    shots: z_awaken_1, z_awaken_2, z_awaken_3, z_awaken_4, z_awaken_5, z_awaken_6
-    advance_on_complete: true
-    completion_events: the_prince_awakens_complete
+    count_events: (z_awaken_1_complete, z_awaken_2_complete, z_awaken_3_complete, z_awaken_4_complete, z_awaken_5_complete, z_awaken_6_complete)
+    count_complete_value: 6
+    reset_on_complete: true
+    events_when_complete: the_prince_awakens_complete
 
 event_player:
   the_prince_awakens_complete:
     - stop_mode_the_prince_awakens
     - start_mode_bubble_bath
-

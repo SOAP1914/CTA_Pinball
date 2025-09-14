@@ -10,14 +10,14 @@ shots:
   q_mba_2: { switch: s_left_ramp_made,   profile: single_hit }
   q_mba_3: { switch: s_center_vuk,       profile: single_hit }
 
-shot_groups:
+counters:
   q_mba_seq:
-    shots: q_mba_1, q_mba_2, q_mba_3
-    advance_on_complete: true
-    completion_events: miss_black_awareness_complete
+    count_events: (q_mba_1_complete, q_mba_2_complete, q_mba_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: miss_black_awareness_complete
 
 event_player:
   miss_black_awareness_complete:
     - stop_mode_miss_black_awareness
     - start_mode_working_at_mcdowells
-

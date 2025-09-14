@@ -12,15 +12,14 @@ mode:
 # Block game flow until player picks a location
 queue_event_player:
   mode_base_started:
-    - events: prompt_location_choice
-      block: true
-      events_when_finished: location_choice_done
+    queue_event: prompt_location_choice
+    events_when_finished: location_choice_done
 
 # Show the chooser slide; clear the queue when either selection event fires
 queue_relay_player:
   prompt_location_choice:
     post: show_location_choice
-    clear_events: (location_queens_selected, location_zamunda_selected)
+    wait_for: confirm_location_choice
 
 # Display + audio
 slide_player:
@@ -43,18 +42,21 @@ variable_player:
 state_machines:
   location_cursor:
     persist_state: true
-    initial_state: queens
+    starting_state: queens
     states:
       queens:
-        value: 0
-        events_when_entered: location_cursor_is_queens
-        transitions:
-          set_location_cursor_right: zamunda
+        label: queens
+        events_when_started: location_cursor_is_queens
       zamunda:
-        value: 1
-        events_when_entered: location_cursor_is_zamunda
-        transitions:
-          set_location_cursor_left: queens
+        label: zamunda
+        events_when_started: location_cursor_is_zamunda
+    transitions:
+      - source: queens
+        target: zamunda
+        events: set_location_cursor_right
+      - source: zamunda
+        target: queens
+        events: set_location_cursor_left
 
 # Inputs + confirmation and final handoff
 event_player:

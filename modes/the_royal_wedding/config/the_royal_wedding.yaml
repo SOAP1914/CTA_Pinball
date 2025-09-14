@@ -10,14 +10,14 @@ shots:
   z_wed_2: { switch: s_right_inlane,    profile: single_hit }
   z_wed_3: { switch: s_spinner,         profile: single_hit }
 
-shot_groups:
+counters:
   z_wed_seq:
-    shots: z_wed_1, z_wed_2, z_wed_3
-    advance_on_complete: true
-    completion_events: the_royal_wedding_complete
+    count_events: (z_wed_1_complete, z_wed_2_complete, z_wed_3_complete)
+    count_complete_value: 3
+    reset_on_complete: true
+    events_when_complete: the_royal_wedding_complete
 
 event_player:
   the_royal_wedding_complete:
     - stop_mode_the_royal_wedding
     - start_mode_a_royal_celebration
-

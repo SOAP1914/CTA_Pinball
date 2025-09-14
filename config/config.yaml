@@ -22,13 +22,13 @@ hardware:
 fast:
   net:
     controller: neuron
-    port: /dev/tty.usbmodemNEURON1   # <-- Windows: COM5, etc. Set your real port.
+    port: auto # <-- Windows: COM5, etc. Set your real port.
     baud: 921600
     io_loop:
-      cab:         { model: FP-I/O-0024, order: 1 }   # Cabinet I/O board
-      pf_lower:    { model: FP-I/O-3208, order: 2 }   # Lower playfield
-      pf_upper:    { model: FP-I/O-1616, order: 3 }   # Upper playfield
-      aux:         { model: FP-I/O-0804, order: 4 }   # Aux node
+      cab: { model: FP-I/O-0024, order: 1 } # Cabinet I/O board
+      pf_lower: { model: FP-I/O-3208, order: 2 } # Lower playfield
+      pf_upper: { model: FP-I/O-1616, order: 3 } # Upper playfield
+      aux: { model: FP-I/O-0804, order: 4 } # Aux node
 
 # Flippers (dual-wound example; change to single-wound if needed)
 flippers:
@@ -38,7 +38,8 @@ flippers:
     activation_switch: s_left_flipper
     eos_switch: s_left_eos
     use_eos: true
-    allow_enable: true
+    enable_events: ball_started
+    disable_events: ball_will_end
 
   right_flipper:
     main_coil: c_right_flipper_main
@@ -46,15 +47,32 @@ flippers:
     activation_switch: s_right_flipper
     eos_switch: s_right_eos
     use_eos: true
-    allow_enable: true
+    enable_events: ball_started
+    disable_events: ball_will_end
 
 playfields:
   playfield:
     tags: default
     default_source_device: bd_trough
 
+machine:
+  balls_installed: 6
+  min_balls: 1
+
+game:
+  balls_per_game: 3
+  max_players: 4
+
 # Enable Credits mode with permanent free play
 credits:
   enabled: true
   free_play: true
   free_play_string: "FREE PLAY"
+
+# Global shot profiles used by modes
+shot_profiles:
+  single_hit:
+    advance_on_hit: true
+    states:
+      - name: ready
+      - name: complete
