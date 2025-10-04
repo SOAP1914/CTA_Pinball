@@ -1,6 +1,6 @@
 #config_version=8
 coils:
-  # Flippers (dual-wound on pf_lower drivers 0â€“3)
+  # Flippers (dual-wound on pf_lower drivers 2-7)
   c_left_flipper_main: { number: pf_lower-7, default_pulse_ms: 30 }
   c_left_flipper_hold:
     { number: pf_lower-6, default_pulse_ms: 0, default_hold_power: 0.99 }
@@ -8,10 +8,20 @@ coils:
   c_right_flipper_hold:
     { number: pf_lower-2, default_pulse_ms: 0, default_hold_power: 0.99 }
 
-  # Ball devices (pf_lower drivers 4â€“5)
+  # Ball devices (pf_lower drivers 4 and 5)
   c_trough_eject: { number: pf_lower-4, default_pulse_ms: 25 }
   c_autoplunger: { number: pf_lower-5, default_pulse_ms: 30 } # remove if manual plunger
 
-  # Slings
+  # Slings (pf_lower drivers 0 and 1)
   c_right_sling: { number: pf_lower-0, default_pulse_ms: 5 }
-  c_left_sling: { number: pf_lower-1, default_pulse_ms: 5 }
+  c_left_sling: { number: pf_lower-3, default_pulse_ms: 5 }
+
+  # Upper playfield coils (FAST IO-1616 pf_upper)
+  c_center_vuk: { number: pf_upper-12, default_pulse_ms: 35 }
+  c_mcdowell_inline_reset: { number: pf_upper-13, default_pulse_ms: 40 }
+  c_soul_drop_reset: { number: pf_upper-6, default_pulse_ms: 40 }
+  c_glo_drop_reset: { number: pf_upper-11, default_pulse_ms: 35 }
+  c_left_ramp_drop_reset: { number: pf_upper-10, default_pulse_ms: 35 }
+  c_upper_pop: { number: pf_upper-15, default_pulse_ms: 12 }
+  c_lower_pf_magnet: { number: pf_upper-5, tags: magnet }
+  c_upper_pf_magnet: { number: pf_upper-14, tags: magnet }
