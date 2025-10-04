@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 ball_devices:
   bd_trough:
@@ -21,3 +21,4 @@ ball_devices:
 playfields:
   playfield:
     default_source_device: bd_trough
+

@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 # Centralized light configuration.
 
@@ -7,4 +7,5 @@ lights:
   # gi_left:
   #   number: 1
   #   subtype: led
+
 

@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 ## MPF Main Machine Config File
 #
@@ -76,3 +76,4 @@ shot_profiles:
     states:
       - name: ready
       - name: complete
+

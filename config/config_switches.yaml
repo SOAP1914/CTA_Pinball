@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 switches:
   # Cabinet buttons (Cabinet I/O)
   s_start: { number: cab-11, tags: start } # start button
@@ -61,3 +61,4 @@ switches:
 
   # Upper pop bumper
   s_upper_pop: { number: pf_upper-11, tags: popbumper }
+
