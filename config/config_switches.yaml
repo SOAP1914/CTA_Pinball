@@ -1,4 +1,4 @@
-#config_version=8
+﻿#config_version=8
 switches:
   # Cabinet buttons (Cabinet I/O)
   s_start:         { number: cab-0, tags: start }                 # start button
@@ -27,19 +27,35 @@ switches:
   s_left_inlane:   { number: pf_lower-10 }
   s_right_inlane:  { number: pf_lower-11 }
 
-  # Orbits, ramps, spinner, VUK (placeholders on pf_lower)
+  # Orbits, ramps, spinner (placeholders on pf_lower)
   s_left_orbit_made:  { number: pf_lower-5 }
   s_right_orbit_made: { number: pf_lower-6 }
   s_left_ramp_made:   { number: pf_lower-7 }
   s_right_ramp_made:  { number: pf_lower-8 }
   s_spinner:          { number: pf_lower-9 }
-  s_center_vuk:       { number: pf_lower-12 }
 
-  # Standups for SOUL / GLO letters (placeholders on pf_lower)
-  s_soul_s: { number: pf_lower-13 }
-  s_soul_o: { number: pf_lower-14 }
-  s_soul_u: { number: pf_lower-15 }
-  s_soul_l: { number: pf_lower-16 }
-  s_glo_g:  { number: pf_lower-17 }
-  s_glo_l:  { number: pf_lower-18 }
-  s_glo_o:  { number: pf_lower-19 }
+  # Upper playfield & FAST IO-1616 (pf_upper)
+  s_lower_pf_magnet: { number: pf_upper-0, tags: magnet }
+  s_upper_pf_magnet: { number: pf_upper-1, tags: magnet }
+
+  # Stern "SOUL" smart drop target bank
+  s_soul_s: { number: pf_upper-2, tags: drop_target }
+  s_soul_o: { number: pf_upper-3, tags: drop_target }
+  s_soul_u: { number: pf_upper-4, tags: drop_target }
+  s_soul_l: { number: pf_upper-5, tags: drop_target }
+
+  # "GLO" drop target bank
+  s_glo_g:  { number: pf_upper-6, tags: drop_target }
+  s_glo_l:  { number: pf_upper-7, tags: drop_target }
+  s_glo_o:  { number: pf_upper-8, tags: drop_target }
+
+  # Upper playfield VUK
+  s_center_vuk: { number: pf_upper-9, tags: vuk }
+
+  # McDowell inline (Metallica-style) drops under VUK
+  s_mcdowell_inline_1: { number: pf_upper-10, tags: drop_target }
+  s_mcdowell_inline_2: { number: pf_upper-11, tags: drop_target }
+  s_mcdowell_inline_3: { number: pf_upper-12, tags: drop_target }
+
+  # Upper pop bumper
+  s_upper_pop: { number: pf_upper-13, tags: popbumper }
