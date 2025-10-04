@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_searching_for_a_queen
@@ -21,3 +21,4 @@ event_player:
   searching_for_a_queen_complete:
     - stop_mode_searching_for_a_queen
     - start_mode_the_barbershop
+

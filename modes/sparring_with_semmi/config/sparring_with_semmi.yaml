@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_sparring_with_semmi
@@ -21,3 +21,4 @@ event_player:
   sparring_with_semmi_complete:
     - stop_mode_sparring_with_semmi
     - start_mode_the_royal_wedding
+

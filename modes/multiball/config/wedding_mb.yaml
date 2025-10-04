@@ -1,6 +1,7 @@
-#config_version=8
+#config_version=6
 
 # Wedding Multiball (stub)
 mode:
   priority: 500
+
 

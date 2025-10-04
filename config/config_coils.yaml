@@ -14,7 +14,7 @@ coils:
 
   # Slings (pf_lower drivers 0 and 1)
   c_right_sling: { number: pf_lower-0, default_pulse_ms: 5 }
-  c_left_sling: { number: pf_lower-3, default_pulse_ms: 5 }
+  c_left_sling: { number: pf_lower-1, default_pulse_ms: 5 }
 
   # Upper playfield coils (FAST IO-1616 pf_upper)
   c_center_vuk: { number: pf_upper-12, default_pulse_ms: 35 }

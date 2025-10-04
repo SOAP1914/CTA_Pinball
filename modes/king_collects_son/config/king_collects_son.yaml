@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_king_collects_son
@@ -20,3 +20,4 @@ counters:
 event_player:
   king_collects_son_complete:
     - stop_mode_king_collects_son
+

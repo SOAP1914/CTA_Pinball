@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_basketball_date
@@ -21,3 +21,4 @@ event_player:
   basketball_date_complete:
     - stop_mode_basketball_date
     - start_mode_thwarting_a_robbery
+

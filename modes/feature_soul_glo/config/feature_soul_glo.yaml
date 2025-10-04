@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 # modes/feature_soul_glo/config/feature_soul_glo.yaml
 # Cross-mode scoring doubler started by spelling S-O-U-L and G-L-O
@@ -79,3 +79,4 @@ slide_player:
 
 sound_player:
   soul_glo_collected: soul_glo_sting.wav   # replace with your preferred voice/sfx
+

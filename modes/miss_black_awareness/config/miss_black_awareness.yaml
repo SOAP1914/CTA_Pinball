@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_miss_black_awareness
@@ -21,3 +21,4 @@ event_player:
   miss_black_awareness_complete:
     - stop_mode_miss_black_awareness
     - start_mode_working_at_mcdowells
+

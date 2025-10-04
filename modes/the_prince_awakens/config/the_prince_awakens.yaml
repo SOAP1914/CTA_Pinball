@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_the_prince_awakens
@@ -24,3 +24,4 @@ event_player:
   the_prince_awakens_complete:
     - stop_mode_the_prince_awakens
     - start_mode_bubble_bath
+

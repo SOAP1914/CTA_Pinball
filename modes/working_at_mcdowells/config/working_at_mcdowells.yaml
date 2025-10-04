@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_working_at_mcdowells
@@ -21,3 +21,4 @@ event_player:
   working_at_mcdowells_complete:
     - stop_mode_working_at_mcdowells
     - start_mode_basketball_date
+

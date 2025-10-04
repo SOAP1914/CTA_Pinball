@@ -1,4 +1,4 @@
-#config_version=8
+#config_version=6
 
 mode:
   start_events: start_mode_bubble_bath
@@ -21,3 +21,4 @@ event_player:
   bubble_bath_complete:
     - stop_mode_bubble_bath
     - start_mode_sparring_with_semmi
+
