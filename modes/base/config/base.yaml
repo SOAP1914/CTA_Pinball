@@ -1,4 +1,4 @@
-#config_version=6
+#config_version=8
 
 # modes/base/config/base.yaml
 # Base mode starts on game start, shows a blocking location chooser,

@@ -1,4 +1,4 @@
-#config_version=6
+#config_version=8
 
 # modes/attract/config/attract.yaml
 mode:
@@ -45,6 +45,6 @@ timers:
       - event: flipper_cradle_release
         action: restart
 
-# NEW: Start button → ask MPF to start a game (credits/free play checks happen automatically)
+# NEW: Start button â†’ ask MPF to start a game (credits/free play checks happen automatically)
 event_player:
   s_start_active: request_to_start_game

@@ -1,4 +1,4 @@
-#config_version=6
+#config_version=8
 # config/modes.yaml
 modes:
   - attract
@@ -6,7 +6,7 @@ modes:
   - queens
   - zamunda
 
-  # Queens sub-modes (order doesn’t matter here—start_events control flow)
+  # Queens sub-modes (order doesnâ€™t matter hereâ€”start_events control flow)
   - arriving_in_queens
   - searching_for_a_queen
   - the_barbershop
