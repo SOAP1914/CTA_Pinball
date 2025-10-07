@@ -19,7 +19,7 @@ mode_settings:
   previous_item_events: s_flipper_left_active
 
 slide_player:
-  mode_attract_started: attract   # slides/attract.tscn
+  mode_attract_started: attract # slides/attract.tscn
 
 sound_player:
   mode_attract_started:
@@ -48,4 +48,3 @@ timers:
 # NEW: Start button ???????? ask MPF to start a game (credits/free play checks happen automatically)
 event_player:
   s_start_active: request_to_start_game
-

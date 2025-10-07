@@ -1,4 +1,4 @@
-[gd_scene load_steps=1 format=3]
+[gd_scene format=3 uid="uid://82fyktbbdeb0"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -12,14 +12,17 @@ offset_right = 1272.0
 offset_bottom = 48.0
 
 [node name="P1" type="Label" parent="Scores"]
+layout_mode = 2
 text = "P1: 0"
 
 [node name="P2" type="Label" parent="Scores"]
+layout_mode = 2
 text = "P2: 0"
 
 [node name="P3" type="Label" parent="Scores"]
+layout_mode = 2
 text = "P3: 0"
 
 [node name="P4" type="Label" parent="Scores"]
+layout_mode = 2
 text = "P4: 0"
-
