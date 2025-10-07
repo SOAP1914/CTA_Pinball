@@ -25,4 +25,3 @@ coils:
   c_upper_pop: { number: pf_upper-15, default_pulse_ms: 12 }
   c_lower_pf_magnet: { number: pf_upper-5, tags: magnet }
   c_upper_pf_magnet: { number: pf_upper-14, tags: magnet }
-

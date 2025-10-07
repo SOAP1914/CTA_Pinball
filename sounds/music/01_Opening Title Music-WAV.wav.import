@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://34fuhr6hh3wo"
+path="res://.godot/imported/01_Opening Title Music-WAV.wav-c1a58b071382d7daf85a716ac053af16.sample"
+
+[deps]
+
+source_file="res://sounds/music/01_Opening Title Music-WAV.wav"
+dest_files=["res://.godot/imported/01_Opening Title Music-WAV.wav-c1a58b071382d7daf85a716ac053af16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
