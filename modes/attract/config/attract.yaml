@@ -23,13 +23,13 @@ slide_player:
 
 sound_player:
   mode_attract_started:
-    intro_music:
+    01_Opening Title Music-WAV:
       bus: music
   game_starting:
-    intro_music:
+    01_Opening Title Music-WAV:
       action: stop
   game_started:
-    intro_music:
+    01_Opening Title Music-WAV:
       action: stop
 
 timers:
