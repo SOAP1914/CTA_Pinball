@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 
 # modes/attract/config/attract.yaml
 mode:
@@ -15,8 +15,8 @@ mode_settings:
     - last_scores_2p{machine.player2_score and not machine.player3_score}
     - last_scores_3p{machine.player3_score and not machine.player4_score}
     - last_scores_4p{machine.player4_score}
-  next_item_events: s_flipper_right_active, timer_attract_carousel_timer_complete
-  previous_item_events: s_flipper_left_active
+  next_item_events: s_right_flipper_active, timer_attract_carousel_timer_complete
+  previous_item_events: s_left_flipper_active
 
 slide_player:
   mode_attract_started: attract # slides/attract.tscn
@@ -28,9 +28,8 @@ sound_player:
   game_starting:
     01_Opening Title Music-WAV:
       action: stop
-  game_started:
-    01_Opening Title Music-WAV:
-      action: stop
+
+# Cycle through carousel items and pause during flipper cradle
 
 timers:
   attract_carousel_timer:
@@ -45,6 +44,7 @@ timers:
       - event: flipper_cradle_release
         action: restart
 
-# NEW: Start button ???????? ask MPF to start a game (credits/free play checks happen automatically)
+# Start button asks MPF to start a game (credits/free play checks happen automatically)
+
 event_player:
   s_start_active: request_to_start_game

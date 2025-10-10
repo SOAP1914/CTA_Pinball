@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 
 # modes/base/config/base.yaml
 # Base mode starts on game start, shows a blocking location chooser,
@@ -60,8 +60,8 @@ state_machines:
 
 # Inputs + confirmation and final handoff
 event_player:
-  s_flipper_left_active: set_location_cursor_left
-  s_flipper_right_active: set_location_cursor_right
+  s_left_flipper_active: set_location_cursor_left
+  s_right_flipper_active: set_location_cursor_right
   s_start_active: confirm_location_choice
 
   confirm_location_choice:
