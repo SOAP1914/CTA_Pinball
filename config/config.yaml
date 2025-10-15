@@ -22,7 +22,7 @@ hardware:
 fast:
   net:
     controller: neuron
-    port:  COM3, COM4, COM5   # <-- Windows: COM5, etc. Set your real port.
+    port: auto # <-- Windows: COM5, etc. Set your real port.
     baud: 921600
     io_loop:
       cab: { model: FP-I/O-0024, order: 1 } # Cabinet I/O board
@@ -76,4 +76,15 @@ shot_profiles:
     states:
       - name: ready
       - name: complete
+
+bcp:
+  connections:
+    local_display:
+      type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+      host: localhost
+      port: 5050
+      required: false
+      exit_on_close: false
+
+
 
