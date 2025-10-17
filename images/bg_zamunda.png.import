@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dof3rvv7hlj16"
-path="res://.godot/imported/Queens_bg.jpg-a09c5c2a11dcdb894965eb8fe241fb23.ctex"
+uid="uid://dcwgo6k7tg7hv"
+path="res://.godot/imported/bg_zamunda.png-d965c7ea65f87926645152d8a215686d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Queens_bg.jpg"
-dest_files=["res://.godot/imported/Queens_bg.jpg-a09c5c2a11dcdb894965eb8fe241fb23.ctex"]
+source_file="res://images/bg_zamunda.png"
+dest_files=["res://.godot/imported/bg_zamunda.png-d965c7ea65f87926645152d8a215686d.ctex"]
 
 [params]
 

@@ -12,6 +12,11 @@ mode:
 # Display + audio
 slide_player:
   mode_location_select_started: location_choice      # slides/location_choice.tscn (extends MPFSlide)
+  # When the selected value changes, update the slide
+  player_selected_location:
+    location_choice:
+      action: update
+
 sound_player:
   mode_location_select_started:
     01_Opening Title Music-WAV:
@@ -37,6 +42,8 @@ variable_player:
 
 # Inputs + confirmation and final handoff
 event_player:
+  # Use the inactive event to prevent accidental changes
+  # during the both-flippers-to-select presses
   s_left_flipper_inactive: set_location_queens
   s_right_flipper_inactive: set_location_zamunda
   flipper_cancel: location_choice_done

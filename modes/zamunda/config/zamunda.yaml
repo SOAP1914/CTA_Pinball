@@ -9,4 +9,5 @@ mode:
 event_player:
   mode_zamunda_started: start_mode_the_prince_awakens
 
-
+slide_player:
+  mode_zamunda_started: zamunda

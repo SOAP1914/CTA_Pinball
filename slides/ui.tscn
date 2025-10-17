@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://p1c08p24hxwt"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_spr3b"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_jb5w5"]
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_spr3b")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="player" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 233.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 48
+text = "Player 1"
+script = ExtResource("2_jb5w5")
+variable_name = "number"
+template_string = "Player %d"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="ball" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1042.0
+offset_top = 48.0
+offset_right = 1227.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 48
+text = "Ball 1"
+horizontal_alignment = 2
+script = ExtResource("2_jb5w5")
+variable_name = "ball"
+template_string = "Ball %d"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 752.0
+offset_right = 1282.0
+offset_bottom = 917.0
+theme_override_font_sizes/font_size = 120
+text = "100,000"
+horizontal_alignment = 1
+script = ExtResource("2_jb5w5")
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cysyn0uniefvo"]
+[gd_scene load_steps=4 format=3 uid="uid://cysyn0uniefvo"]
 
 [ext_resource type="Script" uid="uid://ckgstd4w3fyv6" path="res://slides/scripts/location_choice.gd" id="1"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_gakqy"]
 
 [sub_resource type="Theme" id="2"]
 
@@ -54,6 +55,39 @@ text = "Queens"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Zamunda"
+
+[node name="MPFConditionalChildren" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 611.0
+offset_right = 1276.0
+offset_bottom = 923.0
+script = ExtResource("2_gakqy")
+variable_name = "selected_location"
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="1" type="Label" parent="MPFConditionalChildren"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "QUEENS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Label" parent="MPFConditionalChildren"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "ZAMUNDA"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Margin/VBox/HBox/BtnQueens" to="." method="_on_btn_queens_pressed"]
 [connection signal="pressed" from="Margin/VBox/HBox/BtnZamunda" to="." method="_on_btn_zamunda_pressed"]

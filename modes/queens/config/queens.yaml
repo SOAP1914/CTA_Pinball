@@ -9,3 +9,5 @@ mode:
 event_player:
   mode_queens_started: start_mode_arriving_in_queens
 
+slide_player:
+  mode_queens_started: queens

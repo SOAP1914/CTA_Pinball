@@ -23,3 +23,6 @@ queue_relay_player:
 
 slide_player:
   mode_base_started: base
+  location_choice_done:
+      ui:
+        priority: 10_000

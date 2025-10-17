@@ -1,37 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://po0pb5p0osh6"]
+[gd_scene load_steps=6 format=3 uid="uid://po0pb5p0osh6"]
 
-[ext_resource type="Script" uid="uid://dom5tajdcpt48" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_r1mnt"]
-[ext_resource type="Script" uid="uid://dup0scwwf6w2j" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_f161n"]
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_r1mnt"]
+[ext_resource type="Texture2D" uid="uid://moiimt4hccrd" path="res://images/cover_art.jpg" id="2_cq3lo"]
+[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_f161n"]
 [ext_resource type="Texture2D" uid="uid://cl0g33tvnjn5g" path="res://MPF_Godot.png" id="3_cq3lo"]
-[ext_resource type="Script" uid="uid://cj2i8rs1rarfh" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_twbla"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_twbla"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_r1mnt")
-metadata/_custom_type_script = "uid://dom5tajdcpt48"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 1024.0
-color = Color(0.180392, 0.309804, 1, 1)
+
+[node name="CoverArt" type="Sprite2D" parent="."]
+position = Vector2(641.5, 691)
+scale = Vector2(1.2509767, 1.3125)
+texture = ExtResource("2_cq3lo")
 
 [node name="MPFCarousel" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_f161n")
 carousel_name = "attract"
-metadata/_custom_type_script = "uid://dup0scwwf6w2j"
 
 [node name="title" type="Label" parent="MPFCarousel"]
-visible = false
 layout_mode = 0
 offset_left = 8.0
 offset_top = 4.0
 offset_right = 1286.0
-offset_bottom = 1022.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "Coming To America Pinball"
 horizontal_alignment = 1
@@ -50,6 +56,7 @@ offset_left = 8.0
 offset_top = 4.0
 offset_right = 1282.0
 offset_bottom = 1022.0
+theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "Sample Text"
 horizontal_alignment = 1
@@ -57,13 +64,13 @@ vertical_alignment = 1
 script = ExtResource("4_twbla")
 variable_type = 2
 variable_name = "credits_string"
-metadata/_custom_type_script = "uid://cj2i8rs1rarfh"
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
 offset_right = 1277.0
 offset_bottom = 1024.0
+theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "123789"
 horizontal_alignment = 1
@@ -73,7 +80,6 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 min_digits = 2
-metadata/_custom_type_script = "uid://cj2i8rs1rarfh"
 
 [node name="last_scores_2p" type="Node2D" parent="MPFCarousel"]
 
@@ -82,6 +88,7 @@ offset_left = 2.0
 offset_top = 4.0
 offset_right = 1279.0
 offset_bottom = 383.0
+theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "123789"
 horizontal_alignment = 1
@@ -91,12 +98,12 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 min_digits = 2
-metadata/_custom_type_script = "uid://cj2i8rs1rarfh"
 
 [node name="player2_score" type="Label" parent="MPFCarousel/last_scores_2p"]
 offset_top = 643.0
 offset_right = 1277.0
 offset_bottom = 1022.0
+theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "123789"
 horizontal_alignment = 1
@@ -106,4 +113,3 @@ variable_type = 2
 variable_name = "player2_score"
 comma_separate = true
 min_digits = 2
-metadata/_custom_type_script = "uid://cj2i8rs1rarfh"
