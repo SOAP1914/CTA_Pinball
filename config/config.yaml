@@ -77,14 +77,4 @@ shot_profiles:
       - name: ready
       - name: complete
 
-bcp:
-  connections:
-    local_display:
-      type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
-      host: localhost
-      port: 5050
-      required: false
-      exit_on_close: false
-
-
 

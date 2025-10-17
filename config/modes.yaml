@@ -3,6 +3,7 @@
 modes:
   - attract
   - base
+  - location_select
   - queens
   - zamunda
   # Queens sub-modes (order doesn't matter here; start_events control flow)

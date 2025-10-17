@@ -1,4 +1,4 @@
-extends Control
+extends MPFSlide
 
 # Helper to safely post an MPF event no matter how the singleton is named
 func post_mpf_event(ev: String) -> void:

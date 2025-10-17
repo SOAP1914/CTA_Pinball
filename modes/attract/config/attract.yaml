@@ -43,8 +43,3 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
-
-# Start button asks MPF to start a game (credits/free play checks happen automatically)
-
-event_player:
-  s_start_active: request_to_start_game

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://by5lsq7mdea4u"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_06ewq"]
+[ext_resource type="Texture2D" uid="uid://dof3rvv7hlj16" path="res://Queens_bg.jpg" id="2_mixwp"]
+
+[node name="BaseSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_06ewq")
+
+[node name="QueensBg" type="Sprite2D" parent="."]
+position = Vector2(632.00006, 516)
+scale = Vector2(2.0054946, 2.512195)
+texture = ExtResource("2_mixwp")
