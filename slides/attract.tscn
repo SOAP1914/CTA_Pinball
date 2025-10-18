@@ -8,7 +8,11 @@
 
 [node name="Attract" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_r1mnt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -17,8 +21,8 @@ offset_right = 1280.0
 offset_bottom = 1024.0
 
 [node name="CoverArt" type="Sprite2D" parent="."]
-position = Vector2(641.5, 691)
-scale = Vector2(1.2509767, 1.3125)
+position = Vector2(959.99994, 541)
+scale = Vector2(1.9956058, 2.09375)
 texture = ExtResource("2_cq3lo")
 
 [node name="MPFCarousel" type="Control" parent="."]
@@ -35,7 +39,7 @@ carousel_name = "attract"
 layout_mode = 0
 offset_left = 8.0
 offset_top = 4.0
-offset_right = 1286.0
+offset_right = 1916.0
 offset_bottom = 616.0
 theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
@@ -68,8 +72,8 @@ variable_name = "credits_string"
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
-offset_right = 1277.0
-offset_bottom = 1024.0
+offset_right = 1912.0
+offset_bottom = 1061.0
 theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "123789"
@@ -85,9 +89,9 @@ min_digits = 2
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p"]
 offset_left = 2.0
-offset_top = 4.0
-offset_right = 1279.0
-offset_bottom = 383.0
+offset_top = 467.0
+offset_right = 1912.0
+offset_bottom = 846.0
 theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80
 text = "123789"
@@ -101,7 +105,7 @@ min_digits = 2
 
 [node name="player2_score" type="Label" parent="MPFCarousel/last_scores_2p"]
 offset_top = 643.0
-offset_right = 1277.0
+offset_right = 1930.0
 offset_bottom = 1022.0
 theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
 theme_override_font_sizes/font_size = 80

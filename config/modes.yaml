@@ -2,6 +2,7 @@
 # config/modes.yaml
 modes:
   - attract
+  - service
   - base
   - location_select
   - queens

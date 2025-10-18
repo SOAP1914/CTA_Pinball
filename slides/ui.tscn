@@ -5,7 +5,11 @@
 
 [node name="Ui" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_spr3b")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
@@ -24,9 +28,9 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1042.0
+offset_left = 1661.0
 offset_top = 48.0
-offset_right = 1227.0
+offset_right = 1846.0
 offset_bottom = 115.0
 theme_override_font_sizes/font_size = 48
 text = "Ball 1"
@@ -40,8 +44,8 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 layout_mode = 0
 offset_left = 2.0
 offset_top = 752.0
-offset_right = 1282.0
-offset_bottom = 917.0
+offset_right = 1926.0
+offset_bottom = 1000.0156
 theme_override_font_sizes/font_size = 120
 text = "100,000"
 horizontal_alignment = 1

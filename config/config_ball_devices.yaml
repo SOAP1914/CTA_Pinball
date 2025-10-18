@@ -18,6 +18,53 @@ ball_devices:
     eject_timeouts: 5s
     tags: [plunger_lane]
 
+autofire_coils:
+  bumper:
+    switch: s_upper_pop
+    coil: c_upper_pop
+    enable_events: mode_base_started
+    disable_events: mode_base_will_stop
+  slingshot_left:
+    switch: s_slingshot_left
+    coil: c_left_sling
+    enable_events: mode_base_started
+    disable_events: mode_base_will_stop
+  slingshot_right:
+    switch: s_slingshot_right
+    coil: c_right_sling
+    enable_events: mode_base_started
+    disable_events: mode_base_will_stop
+
+
+drop_targets:
+  drop_soul_s:
+    switch: s_soul_s
+  drop_soul_o:
+    switch: s_soul_o
+  drop_soul_u:
+    switch: s_soul_u
+  drop_soul_l:
+    switch: s_soul_l
+  drop_glo_g:
+    switch: s_glo_g
+  drop_glo_l:
+    switch: s_glo_l
+  drop_glo_o:
+    switch: s_glo_o
+
+drop_target_banks:
+  dropbank_soul:
+    drop_targets: drop_soul_s, drop_soul_o, drop_soul_u, drop_soul_l
+    reset_coils: c_soul_drop_reset
+    reset_on_complete: 1s
+    reset_events: machine_reset_phase_3, ball_starting, reset_dropbank
+  dropbank_glo:
+    drop_targets: drop_glo_g, drop_glo_l, drop_glo_o
+    reset_coils: c_glo_drop_reset
+    reset_on_complete: 1s
+    reset_events: machine_reset_phase_3, ball_starting, reset_dropbank
+
+
 playfields:
   playfield:
     default_source_device: bd_trough

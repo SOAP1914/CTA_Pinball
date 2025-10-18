@@ -59,7 +59,7 @@ text = "Zamunda"
 [node name="MPFConditionalChildren" type="Control" parent="."]
 anchors_preset = 0
 offset_top = 611.0
-offset_right = 1276.0
+offset_right = 1918.0
 offset_bottom = 923.0
 script = ExtResource("2_gakqy")
 variable_name = "selected_location"

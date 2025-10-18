@@ -14,18 +14,21 @@ switches:
   s_right_eos: { number: pf_lower-1 }
 
   # Trough & shooter (lower playfield 3208)
-  s_trough_1: { number: pf_lower-8 }
-  s_trough_2: { number: pf_lower-9 }
-  s_trough_3: { number: pf_lower-10 }
-  s_trough_4: { number: pf_lower-11 }
-  s_trough_5: { number: pf_lower-12 }
-  s_trough_6: { number: pf_lower-13 }
-  s_trough_jam: { number: pf_lower-14 }
+  s_trough_1: { number: pf_lower-8, type: NC }
+  s_trough_2: { number: pf_lower-9, type: NC }
+  s_trough_3: { number: pf_lower-10, type: NC }
+  s_trough_4: { number: pf_lower-11, type: NC }
+  s_trough_5: { number: pf_lower-12, type: NC }
+  s_trough_6: { number: pf_lower-13, type: NC }
+  s_trough_jam: { number: pf_lower-14, type: NC }
   s_shooter_lane: { number: pf_lower-15 }
 
   # A couple of playfield switches for testing flips & scoring
   s_left_inlane:   { number: pf_lower-16 }
   s_right_inlane:  { number: pf_lower-17 }
+
+  s_slingshot_left:  { number: pf_lower-26 }  # 1A
+  s_slingshot_right: { number: pf_lower-27 }  # 1B
 
   # Orbits, ramps, spinner (placeholders on pf_lower)
   s_left_orbit_made:  { number: pf_lower-5 }
@@ -58,4 +61,3 @@ switches:
 
   # Upper pop bumper
   s_upper_pop: { number: pf_upper-11, tags: popbumper }
-
