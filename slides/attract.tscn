@@ -38,12 +38,15 @@ carousel_name = "attract"
 [node name="title" type="Label" parent="MPFCarousel"]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 4.0
+offset_top = 483.0
 offset_right = 1916.0
-offset_bottom = 616.0
-theme_override_colors/font_color = Color(0.06687699, 0, 0.95354146, 1)
-theme_override_font_sizes/font_size = 80
-text = "Coming To America Pinball"
+offset_bottom = 1095.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.039215688, 0.05490196, 0.7411765, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 120
+text = "Coming To America 
+Pinball"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -56,7 +56,7 @@ playfields:
     default_source_device: bd_trough
 
 machine:
-  balls_installed: 6
+  balls_installed: 1
   min_balls: 1
 
 game:
