@@ -14,6 +14,7 @@ config:
   - config_lights.yaml
   - config_displays.yaml
   - modes.yaml
+  - settings.yaml
 
 # FAST NET hardware (Neuron + Cabinet I/O + IO-3208 + IO-1616 + IO-0804)
 hardware:

@@ -9,16 +9,48 @@ mode:
   stop_events: stop_mode_location_select
   priority: 500
 
+event_player:
+  # Set the initial location depending on the settings value
+  mode_location_select_started.2:
+    - set_location_queens{settings.starting_location=="queens" or settings.starting_location=="player_select"}
+    - set_location_zamunda{settings.starting_location=="zamunda"}
+    - set_location_random{settings.starting_location=="random"}
+  # If the location is set and player_select is inactive, immediately finish the mode
+  player_selected_location{settings.starting_location!="player_select"}:
+    - location_choice_done
+  # Use the *inactive8 event to prevent accidental changes
+  # during the both-flippers-to-select presses
+  s_left_flipper_inactive: set_location_queens
+  s_right_flipper_inactive: set_location_zamunda
+  flipper_cancel: location_choice_done
+
+  # When a location choice is made, start the corresponding mode
+  # This is priority 2 (higher) so it happens before the mode stop
+  location_choice_done.2:
+    - start_mode_queens{current_player.selected_location == 1}
+    - start_mode_zamunda{current_player.selected_location == 2}
+  # When a location choice is made, end the location select mode
+  # This is priority 1 (lower) so the queens/zamunda mode is started first
+  location_choice_done.1:
+    - stop_mode_location_select
+
+random_event_player:
+  set_location_random:
+    events:
+      - set_location_queens
+      - set_location_zamunda
+
 # Display + audio
 slide_player:
-  mode_location_select_started: location_choice      # slides/location_choice.tscn (extends MPFSlide)
+  # Only show the location select slide if player_select is enabled
+  mode_location_select_started{settings.starting_location=="player_select"}: location_choice      # slides/location_choice.tscn (extends MPFSlide)
   # When the selected value changes, update the slide
-  player_selected_location:
+  player_selected_location{settings.starting_location=="player_select"}:
     location_choice:
       action: update
 
 sound_player:
-  mode_location_select_started:
+  mode_location_select_started{settings.starting_location=="player_select"}:
     01_Opening Title Music-WAV:
       bus: music
   location_choice_done:
@@ -28,9 +60,6 @@ sound_player:
 # Selection state + defaults (1 = queens, 2 = zamunda)
 
 variable_player:
-  mode_location_select_started:
-    selected_location:
-      int: 1
   set_location_queens:
     selected_location:
       action: set
@@ -39,21 +68,3 @@ variable_player:
     selected_location:
       action: set
       int: 2
-
-# Inputs + confirmation and final handoff
-event_player:
-  # Use the inactive event to prevent accidental changes
-  # during the both-flippers-to-select presses
-  s_left_flipper_inactive: set_location_queens
-  s_right_flipper_inactive: set_location_zamunda
-  flipper_cancel: location_choice_done
-  # UI buttons also confirm the queue
-  location_queens_selected: location_choice_done
-  location_zamunda_selected: location_choice_done
-
-  # When the blocking queue finishes, launch the chosen branch and end base
-  location_choice_done.2:
-    - start_mode_queens{current_player.selected_location == 1}
-    - start_mode_zamunda{current_player.selected_location == 2}
-  location_choice_done.1:
-    - stop_mode_location_select
