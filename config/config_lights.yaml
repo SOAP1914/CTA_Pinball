@@ -3,6 +3,119 @@
 # Centralized light configuration.
 
 lights:
+
+  # MODE LIGHTS
+  l_mode_arrival:
+    number:
+  l_mode_search:
+    number:
+  l_mode_barber:
+    number:
+  l_mode_pageant:
+    number:
+  l_mode_cleo:
+    number:
+  l_mode_saint_johns:
+    number:
+  l_mode_robbery:
+    number:
+  l_mode_dance:
+    number:
+  l_mode_plead:
+    number:
+  l_mode_kings_son:
+    number:
+  l_mode_awakens:
+    number:
+  l_mode_bath:
+    number:
+  l_mode_sparring:
+    number:
+  l_mode_wedding:
+    number:
+  l_mode_celebrate:
+    number:
+
+  # DROP TARGET LIGHTS
+  l_drop_soul_s:
+    number:
+  l_drop_soul_o:
+    number:
+  l_drop_soul_u:
+    number:
+  l_drop_soul_l:
+    number:
+  l_drop_glo_g:
+    number:
+  l_drop_glo_l:
+    number:
+  l_drop_glo_o:
+    number:
+
+  # LANE SHOT LIGHTS
+  l_lane_left_orbit:
+    number:
+  l_lane_left_ramp:
+    number:
+  l_lane_scoop:
+    number:
+  l_lane_right_ramp:
+    number:
+  l_lane_right_orbit:
+    number:
+
+  # MISC TARGETS
+  l_standup_lisa:
+    number:
+  l_top_lane_left:
+    number:
+  l_top_lane_right:
+    number:
+  l_outlane_left:
+    number:
+  l_outlane_right:
+    number:
+  l_return_lane_left:
+    number:
+  l_return_lane_right:
+    number:
+
+  # MISC PROGRESS
+  l_lisa_l:
+    number:
+  l_lisa_i:
+    number:
+  l_lisa_s:
+    number:
+  l_lisa_a:
+    number:
+  l_my_t_sharpe:
+    number:
+  l_soul_glo:
+    number:
+  l_queens:
+    number:
+  l_zamunda:
+    number:
+  l_true_love:
+    number:
+  l_mcdowells:
+    number:
+
+  # INDICATOR LIGHTS
+  l_ball_save:
+    number:
+  l_jackpot:
+    number:
+  l_extra_ball:
+    number:
+  l_2x_3x:
+    number:
+  l_score_2x:
+    number:
+  l_multiball:
+    number:
+
   # example:
   # gi_left:
   #   number: 1

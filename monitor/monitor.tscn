@@ -1,0 +1,454 @@
+[gd_scene load_steps=12 format=3 uid="uid://mx0vdat6k8yx"]
+
+[ext_resource type="Texture2D" uid="uid://dbsqwjqsfi2b1" path="res://monitor/playfield.jpg" id="2_s0ncl"]
+[ext_resource type="Script" uid="uid://dgrkh01rwxu3" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="3_7wb6p"]
+[ext_resource type="Script" uid="uid://bwc3r54eueodr" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="4_7wb6p"]
+[ext_resource type="Texture2D" uid="uid://u5hp0m0sfd0a" path="res://addons/gmc-toolbox/playfield/inserts/circle-insert.svg" id="4_x318j"]
+[ext_resource type="Texture2D" uid="uid://bo5t48mw0l5d3" path="res://addons/gmc-toolbox/playfield/inserts/triangle-insert.svg" id="6_jlabs"]
+[ext_resource type="Texture2D" uid="uid://cne62vr52ovcj" path="res://addons/gmc-toolbox/playfield/inserts/square-insert.svg" id="6_omp5y"]
+
+[sub_resource type="Animation" id="Animation_jlabs"]
+resource_name = "vertical_sweep_up"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(639, 1224), Vector2(639, -177)]
+}
+
+[sub_resource type="Animation" id="Animation_x318j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(639, -177)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omp5y"]
+_data = {
+&"RESET": SubResource("Animation_x318j"),
+&"vertical_sweep_up": SubResource("Animation_jlabs")
+}
+
+[sub_resource type="Gradient" id="Gradient_jlabs"]
+offsets = PackedFloat32Array(0, 0.14, 0.54, 1)
+colors = PackedColorArray(1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x318j"]
+gradient = SubResource("Gradient_jlabs")
+
+[node name="GMCPlayfield" type="TextureRect" node_paths=PackedStringArray("animation_player")]
+offset_right = 633.0
+offset_bottom = 1354.0
+texture = ExtResource("2_s0ncl")
+script = ExtResource("3_7wb6p")
+animation_player = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://dgrkh01rwxu3"
+
+[node name="lights" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 361.0
+offset_bottom = 361.0
+
+[node name="l_mode_arrival" type="Sprite2D" parent="lights"]
+position = Vector2(275, 437.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_search" type="Sprite2D" parent="lights"]
+position = Vector2(236, 455.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_barber" type="Sprite2D" parent="lights"]
+position = Vector2(206, 487.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_pageant" type="Sprite2D" parent="lights"]
+position = Vector2(193, 526.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_cleo" type="Sprite2D" parent="lights"]
+position = Vector2(198, 569.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_saint_johns" type="Sprite2D" parent="lights"]
+position = Vector2(218, 606.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_robbery" type="Sprite2D" parent="lights"]
+position = Vector2(255, 633.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_dance" type="Sprite2D" parent="lights"]
+position = Vector2(296, 641.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_plead" type="Sprite2D" parent="lights"]
+position = Vector2(340, 634.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_kings_son" type="Sprite2D" parent="lights"]
+position = Vector2(377, 605.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_awakens" type="Sprite2D" parent="lights"]
+position = Vector2(398, 568.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_bath" type="Sprite2D" parent="lights"]
+position = Vector2(403, 527.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_sparring" type="Sprite2D" parent="lights"]
+position = Vector2(389, 487.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_wedding" type="Sprite2D" parent="lights"]
+position = Vector2(359, 457.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_mode_celebrate" type="Sprite2D" parent="lights"]
+position = Vector2(320, 438.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+width_inches = 0.4
+
+[node name="l_drop_soul_s" type="Sprite2D" parent="lights"]
+position = Vector2(144, 313.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_soul_o" type="Sprite2D" parent="lights"]
+position = Vector2(145, 348.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_soul_u" type="Sprite2D" parent="lights"]
+position = Vector2(145, 383.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_soul_l" type="Sprite2D" parent="lights"]
+position = Vector2(145, 420.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_glo_g" type="Sprite2D" parent="lights"]
+position = Vector2(488, 345.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_glo_l" type="Sprite2D" parent="lights"]
+position = Vector2(488, 382.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_drop_glo_o" type="Sprite2D" parent="lights"]
+position = Vector2(488.00006, 419.5)
+scale = Vector2(0.2085926, 0.2085926)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.33
+
+[node name="l_lane_left_orbit" type="Sprite2D" parent="lights"]
+position = Vector2(119.00006, 216.5)
+rotation = -0.38920844
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_lane_left_ramp" type="Sprite2D" parent="lights"]
+position = Vector2(196, 282.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_lane_scoop" type="Sprite2D" parent="lights"]
+position = Vector2(268, 59.5)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_lane_right_ramp" type="Sprite2D" parent="lights"]
+position = Vector2(454, 138.5)
+rotation = 0.38920844
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_lane_right_orbit" type="Sprite2D" parent="lights"]
+position = Vector2(501, 188.5)
+rotation = 0.51836276
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_standup_lisa" type="Sprite2D" parent="lights"]
+position = Vector2(417.00006, 119.50008)
+rotation = 0.43633232
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_top_lane_left" type="Sprite2D" parent="lights"]
+position = Vector2(351.0001, -238.49998)
+rotation = 3.1415927
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_top_lane_right" type="Sprite2D" parent="lights"]
+position = Vector2(416.00006, -237.50002)
+rotation = 3.1415927
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_outlane_left" type="Sprite2D" parent="lights"]
+position = Vector2(55.000122, 716.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_outlane_right" type="Sprite2D" parent="lights"]
+position = Vector2(540.00006, 674.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_return_lane_left" type="Sprite2D" parent="lights"]
+position = Vector2(101.00012, 650.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_return_lane_right" type="Sprite2D" parent="lights"]
+position = Vector2(493.00006, 649.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_lisa_l" type="Sprite2D" parent="lights"]
+position = Vector2(54.000122, 582.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_lisa_i" type="Sprite2D" parent="lights"]
+position = Vector2(105.00012, 553.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_lisa_s" type="Sprite2D" parent="lights"]
+position = Vector2(491.00006, 557.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_lisa_a" type="Sprite2D" parent="lights"]
+position = Vector2(539, 582.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_my_t_sharpe" type="Sprite2D" parent="lights"]
+position = Vector2(152, 517)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_soul_glo" type="Sprite2D" parent="lights"]
+position = Vector2(444, 517)
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_queens" type="Sprite2D" parent="lights"]
+position = Vector2(261.00006, 386.5)
+rotation = 0.7853982
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.4
+
+[node name="l_zamunda" type="Sprite2D" parent="lights"]
+position = Vector2(339.0001, 388.5)
+rotation = 0.7853982
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+width_inches = 0.4
+
+[node name="l_true_love" type="Sprite2D" parent="lights"]
+position = Vector2(298, 346)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+
+[node name="l_ball_save" type="Sprite2D" parent="lights"]
+position = Vector2(298.0001, 809.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_jackpot" type="Sprite2D" parent="lights"]
+position = Vector2(148.99998, 713.49994)
+rotation = 0.64751714
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+
+[node name="l_extra_ball" type="Sprite2D" parent="lights"]
+position = Vector2(447.00006, 714.50006)
+rotation = -0.64751714
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("6_omp5y")
+script = ExtResource("4_7wb6p")
+shape = 1
+
+[node name="l_2x_3x" type="Sprite2D" parent="lights"]
+position = Vector2(206.00012, 437)
+rotation = 3.1415927
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_score_2x" type="Sprite2D" parent="lights"]
+position = Vector2(389, 436)
+rotation = 3.1415927
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="l_multiball" type="Sprite2D" parent="lights"]
+position = Vector2(298.0001, 302.5)
+scale = Vector2(0.3160494, 0.3160494)
+texture = ExtResource("4_x318j")
+script = ExtResource("4_7wb6p")
+
+[node name="l_mcdowells" type="Sprite2D" parent="lights"]
+position = Vector2(297, 689)
+rotation = -3.1415925
+scale = Vector2(0.2528395, 0.2528395)
+texture = ExtResource("6_jlabs")
+script = ExtResource("4_7wb6p")
+shape = 2
+width_inches = 0.4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_omp5y")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = -177.0
+offset_right = 895.0
+offset_bottom = 483.00024
+rotation = 1.5707964
+texture = SubResource("GradientTexture1D_x318j")
