@@ -6,7 +6,7 @@ coils:
     { number: pf_lower-6, default_pulse_ms: 0, default_hold_power: 0.99, label: "c_left_flipper_hold"}
   c_right_flipper_main: { number: pf_lower-3, default_pulse_ms: 30, label: "c_right_flipper_main" }
   c_right_flipper_hold:
-    { number: pf_lower-2, default_pulse_ms: 0, default_hold_power: 0.99, label: "c_right_flipper_hoild" }
+    { number: pf_lower-2, default_pulse_ms: 0, default_hold_power: 0.99, label: "c_right_flipper_hold" }
 
   # Ball devices (pf_lower drivers 4 and 5)
   c_trough_eject: { number: pf_lower-4, default_pulse_ms: 25 , label: "c_trough_eject"}
@@ -23,5 +23,5 @@ coils:
   c_glo_drop_reset: { number: pf_upper-5, default_pulse_ms: 35, label: "c_glo_drop_reset" } # , label: "c_glo_drop_reset"D
   c_left_ramp_drop_reset: { number: pf_upper-10, default_pulse_ms: 35 , label: "c_left_ramp_drop_reset"}
   c_upper_pop: { number: pf_upper-15, default_pulse_ms: 40, label: c_upper_pop } #2, label: "c_upper_pop"B
-  c_lower_pf_magnet: { number: pf_upper-11, tags: magnet , label: "c_lower_pf_magnet"}
-  c_upper_pf_magnet: { number: pf_upper-14, tags: magnet , label: "c_upper_pf_magnet"}
+  c_lower_pf_magnet: { number: pf_upper-11, label: "c_lower_pf_magnet"}
+  c_upper_pf_magnet: { number: pf_upper-14, label: "c_upper_pf_magnet"}
