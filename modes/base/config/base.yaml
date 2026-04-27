@@ -11,15 +11,15 @@ mode:
 
 event_player:
   mode_base_started:
-    - start_mode_location_select{current_player.selected_location==0}
-    - start_mode_queens{current_player.selected_location == 1}
-    - start_mode_zamunda{current_player.selected_location == 2}
+	- start_mode_location_select{current_player.selected_location==0}
+	- start_mode_queens{current_player.selected_location == 1}
+	- start_mode_zamunda{current_player.selected_location == 2}
 
 # Block game flow until player picks a location
 queue_relay_player:
   balldevice_bd_trough_eject_attempt{current_player.selected_location==0}:
-    post: wait_for_location_choice
-    wait_for: location_choice_done
+	post: wait_for_location_choice
+	wait_for: location_choice_done
 
 variable_player:
   s_left_inlane_active: { score: 5000 }
@@ -111,5 +111,5 @@ variable_player:
 slide_player:
   mode_base_started: base
   location_choice_done:
-      ui:
-        priority: 10_000
+	  ui:
+		priority: 10_000
