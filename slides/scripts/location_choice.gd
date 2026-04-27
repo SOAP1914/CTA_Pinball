@@ -16,10 +16,10 @@ func _ready() -> void:
   highlight_selection(true)
 
 func _on_btn_queens_pressed() -> void:
-  post_mpf_event("location_queens_selected")
+  post_mpf_event("set_location_queens")
 
 func _on_btn_zamunda_pressed() -> void:
-  post_mpf_event("location_zamunda_selected")
+  post_mpf_event("set_location_zamunda")
 
 # UI highlight helpers; you can also listen to MPF events:
 # 'location_cursor_is_queens' / 'location_cursor_is_zamunda' via GMC if desired.
