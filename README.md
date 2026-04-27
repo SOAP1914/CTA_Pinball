@@ -6,9 +6,10 @@ Created by Ricardo E James II
 
 ## How to Run
 
-- Requirements: MPF installed (virtualenv path set in `gmc.cfg`), Godot with the GMC addon enabled.
+- Requirements: MPF installed (virtualenv path set in `gmc.cfg`), Godot 4.5 with the GMC addon enabled.
+- Local setup: run `tools/setup_dev_env.sh` to create `.venv` and install MPF.
 - Configure MPF path: edit `gmc.cfg` → set `executable_path` to your MPF `mpf(.exe)`.
-- Virtual run: in `gmc.cfg`, optionally set `launch_mpf_with_gmc = true` and `arguments = ["-x", "-t"]` for virtual platform + text console.
+- Virtual run: in `gmc.cfg`, set `spawn_mpf=true` and `mpf_args="-x"` for the virtual platform. GMC adds the machine path and text-console flag.
 - Hardware run: set the FAST port in `config/config.yaml` under `fast.net.port` (e.g., `COM5`).
 - Start from Godot: open the project, run the main scene; GMC will connect to MPF if configured.
 - Keyboard (simulated switches): `Enter` = start, `v` = left flipper, `z` = right flipper.
@@ -49,6 +50,6 @@ Created by Ricardo E James II
   - Tune flipper `default_hold_power` to your coils/mechs; current values are placeholders.
 
 - Dev Tips
-  - To run virtually: enable MPF launch in `gmc.cfg` and pass `arguments = ["-x", "-t"]`.
+  - To run MPF directly: `tools/run_mpf.sh . -t -x`.
   - Increase logging in `gmc.cfg` for debugging (e.g., `logging_game`, `logging_media`).
   - Common simulated inputs: `Enter` = start, `v` = left flipper, `z` = right flipper.
