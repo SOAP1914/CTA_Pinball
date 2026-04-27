@@ -7,7 +7,12 @@ mode:
   stop_events: stop_mode_zamunda
 
 event_player:
-  mode_zamunda_started: start_mode_the_prince_awakens
+  mode_zamunda_started:
+    - start_mode_the_prince_awakens{current_player.zamunda_modes_complete==0}
+    - start_mode_bubble_bath{current_player.zamunda_modes_complete==1}
+    - start_mode_sparring_with_semmi{current_player.zamunda_modes_complete==2}
+    - start_mode_the_royal_wedding{current_player.zamunda_modes_complete==3}
+    - start_mode_a_royal_celebration{current_player.zamunda_modes_complete==4}
 
 slide_player:
   mode_zamunda_started: zamunda
