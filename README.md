@@ -50,6 +50,6 @@ Created by Ricardo E James II
   - Tune flipper `default_hold_power` to your coils/mechs; current values are placeholders.
 
 - Dev Tips
-  - To run MPF directly: `.venv/bin/mpf . -t -x`.
+  - To run MPF directly: `tools/run_mpf.sh . -t -x`.
   - Increase logging in `gmc.cfg` for debugging (e.g., `logging_game`, `logging_media`).
   - Common simulated inputs: `Enter` = start, `v` = left flipper, `z` = right flipper.
