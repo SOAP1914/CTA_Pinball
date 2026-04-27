@@ -21,10 +21,11 @@ MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=2560
+window/size/viewport_height=1800
 window/size/initial_position_type=3
 window/size/resizable=false
+window/subwindows/embed_subwindows=false
 
 [editor_plugins]
 
