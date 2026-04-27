@@ -18,6 +18,11 @@ ball_devices:
     eject_timeouts: 5s
     tags: [plunger_lane]
 
+  bd_center_vuk:
+    ball_switches: s_center_vuk
+    eject_coil: c_center_vuk
+    eject_timeouts: 3s
+
 autofire_coils:
   bumper:
     switch: s_upper_pop
@@ -51,6 +56,10 @@ drop_targets:
     switch: s_glo_l
   drop_glo_o:
     switch: s_glo_o
+  drop_mcdowell_1: { switch: s_mcdowell_inline_1 }
+  drop_mcdowell_2: { switch: s_mcdowell_inline_2 }
+  drop_mcdowell_3: { switch: s_mcdowell_inline_3 }
+  drop_left_ramp: { switch: s_left_ramp_drop }
 
 drop_target_banks:
   dropbank_soul:
@@ -63,6 +72,21 @@ drop_target_banks:
     reset_coils: c_glo_drop_reset
     reset_on_complete: 1s
     reset_events: machine_reset_phase_3, ball_starting, reset_dropbank
+  dropbank_mcdowell:
+    drop_targets: drop_mcdowell_1, drop_mcdowell_2, drop_mcdowell_3
+    reset_coils: c_mcdowell_inline_reset
+    reset_on_complete: 2s
+    reset_events: machine_reset_phase_3, ball_starting
+
+magnets:
+  lower_pf_magnet:
+    magnet_coil: c_lower_pf_magnet
+    enable_events: magnet_lower_enable
+    disable_events: magnet_lower_disable
+  upper_pf_magnet:
+    magnet_coil: c_upper_pf_magnet
+    enable_events: magnet_upper_enable
+    disable_events: magnet_upper_disable
 
 
 playfields:

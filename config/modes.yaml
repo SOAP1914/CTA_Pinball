@@ -3,6 +3,7 @@
 modes:
   - attract
   - service
+  - tilt
   - base
   - location_select
   - queens

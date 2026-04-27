@@ -21,6 +21,33 @@ queue_relay_player:
     post: wait_for_location_choice
     wait_for: location_choice_done
 
+variable_player:
+  s_left_inlane_active: { score: 5000 }
+  s_right_inlane_active: { score: 5000 }
+  s_left_orbit_made_active: { score: 15000 }
+  s_right_orbit_made_active: { score: 15000 }
+  s_left_ramp_made_active: { score: 25000 }
+  s_right_ramp_made_active: { score: 25000 }
+  s_spinner_active: { score: 1000 }
+  s_upper_pop_active: { score: 3000 }
+  s_slingshot_left_active: { score: 500 }
+  s_slingshot_right_active: { score: 500 }
+  balldevice_bd_center_vuk_ball_entered: { score: 10000 }
+  s_soul_s_active: { score: 5000 }
+  s_soul_o_active: { score: 5000 }
+  s_soul_u_active: { score: 5000 }
+  s_soul_l_active: { score: 5000 }
+  s_glo_g_active: { score: 5000 }
+  s_glo_l_active: { score: 5000 }
+  s_glo_o_active: { score: 5000 }
+  s_mcdowell_inline_1_active: { score: 7500 }
+  s_mcdowell_inline_2_active: { score: 7500 }
+  s_mcdowell_inline_3_active: { score: 7500 }
+  s_left_ramp_drop_active: { score: 7500 }
+  drop_target_bank_dropbank_soul_down: { score: 50000 }
+  drop_target_bank_dropbank_glo_down: { score: 40000 }
+  drop_target_bank_dropbank_mcdowell_down: { score: 35000 }
+
 slide_player:
   mode_base_started: base
   location_choice_done:
