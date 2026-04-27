@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=3 uid="uid://yj6pibs7fmj4g"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://bdqhxybo1fbku"]
+>>>>>>> c6466d4 (feat: custom window.tscn with dual MPFDisplay (backbox + playfield))
 
 [ext_resource type="Script" uid="uid://b7l2vx2o7yb2q" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_mpfwin"]
 [ext_resource type="Script" uid="uid://cnc7dblwai6nd" path="res://addons/mpf-gmc/classes/mpf_display.gd" id="2_mpfdsp"]
@@ -41,4 +45,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_mpfdsp")
+<<<<<<< HEAD
+=======
+is_default = false
+>>>>>>> c6466d4 (feat: custom window.tscn with dual MPFDisplay (backbox + playfield))
 initial_slide = ExtResource("3_start")

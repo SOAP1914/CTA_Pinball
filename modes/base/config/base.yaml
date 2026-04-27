@@ -48,65 +48,65 @@ variable_player:
   drop_target_bank_dropbank_glo_down: { score: 40000 }
   drop_target_bank_dropbank_mcdowell_down: { score: 35000 }
   arriving_in_queens_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   searching_for_a_queen_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   the_barbershop_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   miss_black_awareness_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   working_at_mcdowells_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   basketball_date_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   thwarting_a_robbery_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   would_you_like_to_dance_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   pleading_your_case_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   king_collects_son_complete:
-    queens_modes_complete:
-      action: add
-      int: 1
+	queens_modes_complete:
+	  action: add
+	  int: 1
   the_prince_awakens_complete:
-    zamunda_modes_complete:
-      action: add
-      int: 1
+	zamunda_modes_complete:
+	  action: add
+	  int: 1
   bubble_bath_complete:
-    zamunda_modes_complete:
-      action: add
-      int: 1
+	zamunda_modes_complete:
+	  action: add
+	  int: 1
   sparring_with_semmi_complete:
-    zamunda_modes_complete:
-      action: add
-      int: 1
+	zamunda_modes_complete:
+	  action: add
+	  int: 1
   the_royal_wedding_complete:
-    zamunda_modes_complete:
-      action: add
-      int: 1
+	zamunda_modes_complete:
+	  action: add
+	  int: 1
   a_royal_celebration_complete:
-    zamunda_modes_complete:
-      action: add
-      int: 1
+	zamunda_modes_complete:
+	  action: add
+	  int: 1
 
 slide_player:
   mode_base_started: base
