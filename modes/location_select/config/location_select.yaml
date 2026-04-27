@@ -1,6 +1,6 @@
 #config_version=6
 
-# modes/base/config/base.yaml
+# modes/location_select/config/location_select.yaml
 # Base mode starts on game start, shows a blocking location chooser,
 # and launches either Queens or Zamunda based on selection.
 
@@ -18,7 +18,7 @@ event_player:
   # If the location is set and player_select is inactive, immediately finish the mode
   player_selected_location{settings.starting_location!="player_select"}:
     - location_choice_done
-  # Use the *inactive8 event to prevent accidental changes
+  # Use the *inactive* event to prevent accidental changes
   # during the both-flippers-to-select presses
   s_left_flipper_inactive: set_location_queens
   s_right_flipper_inactive: set_location_zamunda
