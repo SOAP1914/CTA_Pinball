@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://j3abqeir2gfk2"]
+[gd_scene load_steps=4 format=3 uid="uid://cdgkkaoaw1n2j"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
 [ext_resource type="Texture2D" uid="uid://ceb8xo7ksu7l6" path="res://images/bg_queens.jpg" id="2_bg"]

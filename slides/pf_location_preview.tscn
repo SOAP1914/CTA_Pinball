@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://uol6cvou8b4y3"]
+[gd_scene load_steps=5 format=3 uid="uid://bdktel3mfbq7a"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
 [ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_cond"]

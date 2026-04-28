@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://2jiilc2rr66cp"]
+[gd_scene load_steps=4 format=3 uid="uid://hnfgxm0tr11d"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
 [ext_resource type="Texture2D" uid="uid://dcwgo6k7tg7hv" path="res://images/bg_zamunda.png" id="2_bg"]
