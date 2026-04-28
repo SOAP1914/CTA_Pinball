@@ -109,7 +109,12 @@ variable_player:
       int: 1
 
 slide_player:
-  mode_base_started: base
+  mode_base_started:
+    base:
+      priority: 100
+    pf_base_play:
+      target: playfield
+      priority: 100
   location_choice_done:
-      ui:
-        priority: 10_000
+    ui:
+      priority: 10000
