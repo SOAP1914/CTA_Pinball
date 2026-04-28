@@ -42,11 +42,17 @@ random_event_player:
 
 # Display + audio
 slide_player:
-  # Only show the location select slide if player_select is enabled
-  mode_location_select_started{settings.starting_location=="player_select"}: location_choice      # slides/location_choice.tscn (extends MPFSlide)
-  # When the selected value changes, update the slide
+  mode_location_select_started{settings.starting_location=="player_select"}:
+    location_choice:
+      priority: 500
+    pf_location_preview:
+      target: playfield
+      priority: 500
   player_selected_location{settings.starting_location=="player_select"}:
     location_choice:
+      action: update
+    pf_location_preview:
+      target: playfield
       action: update
 
 sound_player:
