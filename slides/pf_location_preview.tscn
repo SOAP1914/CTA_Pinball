@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://uol6cvou8b4y3"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_cond"]
+[ext_resource type="Texture2D" uid="uid://ceb8xo7ksu7l6" path="res://images/bg_queens.jpg" id="3_q"]
+[ext_resource type="Texture2D" uid="uid://dcwgo6k7tg7hv" path="res://images/bg_zamunda.png" id="4_z"]
+
+[node name="PFLocationPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_root")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MPFConditionalChildren" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_cond")
+variable_name = "selected_location"
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="1" type="TextureRect" parent="MPFConditionalChildren"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q")
+stretch_mode = 6
+
+[node name="2" type="TextureRect" parent="MPFConditionalChildren"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_z")
+stretch_mode = 6
+
+[node name="DarkOverlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 520.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.7)
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 520.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 48
+text = "USE FLIPPERS TO SELECT — PRESS BOTH TO CONFIRM"
+horizontal_alignment = 1
+vertical_alignment = 1
