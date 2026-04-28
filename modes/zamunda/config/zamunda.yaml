@@ -15,4 +15,34 @@ event_player:
     - start_mode_a_royal_celebration{current_player.zamunda_modes_complete==4}
 
 slide_player:
-  mode_zamunda_started: zamunda
+  mode_zamunda_started:
+    zamunda:
+      priority: 200
+    pf_zamunda:
+      target: playfield
+      priority: 200
+
+widget_player:
+  mode_zamunda_started:
+    pf_mode_hud:
+      target: playfield
+      slide: pf_zamunda
+
+sound_player:
+  mode_zamunda_started:
+    the-royal-penis-is-clean-your-highness-royal-penis-bathing-sponge-bath-servants-101soundboards:
+      bus: music
+      fade_in: 1s
+  mode_zamunda_will_stop:
+    the-royal-penis-is-clean-your-highness-royal-penis-bathing-sponge-bath-servants-101soundboards:
+      action: stop
+      fade_out: 500ms
+
+light_player:
+  mode_zamunda_started:
+    l_zamunda:
+      color: gold
+      priority: 200
+  mode_zamunda_will_stop:
+    l_zamunda:
+      color: "off"
