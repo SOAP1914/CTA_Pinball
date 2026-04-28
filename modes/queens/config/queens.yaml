@@ -20,4 +20,34 @@ event_player:
     - start_mode_king_collects_son{current_player.queens_modes_complete==9}
 
 slide_player:
-  mode_queens_started: queens
+  mode_queens_started:
+    queens:
+      priority: 200
+    pf_queens:
+      target: playfield
+      priority: 200
+
+widget_player:
+  mode_queens_started:
+    pf_mode_hud:
+      target: playfield
+      slide: pf_queens
+
+sound_player:
+  mode_queens_started:
+    01_Opening Title Music-WAV:
+      bus: music
+      fade_in: 1s
+  mode_queens_will_stop:
+    01_Opening Title Music-WAV:
+      action: stop
+      fade_out: 500ms
+
+light_player:
+  mode_queens_started:
+    l_queens:
+      color: blue
+      priority: 200
+  mode_queens_will_stop:
+    l_queens:
+      color: "off"
