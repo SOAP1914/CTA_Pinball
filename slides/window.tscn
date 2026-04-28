@@ -41,4 +41,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_mpfdsp")
+is_default = false
 initial_slide = ExtResource("3_start")

@@ -1,15 +1,17 @@
 #config_version=6
 
-# Centralized display/window configuration for MPF-GMC.
+# Dual display: backbox (1920x1080) + playfield ultrawide (2560x720)
+# Display names MUST match MPFDisplay node names in slides/window.tscn
 
 displays:
-  window:
-    width: 1280
-    height: 1024
+  backbox:
+    width: 1920
+    height: 1080
     default: true
+  playfield:
+    width: 2560
+    height: 720
 
 window:
   title: CTA Pinball
   resizable: false
-
-
