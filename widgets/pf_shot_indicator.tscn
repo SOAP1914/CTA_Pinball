@@ -1,4 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://dc2os5cyblmt6"]
+[gd_scene load_steps=2 format=3 uid="uid://b8vh9pqxnjhxs"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_mpfwgt"]
 
 [node name="PFShotIndicator" type="Control"]
 custom_minimum_size = Vector2(220, 160)
@@ -6,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 220.0
 offset_bottom = 160.0
+script = ExtResource("1_mpfwgt")
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -18,7 +21,6 @@ alignment = 1
 
 [node name="Arrow" type="Label" parent="VBox"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.843, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
@@ -28,7 +30,6 @@ horizontal_alignment = 1
 
 [node name="ShotName" type="Label" parent="VBox"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -38,7 +39,6 @@ horizontal_alignment = 1
 
 [node name="ScoreValue" type="Label" parent="VBox"]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.7, 0.9, 1, 1)
 theme_override_font_sizes/font_size = 18
 text = "25,000"
