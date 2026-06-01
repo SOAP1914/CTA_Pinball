@@ -8,6 +8,7 @@
 
 config:
   - config_ball_devices.yaml
+  - ball_search.yaml
   - config_coils.yaml
   - config_switches.yaml
   - config_lights.yaml

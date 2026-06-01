@@ -1,0 +1,33 @@
+#config_version=6
+
+# Ball search — pulses devices to free a physically stuck ball when the
+# playfield goes inactive unexpectedly. Gated by ball_search_enabled setting.
+
+playfields:
+  playfield:
+    enable_ball_search: true
+    ball_search_timeout: 20s
+    ball_search_wait_after_iteration: 10s
+    ball_search_interval: 250ms
+    ball_search_failed_action: reset
+
+# ball_search_order goes on DEVICES, not raw coils. Lower = fires earlier.
+autofire_coils:
+  slingshot_left:
+    ball_search_order: 10
+  slingshot_right:
+    ball_search_order: 11
+  bumper:
+    ball_search_order: 12
+
+drop_target_banks:
+  dropbank_mcdowell:
+    ball_search_order: 30
+  dropbank_soul:
+    ball_search_order: 31
+  dropbank_glo:
+    ball_search_order: 32
+
+ball_devices:
+  bd_center_vuk:
+    ball_search_order: 20
