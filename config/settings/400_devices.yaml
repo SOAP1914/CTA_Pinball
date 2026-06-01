@@ -1,0 +1,5 @@
+#config_version=6
+
+settings:
+  ### 4XX - Device Settings
+  # Ball device and mechanism tuning settings go here

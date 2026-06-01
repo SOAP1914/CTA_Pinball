@@ -1,0 +1,15 @@
+#config_version=6
+
+settings:
+  ### 2XX - Feature Settings
+  starting_location:
+    label: "Starting Location"
+    settingType: game
+    key_type: str
+    default: random
+    sort: 1
+    values:
+      player_select: "Player Select"
+      queens: "Queens"
+      zamunda: "Zamunda"
+      random: "Random"

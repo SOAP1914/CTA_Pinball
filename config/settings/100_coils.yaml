@@ -1,0 +1,5 @@
+#config_version=6
+
+settings:
+  ### 1XX - Coil Power Settings
+  # Coil power tuning settings go here as we tune the real machine

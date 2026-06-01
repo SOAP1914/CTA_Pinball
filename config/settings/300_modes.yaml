@@ -1,0 +1,5 @@
+#config_version=6
+
+settings:
+  ### 3XX - Mode-Specific Settings
+  # Per-mode tuning settings go here

@@ -1,0 +1,36 @@
+#config_version=6
+
+settings:
+  ### 0XX - General Settings
+  balls_per_game:
+    settingType: game
+    sort: 11
+    label: Balls per game
+    key_type: int
+    default: 3
+    values:
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5'
+  max_players:
+    settingType: game
+    sort: 12
+    label: Max players
+    key_type: int
+    default: 4
+    values:
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+  ball_search_enabled:
+    settingType: game
+    sort: 15
+    label: Ball Search Enabled
+    key_type: int
+    default: 1
+    values:
+      0: "Disabled"
+      1: "Enabled"
