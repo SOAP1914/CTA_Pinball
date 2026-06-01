@@ -1,0 +1,20 @@
+#config_version=6
+
+### This file should not be used as a game config on its own.
+### Instead, it should be loaded by an entry file like config.yaml.
+###
+### Configs loaded here work generically for ALL hardware configurations
+### (both virtual testing and real FAST hardware).
+
+config:
+  - config_ball_devices.yaml
+  - config_coils.yaml
+  - config_switches.yaml
+  - config_lights.yaml
+  - config_displays.yaml
+  - modes.yaml
+  - settings/000_general.yaml
+  - settings/100_coils.yaml
+  - settings/200_features.yaml
+  - settings/300_modes.yaml
+  - settings/400_devices.yaml

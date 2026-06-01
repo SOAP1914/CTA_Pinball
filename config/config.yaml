@@ -1,24 +1,14 @@
 #config_version=6
 
-## MPF Main Machine Config File
+## MPF Main Machine Config — entry point
 #
-# This file defines your system-wide properties like switches,
-# drivers, ball devices, hardware platforms, and more. You can
-# include everything here, or create sub-config files to be
-# imported and merged with this one.
+# This is the thin entry shim. It loads the hardware-independent core
+# (_config_core.yaml) then layers on the platform and machine settings.
+# To run on different hardware, create a parallel shim (e.g.
+# config_virtual.yaml) that loads the same core with a different platform.
 
 config:
-  - config_ball_devices.yaml
-  - config_coils.yaml
-  - config_switches.yaml
-  - config_lights.yaml
-  - config_displays.yaml
-  - modes.yaml
-  - settings/000_general.yaml
-  - settings/100_coils.yaml
-  - settings/200_features.yaml
-  - settings/300_modes.yaml
-  - settings/400_devices.yaml
+  - _config_core.yaml
 
 # FAST NET hardware (Neuron + Cabinet I/O + IO-3208 + IO-1616 + IO-0804)
 hardware:
@@ -91,5 +81,3 @@ shot_profiles:
     states:
       - name: ready
       - name: complete
-
-
