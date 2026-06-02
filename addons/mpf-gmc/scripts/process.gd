@@ -43,7 +43,7 @@ func _spawn_mpf():
 	if MPF.get_config_value("mpf", "mpf_args", ""):
 		mpf_args.append_array(MPF.get_config_value("mpf", "mpf_args").split(" "))
 	if MPF.get_config_value("mpf", "virtual", false):
-		mpf_args.append("-x")
+		mpf_args.append("-X")
 	if MPF.get_config_value("mpf", "verbose", false):
 		mpf_args.append("-vV")
 

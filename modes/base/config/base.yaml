@@ -110,11 +110,11 @@ variable_player:
 
 slide_player:
   mode_base_started:
-    base:
-      priority: 100
+    hud:
+      priority: 50
     pf_base_play:
       target: playfield
-      priority: 100
+      priority: 50
   location_choice_done:
     ui:
       priority: 10000

@@ -1,0 +1,10 @@
+#config_version=6
+
+# Virtual test helpers (keyboard via gmc.cfg). Safe on FAST hardware: the
+# virtual_platform_* events have no handlers unless the virtual/smart_virtual
+# platform is active.
+
+event_player:
+  test_drain_ball:
+    virtual_platform_add_ball_to_device:
+      ball_device: bd_trough

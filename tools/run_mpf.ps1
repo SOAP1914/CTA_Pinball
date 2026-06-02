@@ -1,4 +1,4 @@
-# Run MPF for this machine (venv activate + mpf -x -l logs/mpf-current.log).
+# Run MPF for this machine (venv activate + mpf -X -l logs/mpf-current.log).
 #
 # gmc.cfg encoding: Godot's ConfigFile cannot parse a UTF-8 BOM. If you edit
 # gmc.cfg in PowerShell, save as UTF-8 without BOM, e.g.:
@@ -39,7 +39,7 @@ Get-Process mpf -ErrorAction SilentlyContinue | Stop-Process -Force
 
 Push-Location $rootDir
 try {
-    & $venvPython $mpfExe -x -l $logFile
+    & $venvPython $mpfExe -X -l $logFile
 }
 finally {
     Pop-Location
