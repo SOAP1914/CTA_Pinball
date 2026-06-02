@@ -1,28 +1,192 @@
-[gd_scene format=3 uid="uid://82fyktbbdeb0"]
+[gd_scene load_steps=3 format=3 uid="uid://82fyktbbdeb0"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_slide"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_var"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slide")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="Scores" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 1272.0
-offset_bottom = 48.0
+[node name="TopStrip" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = -40.0
+offset_bottom = 70.0
+grow_horizontal = 2
 
-[node name="P1" type="Label" parent="Scores"]
+[node name="BallLabel" type="Label" parent="TopStrip"]
 layout_mode = 2
-text = "P1: 0"
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "BALL 1"
+horizontal_alignment = 0
+script = ExtResource("2_var")
+variable_type = 2
+variable_name = "ball"
+template_string = "BALL %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
-[node name="P2" type="Label" parent="Scores"]
+[node name="FreePlay" type="Label" parent="TopStrip"]
 layout_mode = 2
-text = "P2: 0"
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.843, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "FREE PLAY"
+horizontal_alignment = 1
 
-[node name="P3" type="Label" parent="Scores"]
+[node name="Credits" type="Label" parent="TopStrip"]
 layout_mode = 2
-text = "P3: 0"
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "CREDITS: FREE"
+horizontal_alignment = 2
 
-[node name="P4" type="Label" parent="Scores"]
+[node name="PlayerStrip" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -90.0
+offset_right = -40.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="P1" type="VBoxContainer" parent="PlayerStrip"]
 layout_mode = 2
-text = "P4: 0"
+size_flags_horizontal = 3
+
+[node name="P1Tag" type="Label" parent="PlayerStrip/P1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "P1"
+horizontal_alignment = 1
+
+[node name="P1Score" type="Label" parent="PlayerStrip/P1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+template_string = "%s"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P2" type="VBoxContainer" parent="PlayerStrip"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="P2Tag" type="Label" parent="PlayerStrip/P2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "P2"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 5
+variable_name = "number"
+template_string = "P%d"
+min_players = 2
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P2Score" type="Label" parent="PlayerStrip/P2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+template_string = "%s"
+min_players = 2
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P3" type="VBoxContainer" parent="PlayerStrip"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="P3Tag" type="Label" parent="PlayerStrip/P3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "P3"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 6
+variable_name = "number"
+template_string = "P%d"
+min_players = 3
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P3Score" type="Label" parent="PlayerStrip/P3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+template_string = "%s"
+min_players = 3
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P4" type="VBoxContainer" parent="PlayerStrip"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="P4Tag" type="Label" parent="PlayerStrip/P4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "P4"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 7
+variable_name = "number"
+template_string = "P%d"
+min_players = 4
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P4Score" type="Label" parent="PlayerStrip/P4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("2_var")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+template_string = "%s"
+min_players = 4
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
