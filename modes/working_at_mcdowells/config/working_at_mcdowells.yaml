@@ -1,24 +1,100 @@
 #config_version=6
 
+# modes/working_at_mcdowells/config/working_at_mcdowells.yaml
+# Queens chapter 5. Sequential inline drop mech (physics enforces 1->2->3).
+# Hit the mech 3 times, escalating scoring, to complete the McDowell's routine.
+
 mode:
   start_events: start_mode_working_at_mcdowells
   priority: 300
   stop_events: stop_mode_working_at_mcdowells
 
+# Three drop targets. Physics enforces order: only the front standing
+# target is reachable, so _1 always drops before _2 before _3.
 shots:
-  q_mcd_1: { switch: s_left_inlane,     profile: single_hit }
-  q_mcd_2: { switch: s_right_ramp_made, profile: single_hit }
-  q_mcd_3: { switch: s_spinner,         profile: single_hit }
+  mcd_drop_1: { switch: s_mcdowell_inline_1, profile: single_hit }
+  mcd_drop_2: { switch: s_mcdowell_inline_2, profile: single_hit }
+  mcd_drop_3: { switch: s_mcdowell_inline_3, profile: single_hit }
 
-counters:
-  q_mcd_seq:
-    count_events: (q_mcd_1_complete, q_mcd_2_complete, q_mcd_3_complete)
-    count_complete_value: 3
-    reset_on_complete: true
-    events_when_complete: working_at_mcdowells_complete
+# Scoring escalates per drop (values mirror code/cta.py MCDOWELLS_SEQUENCE_SCORES)
+variable_player:
+  mcd_drop_1_hit:
+    score: 25000
+    mcd_step:
+      action: set
+      int: 1
+  mcd_drop_2_hit:
+    score: 50000
+    mcd_step:
+      action: set
+      int: 2
+  mcd_drop_3_hit:
+    score: 100000
+    mcd_step:
+      action: set
+      int: 3
+  mcd_sequence_complete:
+    score: 250000
 
+# When all three drops are down, the bank fires its _down event.
+# Use that as the completion trigger.
 event_player:
-  working_at_mcdowells_complete:
-    - stop_mode_working_at_mcdowells
-    - start_mode_basketball_date
+  drop_target_bank_dropbank_mcdowell_down:
+    - mcd_sequence_complete
+  mcd_sequence_complete:
+    - working_at_mcdowells_complete
+  # NOTE: we do NOT start the next mode here. The queens hub handles
+  # progression via the queens_modes_complete counter (set in base.yaml).
+  # working_at_mcdowells_complete is what base.yaml listens for.
 
+# Initialize the step counter when the mode starts
+mode_settings:
+  reset_vars_on_start: true
+
+# Lighting — arrow insert lit gold while sequence active, flash on complete
+light_player:
+  mode_working_at_mcdowells_started:
+    l_mcdowells:
+      color: yellow
+      priority: 300
+  mcd_sequence_complete:
+    l_mcdowells:
+      color: white
+      fade: 100ms
+  mode_working_at_mcdowells_will_stop:
+    l_mcdowells:
+      color: "off"
+
+# Slides — backbox info + playfield McDowell's scene (we build these next steps)
+slide_player:
+  mode_working_at_mcdowells_started:
+    mcdowells_backbox:
+      priority: 300
+    pf_mcdowells:
+      target: playfield
+      priority: 300
+
+# Widgets — HUD with mode name + sequence progress on playfield
+widget_player:
+  mode_working_at_mcdowells_started:
+    pf_mode_hud:
+      target: playfield
+      slide: pf_mcdowells
+
+# Sounds
+sound_player:
+  mode_working_at_mcdowells_started:
+    mcd_welcome:
+      bus: voice
+  mcd_drop_1_hit:
+    mcd_ding:
+      bus: effects
+  mcd_drop_2_hit:
+    mcd_ding:
+      bus: effects
+  mcd_drop_3_hit:
+    mcd_ding:
+      bus: effects
+  mcd_sequence_complete:
+    mcd_complete:
+      bus: voice
