@@ -19,4 +19,3 @@ config:
   - settings/200_features.yaml
   - settings/300_modes.yaml
   - settings/400_devices.yaml
-  - config_virtual_test.yaml

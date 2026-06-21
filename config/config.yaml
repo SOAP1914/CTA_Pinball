@@ -9,6 +9,7 @@
 
 config:
   - _config_core.yaml
+  - config_virtual_test.yaml
 
 # FAST NET hardware (Neuron + Cabinet I/O + IO-3208 + IO-1616 + IO-0804)
 hardware:

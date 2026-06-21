@@ -5,7 +5,7 @@
 # and launches either Queens or Zamunda based on selection.
 
 mode:
-  start_events: ball_starting
+  start_events: ball_started
   stop_events: ball_will_end
   priority: 100
 
@@ -109,12 +109,25 @@ variable_player:
       int: 1
 
 slide_player:
+  mode_base_started.1:
+    base:
+      action: play
+    attract:
+      action: remove
   mode_base_started:
-    hud:
-      priority: 50
     pf_base_play:
       target: playfield
       priority: 50
   location_choice_done:
     ui:
       priority: 10000
+
+widget_player:
+  mode_base_started:
+    gameplay_overlay:
+      slide: base
+      priority: 300
+  mode_base_stopping:
+    gameplay_overlay:
+      slide: _overlay
+      action: remove

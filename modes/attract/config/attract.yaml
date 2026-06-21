@@ -2,7 +2,7 @@
 
 # modes/attract/config/attract.yaml
 mode:
-  start_events: machine_reset_phase_2
+  start_events: machine_reset_phase_2, game_ended
   stop_events: game_starting
   priority: 10
 

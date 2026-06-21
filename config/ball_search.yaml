@@ -9,7 +9,7 @@ playfields:
     ball_search_timeout: 20s
     ball_search_wait_after_iteration: 10s
     ball_search_interval: 250ms
-    ball_search_failed_action: reset
+    ball_search_failed_action: end_ball
 
 # ball_search_order goes on DEVICES, not raw coils. Lower = fires earlier.
 autofire_coils:

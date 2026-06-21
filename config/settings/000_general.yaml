@@ -9,11 +9,7 @@ settings:
     key_type: int
     default: 3
     values:
-      1: '1'
-      2: '2'
       3: '3'
-      4: '4'
-      5: '5'
   max_players:
     settingType: game
     sort: 12
