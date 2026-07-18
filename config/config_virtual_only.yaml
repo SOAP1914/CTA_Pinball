@@ -1,0 +1,93 @@
+#config_version=6
+#
+# config/config_virtual_only.yaml
+#
+# PURPOSE
+#   Declares devices that are NOT yet physically wired (or that have been cut)
+#   so the full game boots, runs complete 3-ball loops, and can be developed and
+#   tested against WITHOUT the hardware present.
+#
+#   Pattern lifted from Bootleggers (@bosh): every unwired/unreliable device is
+#   declared with `platform: virtual` and an EMPTY `number:`. MPF treats it as a
+#   real device that simply never fires from hardware.
+#
+# THE CUT MECHANISM (SFGE cut-decision date ~Jul 20)
+#   If the Dial-In 3-ball lock is NOT reliable in time, the "cut" is literally:
+#   LEAVE IT IN THIS FILE. Nothing else changes. No code surgery. Fully reversible.
+#
+#   McDowell's 3-inline drops are NOT here — they already exist for real hardware
+#   in config_switches.yaml / config_ball_devices.yaml / config_coils.yaml.
+#
+# HOW TO GRADUATE A DEVICE TO REAL HARDWARE
+#   1. Delete its block from this file.
+#   2. Define it for real (real `number:`, no `platform: virtual`) in the
+#      appropriate file: config_switches.yaml / config_coils.yaml /
+#      config_ball_devices.yaml.
+#   3. Run the smoke test BEFORE touching the machine:
+#        python -m pytest tests/test_config.py
+#
+# LOADING - add to the `config:` list in config/config.yaml:
+#   config:
+#     - _config_core.yaml
+#     - config_virtual_only.yaml
+#
+# `number:` is intentionally EMPTY on every entry below.
+
+
+# ===========================================================================
+# SWITCHES
+# ===========================================================================
+switches:
+
+  # -------------------------------------------------------------------------
+  # DIAL-IN 3-BALL LOCK
+  # -------------------------------------------------------------------------
+  # FIRST TO CUT for SFGE. Self-contained: cutting does not touch the core loop.
+  #
+  # Known trap when wired (Anthony van Winkle, FAST Slack): a locked ball that
+  # gets jostled retriggers the lock switch, MPF thinks a NEW ball entered, and
+  # ejects the held ball. Do NOT disable the switch (wrecks ball counts if the
+  # ball escapes) - let the device settle and re-count instead. Bootleggers
+  # ships `entrance_count_delay: 750ms` on its VUK for exactly this. Start there.
+  #
+  # TODO(wiring): rename to match physical layout, confirm numbers, then remove.
+  s_lock_ball_1:
+    number:
+    platform: virtual
+    type: NC          # opto
+
+  s_lock_ball_2:
+    number:
+    platform: virtual
+    type: NC          # opto
+
+  s_lock_ball_3:
+    number:
+    platform: virtual
+    type: NC          # opto
+
+
+# ===========================================================================
+# COILS
+# ===========================================================================
+coils:  # NOTE: remove from here when the device has a wiring solution
+
+  # Dial-In lock release / eject coil.
+  # TODO(wiring): confirm driver pin.
+  c_lock_release:
+    number:
+    platform: virtual
+    default_pulse_ms: 25
+
+
+# ===========================================================================
+# NOTES / GUARDRAILS
+# ===========================================================================
+# * Do NOT put anything here that is already wired and working. This file is
+#   strictly "not yet real (or cut)".
+# * grep "remove from here" / grep "TODO(wiring)" finds all pending hardware.
+# * After ANY edit here, run the smoke test before trusting the machine.
+# * Leading zeros in device names/numbers get eaten by the YAML parser
+#   (e.g. neuron-1-0). Keep names from looking numeric.
+# * Lights start at address 1; switches and coils start at 0. Easy off-by-one.
+# * Never set switch debounce to 0 (Neuron hardware bug).
