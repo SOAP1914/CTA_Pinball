@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7lpdi62gdwlv"
+path="res://.godot/imported/64_You see, they’re McDonalds, I’m McDowell’s” (plays during mode)_.wav-b8d05d39aa01887351b34da0635c645a.sample"
+
+[deps]
+
+source_file="res://sounds/64_You see, they’re McDonalds, I’m McDowell’s” (plays during mode)_.wav"
+dest_files=["res://.godot/imported/64_You see, they’re McDonalds, I’m McDowell’s” (plays during mode)_.wav-b8d05d39aa01887351b34da0635c645a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

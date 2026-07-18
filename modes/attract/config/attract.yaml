@@ -28,10 +28,10 @@ slide_player:
 
 sound_player:
   mode_attract_started:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       bus: music
   game_starting:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       action: stop
 
 # Cycle through carousel items and pause during flipper cradle

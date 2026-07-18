@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by8l2n0fy0vcr"
+path="res://.godot/imported/65_“They’ve got the golden arches, mine_is the golden arcs” (plays during mode)_.wav-f2dd61ce5edec78b8cb469cb0dba263f.sample"
+
+[deps]
+
+source_file="res://sounds/65_“They’ve got the golden arches, mine_is the golden arcs” (plays during mode)_.wav"
+dest_files=["res://.godot/imported/65_“They’ve got the golden arches, mine_is the golden arcs” (plays during mode)_.wav-f2dd61ce5edec78b8cb469cb0dba263f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -60,6 +60,11 @@ game:
   balls_per_game: 3
   max_players: 4
 
+slide_player:
+  game_started:
+    game_start_video:
+      priority: 900
+
 ball_saves:
   default_ball_save:
     active_time: 10s

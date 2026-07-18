@@ -57,10 +57,10 @@ slide_player:
 
 sound_player:
   mode_location_select_started{settings.starting_location=="player_select"}:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       bus: music
   location_choice_done:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       action: stop
 
 # Selection state + defaults (1 = queens, 2 = zamunda)

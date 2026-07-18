@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://w0oaqd7dmw8m"
+path="res://.godot/imported/203A_“There is a fine line between love and nausea” - player tilts.wav-f3ca75538d5bbd2cfe0085757d9fddc4.sample"
+
+[deps]
+
+source_file="res://sounds/203A_“There is a fine line between love and nausea” - player tilts.wav"
+dest_files=["res://.godot/imported/203A_“There is a fine line between love and nausea” - player tilts.wav-f3ca75538d5bbd2cfe0085757d9fddc4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

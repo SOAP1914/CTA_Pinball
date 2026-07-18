@@ -35,11 +35,11 @@ widget_player:
 
 sound_player:
   mode_queens_started:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       bus: music
       fade_in: 1s
   mode_queens_will_stop:
-    01_Opening Title Music-WAV:
+    01_opening_title_music_wav:
       action: stop
       fade_out: 500ms
 

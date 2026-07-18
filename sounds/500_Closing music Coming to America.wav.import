@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtktohib8hf1y"
+path="res://.godot/imported/500_Closing music Coming to America.wav-318ab839d03fdfe93761bcd9a13e92fb.sample"
+
+[deps]
+
+source_file="res://sounds/500_Closing music Coming to America.wav"
+dest_files=["res://.godot/imported/500_Closing music Coming to America.wav-318ab839d03fdfe93761bcd9a13e92fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

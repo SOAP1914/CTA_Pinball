@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1gh3tfqdh8qw"
+path="res://.godot/imported/205A_“You’re a putz” - player tilts.wav-8dd0168fd2dcf9a4ff214f5cf9e4ac7b.sample"
+
+[deps]
+
+source_file="res://sounds/205A_“You’re a putz” - player tilts.wav"
+dest_files=["res://.godot/imported/205A_“You’re a putz” - player tilts.wav-8dd0168fd2dcf9a4ff214f5cf9e4ac7b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnsg4t0jtb11a"
+path="res://.godot/imported/206A_“I warned you didn’t I_ Dottie, get him!” - player tilts_.wav-fe1f71df77ef4e1bf613014c5e2e855e.sample"
+
+[deps]
+
+source_file="res://sounds/206A_“I warned you didn’t I_ Dottie, get him!” - player tilts_.wav"
+dest_files=["res://.godot/imported/206A_“I warned you didn’t I_ Dottie, get him!” - player tilts_.wav-fe1f71df77ef4e1bf613014c5e2e855e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

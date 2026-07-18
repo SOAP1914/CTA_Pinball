@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmgwcosbu4sna"
+path="res://.godot/imported/208A_“This shitty enough for you_” - Player loses the ball with no_low_bonus.wav-15ed32f5b692fc761cabaefbc2f99724.sample"
+
+[deps]
+
+source_file="res://sounds/208A_“This shitty enough for you_” - Player loses the ball with no_low_bonus.wav"
+dest_files=["res://.godot/imported/208A_“This shitty enough for you_” - Player loses the ball with no_low_bonus.wav-15ed32f5b692fc761cabaefbc2f99724.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

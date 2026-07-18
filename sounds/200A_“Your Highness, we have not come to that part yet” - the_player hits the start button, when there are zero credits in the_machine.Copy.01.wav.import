@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjhw3daq1neas"
+path="res://.godot/imported/200A_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine.Copy.01.wav-797e8110b0d540f182c5c70411668271.sample"
+
+[deps]
+
+source_file="res://sounds/200A_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine.Copy.01.wav"
+dest_files=["res://.godot/imported/200A_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine.Copy.01.wav-797e8110b0d540f182c5c70411668271.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
