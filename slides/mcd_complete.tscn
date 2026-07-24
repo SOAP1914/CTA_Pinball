@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmcdcomplete01"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_slide"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="2_video"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_mcd_complete"]
+file = "res://video/75_when_think_garbage_think.ogv"
+
+[node name="McdComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slide")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ClipVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_mcd_complete")
+autoplay = true
+expand = true
+loop = false
+script = ExtResource("2_video")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

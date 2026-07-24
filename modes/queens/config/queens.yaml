@@ -36,8 +36,7 @@ widget_player:
 sound_player:
   mode_queens_started:
     01_opening_title_music_wav:
-      bus: music
-      fade_in: 1s
+      action: stop
   mode_queens_will_stop:
     01_opening_title_music_wav:
       action: stop

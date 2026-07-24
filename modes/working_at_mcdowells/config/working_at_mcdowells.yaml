@@ -43,9 +43,8 @@ event_player:
     - mcd_sequence_complete
   mcd_sequence_complete:
     - working_at_mcdowells_complete
-  # NOTE: we do NOT start the next mode here. The queens hub handles
-  # progression via the queens_modes_complete counter (set in base.yaml).
-  # working_at_mcdowells_complete is what base.yaml listens for.
+    - stop_mode_working_at_mcdowells|26s
+    - start_mode_basketball_date|26s
 
 # Initialize the step counter when the mode starts
 mode_settings:
@@ -65,36 +64,20 @@ light_player:
     l_mcdowells:
       color: "off"
 
-# Slides — backbox info + playfield McDowell's scene (we build these next steps)
 slide_player:
   mode_working_at_mcdowells_started:
-    mcdowells_backbox:
-      priority: 300
-    pf_mcdowells:
-      target: playfield
-      priority: 300
-
-# Widgets — HUD with mode name + sequence progress on playfield
-widget_player:
-  mode_working_at_mcdowells_started:
-    pf_mode_hud:
-      target: playfield
-      slide: pf_mcdowells
-
-# Sounds
-sound_player:
-  mode_working_at_mcdowells_started:
-    mcd_welcome:
-      bus: voice
+    mcd_intro:
+      priority: 400
   mcd_drop_1_hit:
-    mcd_ding:
-      bus: effects
+    mcd_step1:
+      priority: 400
   mcd_drop_2_hit:
-    mcd_ding:
-      bus: effects
-  mcd_drop_3_hit:
-    mcd_ding:
-      bus: effects
+    mcd_step2:
+      priority: 400
   mcd_sequence_complete:
     mcd_complete:
-      bus: voice
+      priority: 400
+
+# Sounds 63/64/65 (look_me / see_theyre / golden_arches) are available for later
+# flavor callouts, but must be staggered on events that do NOT overlap a video
+# clip with dialogue (62/66/70/75 each carry their own audio).

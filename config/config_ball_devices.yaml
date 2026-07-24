@@ -75,8 +75,8 @@ drop_target_banks:
   dropbank_mcdowell:
     drop_targets: drop_mcdowell_1, drop_mcdowell_2, drop_mcdowell_3
     reset_coils: c_mcdowell_inline_reset
-    reset_on_complete: 2s
-    reset_events: machine_reset_phase_3, ball_starting
+    reset_on_complete: false
+    reset_events: balldevice_bd_center_vuk_ball_eject_success|500ms, ball_starting, machine_reset_phase_3
 
 magnets:
   lower_pf_magnet:
