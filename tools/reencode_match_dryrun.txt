@@ -1,0 +1,135 @@
+source mp4  ->  matched ogv
+========================================================================================================================
+01_Opening Title Screen.mp4  ->  01_opening_title_screen.ogv
+02_Door opens - Oha enters the room.  Used for Game Start.mp4  ->  02_door_opens_oha_enters.ogv
+03__Yes, it is my birthday!_.mp4  ->  03_yes_birthday.ogv
+04_1_Slides into shoes.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_2_Puts on Robe.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_3_Walks out of room to bathroom.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_4_Teeth Brushed.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_5_Assisted Gargle.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_6_Mouth dried.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_7_Royal Penis is Clean.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+04_Prince Awakens.mp4  ->  MULTIPLE: 04_1_slides_into_shoes.ogv, 04_2_puts_robe.ogv, 04_3_walks_out_room.ogv, 04_4_teeth_brushed.ogv, 04_5_assisted_gargle.ogv, 04_6_mouth_dried.ogv, 04_7_royal_penis_clean.ogv, 04_prince_awakens.ogv
+05_“How can a man be excited about a wife he has never seen.”.mp4  ->  05_how_man_excited_about.ogv
+06_“Is something troubling you my son_”  Tilt warning in Zamunda.mp4  ->  06_something_troubling_son_tilt.ogv
+07_Elephant SFX.mp4  ->  07_elephant_sfx.ogv
+08_“Actually, I rather enjoy the bathing” .mp4  ->  08_actually_rather_enjoy_bathing.ogv
+09_“There is a very fine line between love and nausea” -  the player tilts in Zamunda.mp4  ->  09_there_very_fine_line.ogv
+10_“when I marry… not because of what I am”.mp4  ->  10_when_marry_because_what.ogv
+100__I Thought you were the King!_.mp4  ->  100_thought_were_king.ogv
+101_ Wedding Parade.mp4  ->  101_wedding_parade.ogv
+11_“Yes!  I was just about to take the birthday boy for his daily workout”.mp4  ->  11_yes_about_take_birthday.ogv
+12_“Now let’s see if you can defend yourself, you sweat from a baboon’s balls”.mp4  ->  12_now_lets_see_defend.ogv
+13_Prince Akeem parries twice and then smiles - First shot scored in Sparring with Semmi.mp4  ->  13_prince_akeem_parries_twice.ogv
+14_Rapid fire parries then ends with Semmi’s line “but you’d rather have a woman who has an opinion_” - second shot.mp4  ->  14_rapid_fire_parries_then.ogv
+15_Prince Akeem’s response “... value her opinion” - third shot.mp4  ->  15_prince_akeems_response_value.ogv
+16_Jumping and sparring - fourth shot.mp4  ->  16_jumping_sparring_fourth_shot.ogv
+17_The staff is knocked away from Akeem and he does backflips, ends with him flipping and smiling. - fifth shot.mp4  ->  17_staff_knocked_away_from.ogv
+18_Akeem says “So you would share your bed and your fortune with a beautiful fool”.   - sixth and final shot.mp4  ->  18_akeem_says_would_share.ogv
+19_Fireworks and a pan down to the palace -  Could be used to begin Wedding Celebration Multiball.mp4  ->  19_fireworks_pan_down_palace.ogv
+20_Dance cycles and drums could be used in a frenzy mode.mp4  ->  20_dance_cycles_drums_could.ogv
+200_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine (1).mp4  ->  MULTIPLE: 200_highness_have_come_part.ogv, 200_highness_have_come_part_2.ogv
+200_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine.mp4  ->  MULTIPLE: 200_highness_have_come_part.ogv, 200_highness_have_come_part_2.ogv
+201_“I always knew there was something special about that boy (1).mp4  ->  MULTIPLE: 201_always_knew_there_something.ogv, 201_always_knew_there_something_2.ogv
+201_“I always knew there was something special about that boy.mp4  ->  MULTIPLE: 201_always_knew_there_something.ogv, 201_always_knew_there_something_2.ogv
+202_“Son, I’m just going to tell you one time, you want to keep working_here, stay off the drugs” - player tilts.mp4  ->  202_son_im_going_tell.ogv
+203_“There is a fine line between love and nausea” - player tilts.mp4  ->  203_there_fine_line_between.ogv
+204_“Hey, be careful... (I think my sister likes you) - tilt warning.mp4  ->  204_hey_careful_think_sister.ogv
+205_“You’re a putz” - player tilts.mp4  ->  205_youre_putz_player_tilts.ogv
+206_“I warned you didn’t I_ Dottie, get him!” - player tilts_.mp4  ->  206_warned_didnt_dottie_get.ogv
+207_“What does dumb fuck mean_” - outlane drain_.mp4  ->  207_what_does_dumb_fuck.ogv
+208_“This shitty enough for you_” - Player loses the ball with no_low_bonus_.mp4  ->  208_shitty_enough_player_loses.ogv
+21_Oha singing “She’s your queen”  could be useful_because its funny, but I don’t want to get too bogged down in_Zamundi, so it might be better for version 2.0. Would definitely be_perfect for attract mode if nothi.mp4  ->  21_oha_singing_shes_queen.ogv
+22_“Bark like a Dog” to “Ah I see the two of you are_getting along” - Attract Mode.mp4  ->  22_bark_like_dog_ah.ogv
+23_“The guests are waiting, your Majesty… Let them wait” -_Player has not plunged ball.mp4  ->  23_guests_waiting_majesty_let.ogv
+25_“Hello Babar”.mp4  ->  25_hello_babar.ogv
+26_“Its just that I’m 21 years old and I have never Zamunda. I_have yet to experience what the outside world has to offer!”_Coming to America is lit.mp4  ->  26_its_im_21_years.ogv
+27_“Prepare the Royal baggage, my son is going on a trip” -_Coming to America begins.mp4  ->  27_prepare_royal_baggage_son.ogv
+29_“I intend to find my bride”.mp4  ->  29_intend_find_bride.ogv
+30_“I want a woman who will arouse my intellect as well as my_loins” “Where will you find such a woman_”.mp4  ->  30_want_woman_who_will.ogv
+31_“Queens!” (The travel shot has been made and the_player is now heading to Queens).mp4  ->  31_queens_travel_shot_been.ogv
+32_“Remember Semmi, no one here can know that I’m_royalty. I must appear no different than the average man”.mp4  ->  32_remember_semmi_no_one.ogv
+33_“Whatever you say pal. What part of Queens you want__Take us to the most common part.” splice with 25_26 “This shitty_enough for you_ Yes, it's perfect” (1).mp4  ->  MULTIPLE: 33_whatever_say_pal_what.ogv, 33_whatever_say_pal_what_2.ogv
+33_“Whatever you say pal. What part of Queens you want__Take us to the most common part.” splice with 25_26 “This shitty_enough for you_ Yes, it's perfect”.mp4  ->  MULTIPLE: 33_whatever_say_pal_what.ogv, 33_whatever_say_pal_what_2.ogv
+34_“What does dumb fuck mean_” - The player has lost the ball_via the outlane.mp4  ->  34_what_does_dumb_fuck.ogv
+35_“Pound for pound Sugar Ray Leonard…” Barbershop quotes_which will play when the player hits it into the Barbershop._(Barbquote 1).mp4  ->  35_pound_pound_sugar_ray.ogv
+36_“Wait a second. A man has the right to change his name to_whatever he wants to change it to” Barb quote 2.mp4  ->  36_wait_second_man_right.ogv
+37_“You're all putzes the three of you. You should_change the name… to the three putzes” - Barb quote 3.mp4  ->  37_youre_all_putzes_three.ogv
+38_“You must be out of your damn mind, Joe Louis is_the greatest fighter to have ever lived” Barb quote 4.mp4  ->  38_must_out_damn_mind.ogv
+39_“Damn shame what they did to that dog.” Attract_mode.mp4  ->  39_damn_shame_what_they.ogv
+40_“Good morning, my neighbors! Yes, yes! Fuck you_too!” (Finding a Queen in Queens begins. This is the first mode_which begins if the player chooses to start the game in Queens).mp4  ->  40_good_morning_neighbors_yes.ogv
+400_ _We're Back_ Long.mp4  ->  400_were_back_long.ogv
+400A_ _We're Back_ Short.mp4  ->  400a_were_back_short.ogv
+400B_ _We're Back_ Shortest.mp4  ->  400b_were_back_shortest.ogv
+41_“We are in New York now, let us dress as New_Yorkers” progress one.mp4  ->  41_new_york_now_let.ogv
+42_“I feel like a complete idiot” progress two.mp4  ->  42_feel_like_complete_idiot.ogv
+43__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one (1).mp4  ->  MULTIPLE: 43_beautiful_sexy_what_youve.ogv, 43_beautiful_sexy_what_youve_2.ogv
+43__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one.mp4  ->  MULTIPLE: 43_beautiful_sexy_what_youve.ogv, 43_beautiful_sexy_what_youve_2.ogv
+43A__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one_Longer.mp4  ->  43a_beautiful_sexy_what_youve.ogv
+44_“Just let your Soul Glo, just let it shine through” -_Soul Glo progress two.mp4  ->  44_let_soul_glo_let.ogv
+44A_Soul Glo now active visual appears over the Semmi and_Akeem video for the first five seconds and then it cuts back to the_commercial. Playfield scoring doubled. (only available when in_Queens)_.mp4  ->  44a_soul_glo_now_active.ogv
+44B_“Perhaps I should cut off my prince’s lock” (Player must_now shoot for the Barbershop) - progress three_.mp4  ->  44b_perhaps_should_cut_off.ogv
+46_Saul waves his hand. (no audio here) Good for ball_loss in Queens_.mp4  ->  46_saul_waves_hand_no.ogv
+47_“Fuck you, fuck you and fuck you.” Who’s next_” Player_has hit the Barbershop. They need to shoot it again right after._While attempting to do so, this plays_.mp4  ->  47_fuck_fuck_fuck_whos.ogv
+48_“Just make it nice and neat”.mp4  ->  48_make_nice_neat.ogv
+49_Barber cuts off the lock. _That’ll be eight dollars._.mp4  ->  49_barber_cuts_off_lock.ogv
+50_“Tell me Semmi, how do I look_” “I think it time to_find your queen” - Nightclub Search begins_.mp4  ->  50_tell_me_semmi_how.ogv
+500_Closing music Easter Egg Soup Joke.mp4  ->  500_closing_music_easter_egg.ogv
+51_“I’ve got a secret, I worship the devil”.mp4  ->  51_ive_got_secret_worship.ogv
+52_“See that’s the problem, I need a guy who can satisfy_me…”_.mp4  ->  52_see_thats_problem_need.ogv
+53_“I’m not interested in a man unless he drives a BMW”.mp4  ->  53_im_interested_man_unless.ogv
+54_ “I’m almost single… my husband’s on Death Row”.mp4  ->  54_im_almost_single_husbands.ogv
+55_“The is the first date Theresa and I have been on_since the doctor separated us”_.mp4  ->  55_first_date_theresa_have.ogv
+56_“I’m into the group thing”.mp4  ->  56_im_into_group_thing.ogv
+57_“I was Joan of Arc in my former life”.mp4  ->  57_joan_arc_former_life.ogv
+58_Rapping twins.mp4  ->  58_rapping_twins.ogv
+59_ “I really want to write my own songs and produce my_own songs”.mp4  ->  59_really_want_write_own.ogv
+60_“Is it me or does every woman in_New York have severe emotional problems”.... “That’s where I’m_going…”_.mp4  ->  60_me_or_does_every.ogv
+61_“She is wonderful…. 84-07 Queens Boulevard”_.mp4  ->  61_she_wonderful_84_07.ogv
+62_“Alright fella’s, now your first job each morning will_be to sweep this walkway.” (intro to mode)_.mp4  ->  62_alright_fellas_now_first.ogv
+66_“Now you’ve gotta mop the food prep area twice a_day. You know how to use a mop, right_ Oh, yes of course.”_(progress one)_.mp4  ->  66_now_youve_gotta_mop.ogv
+67_“There you go….” ends with Prince Akeem smiling_(progress two)_.mp4  ->  67_there_go_ends_prince.ogv
+68_ “Uh, don’t use the bucket, it will just confuse you._When you get through here you can take out the trash” (progress_three)_.mp4  ->  68_uh_dont_use_bucket.ogv
+69_(No audio, Prince Akeem just mops his way across_the screen) (progress four)_ (1).mp4  ->  MULTIPLE: 69_no_audio_prince_akeem.ogv, 69_no_audio_prince_akeem_2.ogv
+69_(No audio, Prince Akeem just mops his way across_the screen) (progress four)_.mp4  ->  MULTIPLE: 69_no_audio_prince_akeem.ogv, 69_no_audio_prince_akeem_2.ogv
+70_“Hi!.... Hello” (progress six).mp4  ->  70_hi_hello_progress_six.ogv
+71_ “Hello! … Hi!) (progress seven).mp4  ->  71_hello_hi_progress_seven.ogv
+72_“I am Akeem… Nice to meet you Akeem” (progress_eight)_.mp4  ->  72_am_akeem_nice_meet.ogv
+73_“I have recently been placed in charge of garbage, do_you have any that requires disposal_” (progress nine)_.mp4  ->  73_have_recently_been_placed.ogv
+74_“No, its total empty.” (progress ten)_.mp4  ->  74_no_its_total_empty.ogv
+75_ “When you think of garbage, think of Akeem…_Maybe we’ll have chance to talk on a professional level” (Mode_Complete)_.mp4  ->  75_when_think_garbage_think.ogv
+
+=== FLAGGED CODES ===
+code '200':
+  source mp4s (2): 200_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine (1).mp4 || 200_“Your Highness, we have not come to that part yet” - the_player hits the start button, when there are zero credits in the_machine.mp4
+  matched ogvs: MULTIPLE: 200_highness_have_come_part.ogv, 200_highness_have_come_part_2.ogv
+code '201':
+  source mp4s (2): 201_“I always knew there was something special about that boy (1).mp4 || 201_“I always knew there was something special about that boy.mp4
+  matched ogvs: MULTIPLE: 201_always_knew_there_something.ogv, 201_always_knew_there_something_2.ogv
+code '33':
+  source mp4s (2): 33_“Whatever you say pal. What part of Queens you want__Take us to the most common part.” splice with 25_26 “This shitty_enough for you_ Yes, it's perfect” (1).mp4 || 33_“Whatever you say pal. What part of Queens you want__Take us to the most common part.” splice with 25_26 “This shitty_enough for you_ Yes, it's perfect”.mp4
+  matched ogvs: MULTIPLE: 33_whatever_say_pal_what.ogv, 33_whatever_say_pal_what_2.ogv
+code '43':
+  source mp4s (2): 43__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one (1).mp4 || 43__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one.mp4
+  matched ogvs: MULTIPLE: 43_beautiful_sexy_what_youve.ogv, 43_beautiful_sexy_what_youve_2.ogv
+code '43A':
+  source mp4s (1): 43A__“Beautiful, sexy, what you’ve always wanted to be,_easy as one two three” Soul Glo progress one_Longer.mp4
+  matched ogvs: 43a_beautiful_sexy_what_youve.ogv
+code '69':
+  source mp4s (2): 69_(No audio, Prince Akeem just mops his way across_the screen) (progress four)_ (1).mp4 || 69_(No audio, Prince Akeem just mops his way across_the screen) (progress four)_.mp4
+  matched ogvs: MULTIPLE: 69_no_audio_prince_akeem.ogv, 69_no_audio_prince_akeem_2.ogv
+code '400':
+  source mp4s (1): 400_ _We're Back_ Long.mp4
+  matched ogvs: 400_were_back_long.ogv
+code '400A':
+  source mp4s (1): 400A_ _We're Back_ Short.mp4
+  matched ogvs: 400a_were_back_short.ogv
+code '400B':
+  source mp4s (1): 400B_ _We're Back_ Shortest.mp4
+  matched ogvs: 400b_were_back_shortest.ogv
+
+TOTAL mp4s: 99
+1:1 matches: 81
+MULTIPLE: 18
+NO MATCH: 0

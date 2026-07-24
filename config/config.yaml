@@ -64,6 +64,17 @@ slide_player:
   game_started:
     game_start_video:
       priority: 900
+  # Batch 2 drain/tilt callouts (backbox / default display)
+  tilt:
+    callout_206_tilt:
+      priority: 950
+  # Skip ball-loss clip when this ball already tilted (MPF sets game.tilted=True
+  # before posting tilt, then end_ball() → ball_ending).
+  ball_ending{not game.tilted}:
+    callout_208_drain:
+      priority: 900
+  # TODO(outlane hardware): 207 / 34 outlane callouts deferred — no
+  # s_left_outlane / s_right_outlane switches or outlane-specific events yet.
 
 ball_saves:
   default_ball_save:
