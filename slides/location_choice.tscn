@@ -1,75 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cysyn0uniefvo"]
+[gd_scene load_steps=5 format=3 uid="uid://cysyn0uniefvo"]
 
 [ext_resource type="Script" uid="uid://ckgstd4w3fyv6" path="res://slides/scripts/location_choice.gd" id="1"]
-[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_gakqy"]
-
-[sub_resource type="Theme" id="2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_queens_normal"]
-bg_color = Color(0.13, 0.6, 0.2, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_queens_hover"]
-bg_color = Color(0.18, 0.72, 0.28, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_queens_pressed"]
-bg_color = Color(0.09, 0.48, 0.16, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zamunda_normal"]
-bg_color = Color(0.75, 0.15, 0.15, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zamunda_hover"]
-bg_color = Color(0.88, 0.22, 0.22, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zamunda_pressed"]
-bg_color = Color(0.58, 0.1, 0.1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-content_margin_left = 24.0
-content_margin_top = 24.0
-content_margin_right = 24.0
-content_margin_bottom = 24.0
+[ext_resource type="Texture2D" path="res://images/queens_card.jpg" id="2_queens"]
+[ext_resource type="Texture2D" path="res://images/zamunda_card.jpg" id="3_zamunda"]
+[ext_resource type="Texture2D" path="res://images/royal_background_location.png" id="4_frame"]
 
 [sub_resource type="SystemFont" id="SystemFont_bold"]
 font_weight = 700
@@ -84,14 +18,19 @@ grow_vertical = 2
 script = ExtResource("1")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="FrameBackground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.15487596, 0.154876, 0.15487596, 1)
+z_index = 110
+z_as_relative = false
+texture = ExtResource("4_frame")
+expand_mode = 1
+stretch_mode = 0
+texture_filter = 1
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -100,21 +39,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 80
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 80
-theme_override_constants/margin_bottom = 80
-theme = SubResource("2")
+z_index = 111
+z_as_relative = false
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 100
 
 [node name="VBox" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
-theme_override_constants/separation = 48
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="Title" type="Label" parent="Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("SystemFont_bold")
 theme_override_font_sizes/font_size = 96
@@ -124,72 +63,29 @@ vertical_alignment = 1
 
 [node name="HBox" type="HBoxContainer" parent="Margin/VBox"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 48
+theme_override_constants/separation = 100
 alignment = 1
 
-[node name="BtnQueens" type="Button" parent="Margin/VBox/HBox"]
-custom_minimum_size = Vector2(0, 300)
+[node name="QueensCardContainer" type="PanelContainer" parent="Margin/VBox/HBox"]
+custom_minimum_size = Vector2(435, 580)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("SystemFont_bold")
-theme_override_font_sizes/font_size = 96
-theme_override_styles/normal = SubResource("StyleBoxFlat_queens_normal")
-theme_override_styles/hover = SubResource("StyleBoxFlat_queens_hover")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_queens_pressed")
-text = "QUEENS"
 
-[node name="BtnZamunda" type="Button" parent="Margin/VBox/HBox"]
-custom_minimum_size = Vector2(0, 300)
+[node name="QueensCard" type="TextureRect" parent="Margin/VBox/HBox/QueensCardContainer"]
+custom_minimum_size = Vector2(435, 580)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("SystemFont_bold")
-theme_override_font_sizes/font_size = 96
-theme_override_styles/normal = SubResource("StyleBoxFlat_zamunda_normal")
-theme_override_styles/hover = SubResource("StyleBoxFlat_zamunda_hover")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_zamunda_pressed")
-text = "ZAMUNDA"
+texture = ExtResource("2_queens")
+expand_mode = 1
+stretch_mode = 5
+texture_filter = 1
 
-[node name="MPFConditionalChildren" type="Control" parent="."]
-anchors_preset = 0
-offset_top = 611.0
-offset_right = 1918.0
-offset_bottom = 923.0
-script = ExtResource("2_gakqy")
-variable_name = "selected_location"
-metadata/_custom_type_script = "uid://808knhb8e2nn"
+[node name="ZamundaCardContainer" type="PanelContainer" parent="Margin/VBox/HBox"]
+custom_minimum_size = Vector2(435, 580)
+layout_mode = 2
 
-[node name="1" type="Label" parent="MPFConditionalChildren"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "QUEENS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="2" type="Label" parent="MPFConditionalChildren"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "ZAMUNDA"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="Margin/VBox/HBox/BtnQueens" to="." method="_on_btn_queens_pressed"]
-[connection signal="pressed" from="Margin/VBox/HBox/BtnZamunda" to="." method="_on_btn_zamunda_pressed"]
+[node name="ZamundaCard" type="TextureRect" parent="Margin/VBox/HBox/ZamundaCardContainer"]
+custom_minimum_size = Vector2(435, 580)
+layout_mode = 2
+texture = ExtResource("3_zamunda")
+expand_mode = 1
+stretch_mode = 5
+texture_filter = 1

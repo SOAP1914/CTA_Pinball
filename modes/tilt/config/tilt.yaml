@@ -4,3 +4,23 @@ tilt:
   warnings_to_tilt: 3
   settle_time: 5s
   multiple_hit_window: 300ms
+
+slide_player:
+  tilt_warning_1:
+    pf_danger:
+      target: playfield
+      priority: 800
+      expire: 2500ms
+  tilt_warning_2:
+    pf_danger:
+      target: playfield
+      priority: 800
+      expire: 2500ms
+
+sound_player:
+  tilt_warning_1:
+    204a_hey_careful_think_sister:
+      bus: voice
+  tilt_warning_2:
+    204a_hey_careful_think_sister:
+      bus: voice

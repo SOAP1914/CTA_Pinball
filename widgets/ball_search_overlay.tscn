@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbsrchovrly1080"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_widget"]
+
+[node name="BallSearchOverlay" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+z_index = 110
+z_as_relative = false
+script = ExtResource("1_widget")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Scrim" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.24, 0.24, 0.24, 0.72)
+
+[node name="SearchLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 120
+text = "BALL SEARCH"
+horizontal_alignment = 1
+vertical_alignment = 1

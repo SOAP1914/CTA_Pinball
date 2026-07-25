@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://hlng57sbeyr1"]
+[gd_scene load_steps=6 format=3 uid="uid://hlng57sbeyr1"]
 
 [ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_widget"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_var"]
+[ext_resource type="Script" path="res://widgets/player_highlight.gd" id="3_highlight"]
+[ext_resource type="Script" path="res://widgets/intro_hud_gate.gd" id="4_intro_gate"]
+
+[sub_resource type="SystemFont" id="SystemFont_bold"]
+font_weight = 700
 
 [node name="GameplayOverlay" type="Control"]
 layout_mode = 3
@@ -54,22 +59,18 @@ theme_override_font_sizes/font_size = 40
 text = "CREDITS: FREE"
 horizontal_alignment = 2
 
-[node name="ScoreLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="BigScore" type="Label" parent="."]
+layout_mode = 0
 offset_left = 40.0
-offset_top = -170.0
-offset_right = -40.0
-offset_bottom = -100.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_top = 80.0
+offset_right = 1880.0
+offset_bottom = 230.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 44
+theme_override_fonts/font = SubResource("SystemFont_bold")
+theme_override_font_sizes/font_size = 100
 text = "0"
 horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("2_var")
 variable_name = "score"
 comma_separate = true
@@ -84,9 +85,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = -90.0
+offset_top = -150.0
 offset_right = -40.0
-offset_bottom = -10.0
+offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 24
@@ -98,14 +99,14 @@ size_flags_horizontal = 3
 
 [node name="P1Tag" type="Label" parent="PlayerStrip/P1"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.843, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "P1"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
 horizontal_alignment = 1
 script = ExtResource("2_var")
 variable_type = 4
 variable_name = "number"
-template_string = "P%d"
+template_string = "Player %d"
 min_players = 2
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
@@ -132,13 +133,13 @@ size_flags_horizontal = 3
 [node name="P2Tag" type="Label" parent="PlayerStrip/P2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 28
-text = "P2"
+theme_override_font_sizes/font_size = 24
+text = "Player 2"
 horizontal_alignment = 1
 script = ExtResource("2_var")
 variable_type = 5
 variable_name = "number"
-template_string = "P%d"
+template_string = "Player %d"
 min_players = 2
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
@@ -165,13 +166,13 @@ size_flags_horizontal = 3
 [node name="P3Tag" type="Label" parent="PlayerStrip/P3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 28
-text = "P3"
+theme_override_font_sizes/font_size = 24
+text = "Player 3"
 horizontal_alignment = 1
 script = ExtResource("2_var")
 variable_type = 6
 variable_name = "number"
-template_string = "P%d"
+template_string = "Player %d"
 min_players = 3
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
@@ -198,13 +199,13 @@ size_flags_horizontal = 3
 [node name="P4Tag" type="Label" parent="PlayerStrip/P4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 28
-text = "P4"
+theme_override_font_sizes/font_size = 24
+text = "Player 4"
 horizontal_alignment = 1
 script = ExtResource("2_var")
 variable_type = 7
 variable_name = "number"
-template_string = "P%d"
+template_string = "Player %d"
 min_players = 4
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
@@ -223,3 +224,9 @@ template_string = "%s"
 min_players = 4
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HighlightController" type="Node" parent="."]
+script = ExtResource("3_highlight")
+
+[node name="IntroHudGate" type="Node" parent="."]
+script = ExtResource("4_intro_gate")

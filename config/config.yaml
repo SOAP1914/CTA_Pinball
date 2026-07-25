@@ -60,6 +60,52 @@ game:
   balls_per_game: 3
   max_players: 4
 
+machine_vars:
+  game_start_intro_playing:
+    initial_value: 0
+    value_type: int
+    persist: false
+
+variable_player:
+  game_started:
+    game_start_intro_playing:
+      int: 1
+      action: set_machine
+  game_start_intro_done:
+    game_start_intro_playing:
+      int: 0
+      action: set_machine
+  ball_will_end:
+    game_start_intro_playing:
+      int: 0
+      action: set_machine
+  tilt:
+    game_start_intro_playing:
+      int: 0
+      action: set_machine
+
+widget_player:
+  game_starting:
+    gameplay_overlay:
+      slide: base
+      action: remove
+  game_started:
+    gameplay_overlay:
+      slide: base
+      action: remove
+  game_start_intro_done:
+    gameplay_overlay:
+      slide: base
+      priority: 300
+  ball_search_started:
+    ball_search_overlay:
+      slide: base
+      priority: 400
+  ball_search_stopped:
+    ball_search_overlay:
+      slide: base
+      action: remove
+
 slide_player:
   game_started:
     game_start_video:
@@ -75,6 +121,11 @@ slide_player:
       priority: 900
   # TODO(outlane hardware): 207 / 34 outlane callouts deferred — no
   # s_left_outlane / s_right_outlane switches or outlane-specific events yet.
+
+sound_player:
+  not_enough_credits:
+    200a_highness_have_come_part:
+      bus: voice
 
 ball_saves:
   default_ball_save:

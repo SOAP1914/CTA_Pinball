@@ -166,12 +166,9 @@ slide_player:
     pf_base_play:
       target: playfield
       priority: 50
-  location_choice_done:
-    ui:
-      priority: 10000
 
 widget_player:
-  mode_base_started:
+  mode_base_started{machine.game_start_intro_playing==0}:
     gameplay_overlay:
       slide: base
       priority: 300

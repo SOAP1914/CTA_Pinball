@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpfdanger2560hd"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
+
+[node name="PFDanger" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_root")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="DangerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 2560.0
+offset_bottom = 720.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 250
+text = "DANGER"
+horizontal_alignment = 1
+vertical_alignment = 1
