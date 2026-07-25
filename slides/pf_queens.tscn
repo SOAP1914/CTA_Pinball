@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdgkkaoaw1n2j"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
-[ext_resource type="Texture2D" uid="uid://ceb8xo7ksu7l6" path="res://images/bg_queens.jpg" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://cgynj8vnije8b" path="res://images/queens_playfield.jpg" id="2_bg"]
 [ext_resource type="Script" uid="uid://d2ml5cbpr2hqh" path="res://slides/scripts/panning_bg.gd" id="3_pan"]
 
 [node name="PFQueens" type="Control"]

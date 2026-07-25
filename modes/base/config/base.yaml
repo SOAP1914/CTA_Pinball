@@ -108,6 +108,54 @@ variable_player:
       action: add
       int: 1
 
+# --- Mech SFX -------------------------------------------------
+# Sound Design by Jeff Dodson (Dirty Pool Homebrew Cinematic SFX Kit).
+# Non-commercial homebrew license; attribution required on placard + credits.
+
+random_event_player:
+  s_slingshot_left_active:
+    force_different: True
+    events: [play_sling_1, play_sling_2, play_sling_3]
+  s_slingshot_right_active:
+    force_different: True
+    events: [play_sling_1, play_sling_2, play_sling_3]
+  s_upper_pop_active:
+    force_different: True
+    events: [play_pop_1, play_pop_2, play_pop_3]
+
+sound_player:
+  play_sling_1: { sfx_sling_1: { bus: effects } }
+  play_sling_2: { sfx_sling_2: { bus: effects } }
+  play_sling_3: { sfx_sling_3: { bus: effects } }
+
+  play_pop_1: { sfx_pop_1: { bus: effects } }
+  play_pop_2: { sfx_pop_2: { bus: effects } }
+  play_pop_3: { sfx_pop_3: { bus: effects } }
+
+  s_soul_s_active: { sfx_soul_1: { bus: effects } }
+  s_soul_o_active: { sfx_soul_2: { bus: effects } }
+  s_soul_u_active: { sfx_soul_3: { bus: effects } }
+  s_soul_l_active: { sfx_drop_thump: { bus: effects } }
+
+  s_glo_g_active: { sfx_glo_1: { bus: effects } }
+  s_glo_l_active: { sfx_glo_2: { bus: effects } }
+  s_glo_o_active: { sfx_glo_3: { bus: effects } }
+
+  s_left_ramp_drop_active: { sfx_drop_clank: { bus: effects } }
+
+  s_spinner_active:          { sfx_spinner:     { bus: effects } }
+  s_left_orbit_made_active:  { sfx_orbit_left:  { bus: effects } }
+  s_right_orbit_made_active: { sfx_orbit_right: { bus: effects } }
+  s_left_ramp_made_active:   { sfx_ramp_enter:  { bus: effects } }
+  s_right_ramp_made_active:  { sfx_ramp_exit:   { bus: effects } }
+
+  s_center_vuk_active: { sfx_chosen_one: { bus: effects } }
+  balldevice_bd_center_vuk_ball_eject_success: { sfx_vuk_eject: { bus: effects } }
+
+  mcd_drop_1_hit: { sfx_inline_1: { bus: effects } }
+  mcd_drop_2_hit: { sfx_inline_2: { bus: effects } }
+  mcd_drop_3_hit: { sfx_drop_thump: { bus: effects } }
+
 slide_player:
   mode_base_started.1:
     base:

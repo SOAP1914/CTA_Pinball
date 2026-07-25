@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_root"]
 [ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_cond"]
-[ext_resource type="Texture2D" uid="uid://ceb8xo7ksu7l6" path="res://images/bg_queens.jpg" id="3_q"]
+[ext_resource type="Texture2D" uid="uid://cgynj8vnije8b" path="res://images/queens_playfield.jpg" id="3_q"]
 [ext_resource type="Texture2D" uid="uid://dcwgo6k7tg7hv" path="res://images/bg_zamunda.png" id="4_z"]
 
 [node name="PFLocationPreview" type="Control"]
