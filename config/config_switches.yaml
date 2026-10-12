@@ -1,15 +1,18 @@
 #config_version=6
 switches:
   # Cabinet buttons (Cabinet I/O)
-  s_start: { number: cab-11, tags: start } # start button
-  s_tilt_bob: { number: cab-9, tags: tilt } # plumb-bob tilt
+  s_start: { number: cab-10, tags: start } # start button
+  s_tilt_bob: { number: cab-11, tags: tilt } # plumb-bob tilt
   s_tilt_warning: { number: cab-12, tags: tilt_warning } # optional warn
-  #s_coin:          { number: cab-3 }
+  s_launch: { number: cab-18 }
 
-  s_left_flipper: { number: cab-10, tags: left_flipper }
+  # Flipper button optos (primary = used; secondary = unused, no upper flipper)
+  s_left_flipper: { number: cab-8, tags: left_flipper }
+  s_left_flipper_secondary: { number: cab-9 } # unused - no upper flipper
   s_right_flipper: { number: cab-16, tags: right_flipper }
+  s_right_flipper_secondary: { number: cab-17 } # unused - no upper flipper
 
-  # EOS (on the lower playfield node 3208)
+  # EOS (3208 J8 switches; separate from flipper driver address space)
   s_left_eos: { number: pf_lower-2 }
   s_right_eos: { number: pf_lower-1 }
 
@@ -27,8 +30,14 @@ switches:
   s_left_inlane:   { number: pf_lower-16 }
   s_right_inlane:  { number: pf_lower-17 }
 
-  s_slingshot_left:  { number: pf_lower-26 }  # 1A
-  s_slingshot_right: { number: pf_lower-27 }  # 1B
+  # Slings (trip-tested)
+  s_slingshot_left:  { number: pf_lower-0 }
+  s_slingshot_right: { number: pf_lower-3 }
+
+  # Lower lanes (trip-tested)
+  s_lower_outer_lane_l: { number: pf_lower-31 }
+  s_lower_inner_lane_s: { number: pf_lower-28 }
+  s_lower_outer_lane_a: { number: pf_lower-29 }
 
   # Orbits, ramps, spinner (placeholders on pf_lower)
   s_left_orbit_made:  { number: pf_lower-5 }
@@ -38,26 +47,38 @@ switches:
   s_spinner:          { number: pf_lower-19 }
 
 
-  # Stern "SOUL" smart drop target bank
-  s_soul_s: { number: pf_upper-4, tags: drop_target }
-  s_soul_o: { number: pf_upper-5, tags: drop_target }
-  s_soul_u: { number: pf_upper-6, tags: drop_target }
-  s_soul_l: { number: pf_upper-7, tags: drop_target }
+  # Stern "SOUL" smart drop target bank (trip-tested; optos NC)
+  s_soul_s: { number: pf_upper-7, type: NC, tags: drop_target }
+  s_soul_o: { number: pf_upper-6, type: NC, tags: drop_target }
+  s_soul_u: { number: pf_upper-5, type: NC, tags: drop_target }
+  s_soul_l: { number: pf_upper-4, type: NC, tags: drop_target }
 
-  # "GLO" drop target bank
-  s_glo_g: { number: pf_upper-13, tags: drop_target }
-  s_glo_l: { number: pf_upper-14, tags: drop_target }
-  s_glo_o: { number: pf_upper-15, tags: drop_target }
+  # "GLO" drop target bank (trip-tested; optos NC)
+  s_glo_g: { number: pf_upper-15, type: NC, tags: drop_target }
+  s_glo_l: { number: pf_upper-14, type: NC, tags: drop_target }
+  s_glo_o: { number: pf_upper-13, type: NC, tags: drop_target }
 
-  # Left ramp single drop target
-  s_left_ramp_drop: { number: pf_upper-12, tags: drop_target }
-  # Upper playfield VUK
+  # Left ramp drop — NOT YET MAPPED. Kept defined only because drop_left_ramp in
+  # ball_devices still references it (that file was out of scope). Do not trust this pin.
+  # pf_upper-12 (raw 0x44) reads BAD - hardware check needed, do not use
+  s_left_ramp_drop: { number: pf_upper-12, type: NC, tags: drop_target }
+
+  # CONFIRM: VUK number was crossed out - retest
+  # Kept active only because ball_devices / mode shots still reference s_center_vuk.
   s_center_vuk: { number: pf_upper-3, tags: vuk }
 
-  # McDowell inline (Metallica-style) drops under VUK
-  s_mcdowell_inline_1: { number: pf_upper-0, tags: drop_target }
-  s_mcdowell_inline_2: { number: pf_upper-1, tags: drop_target }
-  s_mcdowell_inline_3: { number: pf_upper-2, tags: drop_target }
+  # McDowell inline (Metallica-style) drops under VUK (trip-tested; optos NC)
+  s_mcdowell_inline_1: { number: pf_upper-0, type: NC, tags: drop_target }
+  s_mcdowell_inline_2: { number: pf_upper-1, type: NC, tags: drop_target }
+  s_mcdowell_inline_3: { number: pf_upper-2, type: NC, tags: drop_target }
 
-  # Upper pop bumper
+  # Upper pop bumper + top lane (trip-tested)
   s_upper_pop: { number: pf_upper-11, tags: popbumper }
+  s_top_lane_mid_left: { number: pf_upper-8 }
+
+  # CONFIRM: aux board switch conflict - retest
+  # (raw landed in aux 0804 range; aux was previously said to carry no switches)
+  # s_soul_slingshot:   { number: aux-3 }  # raw 0x4B
+  # s_top_outer_orbit:  { number: aux-1 }  # raw 0x49
+  # s_top_outer_lane_r: { number: aux-0 }  # raw 0x48
+  # s_top_outer_lane_l: { number: aux-2 }  # raw 0x4A

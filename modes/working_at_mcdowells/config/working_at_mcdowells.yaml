@@ -51,18 +51,18 @@ mode_settings:
   reset_vars_on_start: true
 
 # Lighting — arrow insert lit gold while sequence active, flash on complete
-light_player:
-  mode_working_at_mcdowells_started:
-    l_mcdowells:
-      color: yellow
-      priority: 300
-  mcd_sequence_complete:
-    l_mcdowells:
-      color: white
-      fade: 100ms
-  mode_working_at_mcdowells_will_stop:
-    l_mcdowells:
-      color: "off"
+#light_player:
+#  mode_working_at_mcdowells_started:
+#    l_mcdowells:
+#      color: yellow
+#      priority: 300
+#  mcd_sequence_complete:
+#    l_mcdowells:
+#      color: white
+#      fade: 100ms
+#  mode_working_at_mcdowells_will_stop:
+#    l_mcdowells:
+#      color: "off"
 
 slide_player:
   mode_working_at_mcdowells_started:

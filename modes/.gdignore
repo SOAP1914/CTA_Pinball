@@ -1,0 +1,1 @@
+# Keep MPF YAML out of Godot. Godot's text editor saves with tabs, which breaks MPF.

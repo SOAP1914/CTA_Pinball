@@ -1,124 +1,245 @@
 #config_version=6
 
-# Centralized light configuration.
+# Playfield LEDs on EXP-0081 (board name exp_led).
+# Numbers from the physical chain walk: exp_led-<port>-<position>.
+# Port 1 = 23 LEDs, Port 2 = 24, Port 8 = 20.
+# Two-LED inserts: the original name is LED "a"; the partner is "_b".
+# Both share a tag so a light_player or show can target the pair.
+# l_lane_scoop and l_standup_lisa were not found on the walk and stay virtual.
 
 lights:
 
-  # MODE LIGHTS
-  l_mode_arrival:
-    number:
-  l_mode_search:
-    number:
-  l_mode_barber:
-    number:
-  l_mode_pageant:
-    number:
-  l_mode_cleo:
-    number:
-  l_mode_saint_johns:
-    number:
-  l_mode_robbery:
-    number:
-  l_mode_dance:
-    number:
-  l_mode_plead:
-    number:
-  l_mode_kings_son:
-    number:
-  l_mode_awakens:
-    number:
-  l_mode_bath:
-    number:
-  l_mode_sparring:
-    number:
-  l_mode_wedding:
-    number:
-  l_mode_celebrate:
-    number:
-
-  # DROP TARGET LIGHTS
-  l_drop_soul_s:
-    number:
-  l_drop_soul_o:
-    number:
-  l_drop_soul_u:
-    number:
-  l_drop_soul_l:
-    number:
-  l_drop_glo_g:
-    number:
-  l_drop_glo_l:
-    number:
-  l_drop_glo_o:
-    number:
-
-  # LANE SHOT LIGHTS
+  # Port 1
+  l_top_lane_right:
+    number: exp_led-1-1
+    type: rgb
+  l_top_lane_left:
+    number: exp_led-1-2
+    type: rgb
+  l_gi_top_right:
+    number: exp_led-1-3
+    type: rgb
+    tags: gi
+  l_gi_top_middle:
+    number: exp_led-1-4
+    type: rgb
+    tags: gi
+  l_gi_top_left:
+    number: exp_led-1-5
+    type: rgb
+    tags: gi
+  l_rollover_left_orbit:
+    number: exp_led-1-6
+    type: rgb
   l_lane_left_orbit:
-    number:
+    number: exp_led-1-7
+    type: rgb
+    tags: lane_left_orbit
+  l_lane_left_orbit_b:
+    number: exp_led-1-8
+    type: rgb
+    tags: lane_left_orbit
+  l_gi_left_drop_a:
+    number: exp_led-1-9
+    type: rgb
+    tags: gi
+  l_gi_left_drop_b:
+    number: exp_led-1-10
+    type: rgb
+    tags: gi
+  l_drop_soul_l:
+    number: exp_led-1-11
+    type: rgb
+  l_drop_soul_u:
+    number: exp_led-1-12
+    type: rgb
+  l_drop_soul_o:
+    number: exp_led-1-13
+    type: rgb
+  l_drop_soul_s:
+    number: exp_led-1-14
+    type: rgb
   l_lane_left_ramp:
-    number:
+    number: exp_led-1-15
+    type: rgb
+  l_my_t_sharpe:
+    number: exp_led-1-16
+    type: rgb
+  l_lisa_i:
+    number: exp_led-1-17
+    type: rgb
+  l_lisa_l:
+    number: exp_led-1-18
+    type: rgb
+  l_return_lane_left:
+    number: exp_led-1-19
+    type: rgb
+  l_outlane_left:
+    number: exp_led-1-20
+    type: rgb
+  l_jackpot:
+    number: exp_led-1-21
+    type: rgb
+  l_gi_left_lane_a:
+    number: exp_led-1-22
+    type: rgb
+    tags: gi
+  l_gi_left_lane_b:
+    number: exp_led-1-23
+    type: rgb
+    tags: gi
+
+  # Port 2
+  l_inline_drop_arrow:
+    number: exp_led-2-1
+    type: rgb
+    tags: inline_drop_arrow
+  l_inline_drop_arrow_b:
+    number: exp_led-2-2
+    type: rgb
+    tags: inline_drop_arrow
+  l_multiball:
+    number: exp_led-2-3
+    type: rgb
+    tags: multiball
+  l_multiball_b:
+    number: exp_led-2-4
+    type: rgb
+    tags: multiball
+  l_true_love:
+    number: exp_led-2-5
+    type: rgb
+  l_mode_arrival:
+    number: exp_led-2-6
+    type: rgb
+  l_mode_search:
+    number: exp_led-2-7
+    type: rgb
+  l_mode_barber:
+    number: exp_led-2-8
+    type: rgb
+  l_mode_pageant:
+    number: exp_led-2-9
+    type: rgb
+  l_mode_cleo:
+    number: exp_led-2-10
+    type: rgb
+  l_mode_saint_johns:
+    number: exp_led-2-11
+    type: rgb
+  l_mode_robbery:
+    number: exp_led-2-12
+    type: rgb
+  l_mode_dance:
+    number: exp_led-2-13
+    type: rgb
+  l_mcdowells:
+    number: exp_led-2-14
+    type: rgb
+  l_ball_save:
+    number: exp_led-2-15
+    type: rgb
+  l_mode_plead:
+    number: exp_led-2-16
+    type: rgb
+  l_mode_kings_son:
+    number: exp_led-2-17
+    type: rgb
+  l_mode_awakens:
+    number: exp_led-2-18
+    type: rgb
+  l_mode_bath:
+    number: exp_led-2-19
+    type: rgb
+  l_mode_sparring:
+    number: exp_led-2-20
+    type: rgb
+  l_mode_wedding:
+    number: exp_led-2-21
+    type: rgb
+  l_mode_celebrate:
+    number: exp_led-2-22
+    type: rgb
+  l_queens:
+    number: exp_led-2-23
+    type: rgb
+  l_2x_3x:
+    number: exp_led-2-24
+    type: rgb
+
+  # Port 8
+  l_rollover_right_orbit:
+    number: exp_led-8-1
+    type: rgb
+  l_right_ramp_target:
+    number: exp_led-8-2
+    type: rgb
+  l_lane_right_ramp:
+    number: exp_led-8-3
+    type: rgb
+    tags: lane_right_ramp
+  l_lane_right_ramp_b:
+    number: exp_led-8-4
+    type: rgb
+    tags: lane_right_ramp
+  l_lane_right_orbit:
+    number: exp_led-8-5
+    type: rgb
+    tags: lane_right_orbit
+  l_lane_right_orbit_b:
+    number: exp_led-8-6
+    type: rgb
+    tags: lane_right_orbit
+  l_gi_right_drop:
+    number: exp_led-8-7
+    type: rgb
+    tags: gi
+  l_drop_glo_o:
+    number: exp_led-8-8
+    type: rgb
+  l_drop_glo_l:
+    number: exp_led-8-9
+    type: rgb
+  l_drop_glo_g:
+    number: exp_led-8-10
+    type: rgb
+  l_zamunda:
+    number: exp_led-8-11
+    type: rgb
+  l_score_2x:
+    number: exp_led-8-12
+    type: rgb
+  l_soul_glo:
+    number: exp_led-8-13
+    type: rgb
+  l_lisa_s:
+    number: exp_led-8-14
+    type: rgb
+  l_lisa_a:
+    number: exp_led-8-15
+    type: rgb
+  l_return_lane_right:
+    number: exp_led-8-16
+    type: rgb
+  l_outlane_right:
+    number: exp_led-8-17
+    type: rgb
+  l_extra_ball:
+    number: exp_led-8-18
+    type: rgb
+  l_gi_right_lane_a:
+    number: exp_led-8-19
+    type: rgb
+    tags: gi
+  l_gi_right_lane_b:
+    number: exp_led-8-20
+    type: rgb
+    tags: gi
+
+  # Not found on the chain walk
   l_lane_scoop:
     number:
-  l_lane_right_ramp:
-    number:
-  l_lane_right_orbit:
-    number:
-
-  # MISC TARGETS
+    platform: virtual
   l_standup_lisa:
     number:
-  l_top_lane_left:
-    number:
-  l_top_lane_right:
-    number:
-  l_outlane_left:
-    number:
-  l_outlane_right:
-    number:
-  l_return_lane_left:
-    number:
-  l_return_lane_right:
-    number:
-
-  # MISC PROGRESS
-  l_lisa_l:
-    number:
-  l_lisa_i:
-    number:
-  l_lisa_s:
-    number:
-  l_lisa_a:
-    number:
-  l_my_t_sharpe:
-    number:
-  l_soul_glo:
-    number:
-  l_queens:
-    number:
-  l_zamunda:
-    number:
-  l_true_love:
-    number:
-  l_mcdowells:
-    number:
-
-  # INDICATOR LIGHTS
-  l_ball_save:
-    number:
-  l_jackpot:
-    number:
-  l_extra_ball:
-    number:
-  l_2x_3x:
-    number:
-  l_score_2x:
-    number:
-  l_multiball:
-    number:
-
-  # example:
-  # gi_left:
-  #   number: 1
-  #   subtype: led
-
-
+    platform: virtual

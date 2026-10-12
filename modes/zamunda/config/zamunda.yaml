@@ -38,11 +38,11 @@ sound_player:
       action: stop
       fade_out: 500ms
 
-light_player:
-  mode_zamunda_started:
-    l_zamunda:
-      color: gold
-      priority: 200
-  mode_zamunda_will_stop:
-    l_zamunda:
-      color: "off"
+#light_player:
+#  mode_zamunda_started:
+#    l_zamunda:
+#      color: gold
+#      priority: 200
+#  mode_zamunda_will_stop:
+#    l_zamunda:
+#      color: "off"

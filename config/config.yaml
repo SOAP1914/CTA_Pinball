@@ -6,15 +6,18 @@
 # (_config_core.yaml) then layers on the platform and machine settings.
 # To run on different hardware, create a parallel shim (e.g.
 # config_virtual.yaml) that loads the same core with a different platform.
+#
+# DO NOT EDIT IN GODOT — Godot rewrites this file with tabs and breaks MPF.
+# Edit in Cursor/VS Code only.
 
 config:
   - _config_core.yaml
-  - config_virtual_only.yaml
-  - config_virtual_test.yaml
+#  - config_virtual_only.yaml
+#  - config_virtual_test.yaml
 
 # FAST NET hardware (Neuron + Cabinet I/O + IO-3208 + IO-1616 + IO-0804)
 hardware:
-  platform: fast
+  platform: fast, virtual
 
 fast:
   net:
@@ -26,14 +29,23 @@ fast:
       pf_lower: { model: FP-I/O-3208, order: 2 } # Lower playfield
       pf_upper: { model: FP-I/O-1616, order: 3 } # Upper playfield
       aux: { model: FP-I/O-0804, order: 4 } # Aux node
+  exp:
+    port: auto
+    baud: 921600
+    boards:
+      neuron:
+        model: FP-EXP-2000
+      exp_led:
+        model: FP-EXP-0081
+        led_fade_time: 50ms
 
-# Flippers (dual-wound example; change to single-wound if needed)
+# Flippers (dual-wound; primary cab optos + separate EOS on 3208 J8)
 flippers:
   left_flipper:
     main_coil: c_left_flipper_main
     hold_coil: c_left_flipper_hold
-    activation_switch: s_left_flipper
-    eos_switch: s_left_eos
+    activation_switch: s_left_flipper      # cab-8 primary opto
+    eos_switch: s_left_eos                  # pf_lower-2
     use_eos: true
     enable_events: ball_started
     disable_events: ball_will_end
@@ -41,11 +53,12 @@ flippers:
   right_flipper:
     main_coil: c_right_flipper_main
     hold_coil: c_right_flipper_hold
-    activation_switch: s_right_flipper
-    eos_switch: s_right_eos
+    activation_switch: s_right_flipper     # cab-16 primary opto
+    eos_switch: s_right_eos                 # pf_lower-1
     use_eos: true
     enable_events: ball_started
     disable_events: ball_will_end
+  # NO upper_flipper — secondary optos cab-9/cab-17 are defined but unused.
 
 playfields:
   playfield:

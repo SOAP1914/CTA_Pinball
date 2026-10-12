@@ -42,11 +42,11 @@ sound_player:
       action: stop
       fade_out: 500ms
 
-light_player:
-  mode_queens_started:
-    l_queens:
-      color: blue
-      priority: 200
-  mode_queens_will_stop:
-    l_queens:
-      color: "off"
+#light_player:
+#  mode_queens_started:
+#    l_queens:
+#      color: blue
+#      priority: 200
+#  mode_queens_will_stop:
+#    l_queens:
+#      color: "off"

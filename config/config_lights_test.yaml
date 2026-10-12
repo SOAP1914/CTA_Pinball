@@ -1,0 +1,79 @@
+#config_version=6
+
+# Temporary EXP-0081 chain walk — rename to real names after mapping.
+lights:
+  # Port 1
+  l_test_1_01: { number: exp_led-1-1, type: rgb }
+  l_test_1_02: { number: exp_led-1-2, type: rgb }
+  l_test_1_03: { number: exp_led-1-3, type: rgb }
+  l_test_1_04: { number: exp_led-1-4, type: rgb }
+  l_test_1_05: { number: exp_led-1-5, type: rgb }
+  l_test_1_06: { number: exp_led-1-6, type: rgb }
+  l_test_1_07: { number: exp_led-1-7, type: rgb }
+  l_test_1_08: { number: exp_led-1-8, type: rgb }
+  l_test_1_09: { number: exp_led-1-9, type: rgb }
+  l_test_1_10: { number: exp_led-1-10, type: rgb }
+  l_test_1_11: { number: exp_led-1-11, type: rgb }
+  l_test_1_12: { number: exp_led-1-12, type: rgb }
+  l_test_1_13: { number: exp_led-1-13, type: rgb }
+  l_test_1_14: { number: exp_led-1-14, type: rgb }
+  l_test_1_15: { number: exp_led-1-15, type: rgb }
+  l_test_1_16: { number: exp_led-1-16, type: rgb }
+  l_test_1_17: { number: exp_led-1-17, type: rgb }
+  l_test_1_18: { number: exp_led-1-18, type: rgb }
+  l_test_1_19: { number: exp_led-1-19, type: rgb }
+  l_test_1_20: { number: exp_led-1-20, type: rgb }
+  l_test_1_21: { number: exp_led-1-21, type: rgb }
+  l_test_1_22: { number: exp_led-1-22, type: rgb }
+  l_test_1_23: { number: exp_led-1-23, type: rgb }
+  l_test_1_24: { number: exp_led-1-24, type: rgb }
+  # Port 2
+  l_test_2_01: { number: exp_led-2-1, type: rgb }
+  l_test_2_02: { number: exp_led-2-2, type: rgb }
+  l_test_2_03: { number: exp_led-2-3, type: rgb }
+  l_test_2_04: { number: exp_led-2-4, type: rgb }
+  l_test_2_05: { number: exp_led-2-5, type: rgb }
+  l_test_2_06: { number: exp_led-2-6, type: rgb }
+  l_test_2_07: { number: exp_led-2-7, type: rgb }
+  l_test_2_08: { number: exp_led-2-8, type: rgb }
+  l_test_2_09: { number: exp_led-2-9, type: rgb }
+  l_test_2_10: { number: exp_led-2-10, type: rgb }
+  l_test_2_11: { number: exp_led-2-11, type: rgb }
+  l_test_2_12: { number: exp_led-2-12, type: rgb }
+  l_test_2_13: { number: exp_led-2-13, type: rgb }
+  l_test_2_14: { number: exp_led-2-14, type: rgb }
+  l_test_2_15: { number: exp_led-2-15, type: rgb }
+  l_test_2_16: { number: exp_led-2-16, type: rgb }
+  l_test_2_17: { number: exp_led-2-17, type: rgb }
+  l_test_2_18: { number: exp_led-2-18, type: rgb }
+  l_test_2_19: { number: exp_led-2-19, type: rgb }
+  l_test_2_20: { number: exp_led-2-20, type: rgb }
+  l_test_2_21: { number: exp_led-2-21, type: rgb }
+  l_test_2_22: { number: exp_led-2-22, type: rgb }
+  l_test_2_23: { number: exp_led-2-23, type: rgb }
+  l_test_2_24: { number: exp_led-2-24, type: rgb }
+  # Port 8
+  l_test_8_01: { number: exp_led-8-1, type: rgb }
+  l_test_8_02: { number: exp_led-8-2, type: rgb }
+  l_test_8_03: { number: exp_led-8-3, type: rgb }
+  l_test_8_04: { number: exp_led-8-4, type: rgb }
+  l_test_8_05: { number: exp_led-8-5, type: rgb }
+  l_test_8_06: { number: exp_led-8-6, type: rgb }
+  l_test_8_07: { number: exp_led-8-7, type: rgb }
+  l_test_8_08: { number: exp_led-8-8, type: rgb }
+  l_test_8_09: { number: exp_led-8-9, type: rgb }
+  l_test_8_10: { number: exp_led-8-10, type: rgb }
+  l_test_8_11: { number: exp_led-8-11, type: rgb }
+  l_test_8_12: { number: exp_led-8-12, type: rgb }
+  l_test_8_13: { number: exp_led-8-13, type: rgb }
+  l_test_8_14: { number: exp_led-8-14, type: rgb }
+  l_test_8_15: { number: exp_led-8-15, type: rgb }
+  l_test_8_16: { number: exp_led-8-16, type: rgb }
+  l_test_8_17: { number: exp_led-8-17, type: rgb }
+  l_test_8_18: { number: exp_led-8-18, type: rgb }
+  l_test_8_19: { number: exp_led-8-19, type: rgb }
+  l_test_8_20: { number: exp_led-8-20, type: rgb }
+  l_test_8_21: { number: exp_led-8-21, type: rgb }
+  l_test_8_22: { number: exp_led-8-22, type: rgb }
+  l_test_8_23: { number: exp_led-8-23, type: rgb }
+  l_test_8_24: { number: exp_led-8-24, type: rgb }
