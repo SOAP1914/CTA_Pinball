@@ -25,7 +25,10 @@ initial_slide = ExtResource("3_start")
 
 [node name="PlayfieldWindow" type="Window" parent="."]
 oversampling_override = 1.0
+initial_position = 0
+position = Vector2i(1920, 0)
 size = Vector2i(2560, 720)
+transient = true
 unresizable = true
 borderless = true
 

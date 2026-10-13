@@ -13,8 +13,9 @@ ball_devices:
 
   bd_shooter:
     ball_switches: s_shooter_lane
-    eject_coil: c_autoplunger # remove if manual plunger
+    eject_coil: c_autoplunger
     mechanical_eject: true
+    player_controlled_eject_event: s_launch_active
     eject_timeouts: 5s
     tags: [plunger_lane]
 
@@ -91,7 +92,7 @@ magnets:
 
 playfields:
   playfield:
-    default_source_device: bd_trough
+    default_source_device: bd_shooter
 
 virtual_platform_start_active_switches:
   - s_trough_1

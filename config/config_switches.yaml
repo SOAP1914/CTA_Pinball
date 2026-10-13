@@ -48,10 +48,10 @@ switches:
 
 
   # Stern "SOUL" smart drop target bank (trip-tested; optos NC)
-  s_soul_s: { number: pf_upper-7, type: NC, tags: drop_target }
-  s_soul_o: { number: pf_upper-6, type: NC, tags: drop_target }
-  s_soul_u: { number: pf_upper-5, type: NC, tags: drop_target }
-  s_soul_l: { number: pf_upper-4, type: NC, tags: drop_target }
+  s_soul_s: { number: pf_upper-7, tags: drop_target }
+  s_soul_o: { number: pf_upper-6, tags: drop_target }
+  s_soul_u: { number: pf_upper-5, tags: drop_target }
+  s_soul_l: { number: pf_upper-4, tags: drop_target }
 
   # "GLO" drop target bank (trip-tested; optos NC)
   s_glo_g: { number: pf_upper-15, type: NC, tags: drop_target }
@@ -68,9 +68,9 @@ switches:
   s_center_vuk: { number: pf_upper-3, tags: vuk }
 
   # McDowell inline (Metallica-style) drops under VUK (trip-tested; optos NC)
-  s_mcdowell_inline_1: { number: pf_upper-0, type: NC, tags: drop_target }
-  s_mcdowell_inline_2: { number: pf_upper-1, type: NC, tags: drop_target }
-  s_mcdowell_inline_3: { number: pf_upper-2, type: NC, tags: drop_target }
+  s_mcdowell_inline_1: { number: pf_upper-0, tags: drop_target }
+  s_mcdowell_inline_2: { number: pf_upper-1, tags: drop_target }
+  s_mcdowell_inline_3: { number: pf_upper-2, tags: drop_target }
 
   # Upper pop bumper + top lane (trip-tested)
   s_upper_pop: { number: pf_upper-11, tags: popbumper }
