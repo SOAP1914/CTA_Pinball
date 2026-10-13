@@ -18,13 +18,13 @@ coils:
 
   # Upper playfield coils (FAST IO-1616 pf_upper)
   c_center_vuk: { number: pf_upper-12, default_pulse_ms: 35 , label: "c_center_vuk"}
-  c_mcdowell_inline_reset: { number: pf_upper-13, default_pulse_ms: 40 , label: "c_mcdowell_inline_reset"}
+  c_mcdowell_inline_reset: { number: pf_upper-14, default_pulse_ms: 40, label: "c_mcdowell_inline_reset" } # 1616 J4 D14 (traced)
   c_soul_drop_reset: { number: pf_upper-7, default_pulse_ms: 40, label: "c_soul_drop_reset" } # , label: "c_soul_drop_reset"F
-  c_glo_drop_reset: { number: pf_upper-5, default_pulse_ms: 35, label: "c_glo_drop_reset" } # , label: "c_glo_drop_reset"D
+  c_glo_drop_reset: { number: pf_upper-11, default_pulse_ms: 35, label: "c_glo_drop_reset" } # 1616 J4 D11 (traced)
   c_left_ramp_drop_reset: { number: pf_upper-10, default_pulse_ms: 35 , label: "c_left_ramp_drop_reset"}
   c_upper_pop: { number: pf_upper-15, default_pulse_ms: 40, label: c_upper_pop } #2, label: "c_upper_pop"B
-  c_lower_pf_magnet: { number: pf_upper-11, label: "c_lower_pf_magnet"}
-  c_upper_pf_magnet: { number: pf_upper-14, label: "c_upper_pf_magnet"}
+  c_lower_pf_magnet: { number: , platform: virtual, label: "c_lower_pf_magnet" } # TODO(wiring): not traced; D11 is GLO reset
+  c_upper_pf_magnet: { number: , platform: virtual, label: "c_upper_pf_magnet" } # TODO(wiring): not traced; D14 is McDowell reset
 
   # Cabinet I/O J1-L3 = tilt bob ground (FAST Cabinet wiring doc).
   # Must stay ON or s_tilt_bob can never close. Same as Bootleggers c_tilt_control.
