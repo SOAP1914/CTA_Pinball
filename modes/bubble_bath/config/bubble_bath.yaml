@@ -22,3 +22,11 @@ event_player:
     - stop_mode_bubble_bath
     - start_mode_sparring_with_semmi
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_bubble_bath_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_bath, color: cta_gold }

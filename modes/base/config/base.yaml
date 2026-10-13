@@ -176,3 +176,54 @@ widget_player:
     gameplay_overlay:
       slide: _overlay
       action: remove
+
+# ---- Lighting ----
+light_player:
+  mode_base_started:
+    gi: warm_gi
+  # Drop target letters: lit when knocked down, off when reset
+  s_soul_s_active: { l_drop_soul_s: cta_gold }
+  s_soul_s_inactive: { l_drop_soul_s: "off" }
+  s_soul_o_active: { l_drop_soul_o: cta_gold }
+  s_soul_o_inactive: { l_drop_soul_o: "off" }
+  s_soul_u_active: { l_drop_soul_u: cta_gold }
+  s_soul_u_inactive: { l_drop_soul_u: "off" }
+  s_soul_l_active: { l_drop_soul_l: cta_gold }
+  s_soul_l_inactive: { l_drop_soul_l: "off" }
+  s_glo_g_active: { l_drop_glo_g: cta_gold }
+  s_glo_g_inactive: { l_drop_glo_g: "off" }
+  s_glo_l_active: { l_drop_glo_l: cta_gold }
+  s_glo_l_inactive: { l_drop_glo_l: "off" }
+  s_glo_o_active: { l_drop_glo_o: cta_gold }
+  s_glo_o_inactive: { l_drop_glo_o: "off" }
+  # Completed mode inserts stay solid (re-lit each ball)
+  mode_base_started{current_player.queens_modes_complete>=1}: { l_mode_arrival: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=2}: { l_mode_search: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=3}: { l_mode_barber: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=4}: { l_mode_pageant: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=5}: { l_mode_cleo: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=6}: { l_mode_saint_johns: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=7}: { l_mode_robbery: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=8}: { l_mode_dance: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=9}: { l_mode_plead: cta_gold }
+  mode_base_started{current_player.queens_modes_complete>=10}: { l_mode_kings_son: cta_gold }
+  mode_base_started{current_player.zamunda_modes_complete>=1}: { l_mode_awakens: purple }
+  mode_base_started{current_player.zamunda_modes_complete>=2}: { l_mode_bath: purple }
+  mode_base_started{current_player.zamunda_modes_complete>=3}: { l_mode_sparring: purple }
+  mode_base_started{current_player.zamunda_modes_complete>=4}: { l_mode_wedding: purple }
+  mode_base_started{current_player.zamunda_modes_complete>=5}: { l_mode_celebrate: purple }
+  arriving_in_queens_complete: { l_mode_arrival: cta_gold }
+  searching_for_a_queen_complete: { l_mode_search: cta_gold }
+  the_barbershop_complete: { l_mode_barber: cta_gold }
+  miss_black_awareness_complete: { l_mode_pageant: cta_gold }
+  working_at_mcdowells_complete: { l_mode_cleo: cta_gold }
+  basketball_date_complete: { l_mode_saint_johns: cta_gold }
+  thwarting_a_robbery_complete: { l_mode_robbery: cta_gold }
+  would_you_like_to_dance_complete: { l_mode_dance: cta_gold }
+  pleading_your_case_complete: { l_mode_plead: cta_gold }
+  king_collects_son_complete: { l_mode_kings_son: cta_gold }
+  the_prince_awakens_complete: { l_mode_awakens: purple }
+  bubble_bath_complete: { l_mode_bath: purple }
+  sparring_with_semmi_complete: { l_mode_sparring: purple }
+  the_royal_wedding_complete: { l_mode_wedding: purple }
+  a_royal_celebration_complete: { l_mode_celebrate: purple }

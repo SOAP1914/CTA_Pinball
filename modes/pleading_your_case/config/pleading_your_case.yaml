@@ -22,3 +22,11 @@ event_player:
     - stop_mode_pleading_your_case
     - start_mode_king_collects_son
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_pleading_your_case_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_plead, color: cta_gold }

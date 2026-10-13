@@ -25,3 +25,11 @@ event_player:
     - stop_mode_the_prince_awakens
     - start_mode_bubble_bath
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_the_prince_awakens_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_awakens, color: cta_gold }

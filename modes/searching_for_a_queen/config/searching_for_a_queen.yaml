@@ -22,3 +22,11 @@ event_player:
     - stop_mode_searching_for_a_queen
     - start_mode_the_barbershop
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_searching_for_a_queen_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_search, color: cta_gold }

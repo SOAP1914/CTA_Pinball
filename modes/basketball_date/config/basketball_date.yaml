@@ -22,3 +22,11 @@ event_player:
     - stop_mode_basketball_date
     - start_mode_thwarting_a_robbery
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_basketball_date_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_saint_johns, color: cta_gold }

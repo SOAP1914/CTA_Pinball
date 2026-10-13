@@ -81,3 +81,16 @@ slide_player:
 # Sounds 63/64/65 (look_me / see_theyre / golden_arches) are available for later
 # flavor callouts, but must be staggered on events that do NOT overlap a video
 # clip with dialogue (62/66/70/75 each carry their own audio).
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_working_at_mcdowells_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_cleo, color: cta_gold }
+    mcd_arrow_flash:
+      show: flash_color
+      key: mcd_arrow
+      speed: 6
+      show_tokens: { lights: inline_drop_arrow, color: red }

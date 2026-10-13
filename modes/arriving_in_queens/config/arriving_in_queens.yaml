@@ -22,3 +22,11 @@ event_player:
   arriving_in_queens_complete:
     - stop_mode_arriving_in_queens
     - start_mode_searching_for_a_queen
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_arriving_in_queens_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_arrival, color: cta_gold }

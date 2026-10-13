@@ -5,7 +5,7 @@
 
 playfields:
   playfield:
-    enable_ball_search: true
+    enable_ball_search: settings.ball_search_enabled
     ball_search_timeout: 20s
     ball_search_wait_after_iteration: 10s
     ball_search_interval: 250ms

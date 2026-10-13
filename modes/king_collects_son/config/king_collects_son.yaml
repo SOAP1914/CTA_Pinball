@@ -21,3 +21,11 @@ event_player:
   king_collects_son_complete:
     - stop_mode_king_collects_son
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_king_collects_son_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_kings_son, color: cta_gold }

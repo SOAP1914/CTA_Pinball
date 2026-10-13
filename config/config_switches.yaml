@@ -2,7 +2,7 @@
 switches:
   # Cabinet buttons (Cabinet I/O)
   s_start: { number: cab-10, tags: start } # start button
-  s_tilt_bob: { number: cab-11, tags: tilt } # plumb-bob tilt
+  s_tilt_bob: { number: cab-11, tags: tilt_warning } # plumb-bob tilt
   s_tilt_warning: { number: cab-12, tags: tilt_warning } # optional warn
   s_launch: { number: cab-18 }
 
@@ -35,9 +35,9 @@ switches:
   s_slingshot_right: { number: pf_lower-3 }
 
   # Lower lanes (trip-tested)
-  s_lower_outer_lane_l: { number: pf_lower-31 }
-  s_lower_inner_lane_s: { number: pf_lower-28 }
-  s_lower_outer_lane_a: { number: pf_lower-29 }
+  s_lower_outer_lane_l: { number: pf_lower-31, tags: playfield_active }
+  s_lower_inner_lane_s: { number: pf_lower-28, tags: playfield_active }
+  s_lower_outer_lane_a: { number: pf_lower-29, tags: playfield_active }
 
   # Orbits, ramps, spinner (placeholders on pf_lower)
   s_left_orbit_made:  { number: pf_lower-5 }
@@ -74,7 +74,7 @@ switches:
 
   # Upper pop bumper + top lane (trip-tested)
   s_upper_pop: { number: pf_upper-11, tags: popbumper }
-  s_top_lane_mid_left: { number: pf_upper-8 }
+  s_top_lane_mid_left: { number: pf_upper-8, tags: playfield_active }
 
   # CONFIRM: aux board switch conflict - retest
   # (raw landed in aux 0804 range; aux was previously said to carry no switches)

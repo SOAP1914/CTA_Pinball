@@ -21,3 +21,11 @@ event_player:
   a_royal_celebration_complete:
     - stop_mode_a_royal_celebration
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_a_royal_celebration_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_celebrate, color: cta_gold }

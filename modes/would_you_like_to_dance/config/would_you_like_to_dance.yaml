@@ -22,3 +22,11 @@ event_player:
     - stop_mode_would_you_like_to_dance
     - start_mode_pleading_your_case
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_would_you_like_to_dance_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_dance, color: cta_gold }

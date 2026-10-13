@@ -50,3 +50,7 @@ sound_player:
 #  mode_queens_will_stop:
 #    l_queens:
 #      color: "off"
+
+light_player:
+  mode_queens_started:
+    l_queens: cta_gold

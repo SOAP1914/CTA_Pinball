@@ -22,3 +22,11 @@ event_player:
     - stop_mode_the_barbershop
     - start_mode_miss_black_awareness
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_the_barbershop_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_barber, color: cta_gold }

@@ -48,7 +48,7 @@ flippers:
     eos_switch: s_left_eos                  # pf_lower-2
     use_eos: true
     enable_events: ball_started
-    disable_events: ball_will_end
+    disable_events: ball_will_end, service_mode_entered
 
   right_flipper:
     main_coil: c_right_flipper_main
@@ -57,7 +57,7 @@ flippers:
     eos_switch: s_right_eos                 # pf_lower-1
     use_eos: true
     enable_events: ball_started
-    disable_events: ball_will_end
+    disable_events: ball_will_end, service_mode_entered
   # NO upper_flipper — secondary optos cab-9/cab-17 are defined but unused.
 
 playfields:
@@ -111,11 +111,14 @@ widget_player:
       priority: 300
   ball_search_started:
     ball_search_overlay:
-      slide: base
-      priority: 400
+      slide: _overlay
   ball_search_stopped:
     ball_search_overlay:
-      slide: base
+      slide: _overlay
+      action: remove
+  service_mode_entered:
+    ball_search_overlay:
+      slide: _overlay
       action: remove
 
 slide_player:
@@ -162,3 +165,31 @@ shot_profiles:
     states:
       - name: ready
       - name: complete
+
+# ---- Lighting (pattern from Bootleggers colors.yaml / ball_saves.yaml) ----
+named_colors:
+  cta_gold: FFC21A
+  warm_gi: F0B572
+
+show_player:
+  ball_save_default_ball_save_enabled:
+    flash_color:
+      key: ball_save_show
+      speed: 3
+      show_tokens: { lights: l_ball_save, color: 33CEFA }
+  ball_save_default_ball_save_hurry_up:
+    flash_color:
+      key: ball_save_show
+      speed: 6
+      show_tokens: { lights: l_ball_save, color: 00BFFF }
+  ball_save_default_ball_save_disabled:
+    flash_color:
+      key: ball_save_show
+      action: stop
+
+# Hold START 5 s during a game to end it (Bootleggers ts_start_button_long)
+timed_switches:
+  ts_start_long:
+    switches: s_start
+    time: 5s
+    events_when_active: end_game

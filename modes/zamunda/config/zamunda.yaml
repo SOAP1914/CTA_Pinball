@@ -46,3 +46,7 @@ sound_player:
 #  mode_zamunda_will_stop:
 #    l_zamunda:
 #      color: "off"
+
+light_player:
+  mode_zamunda_started:
+    l_zamunda: purple

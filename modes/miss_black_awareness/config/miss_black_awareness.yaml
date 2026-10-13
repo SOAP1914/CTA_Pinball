@@ -22,3 +22,11 @@ event_player:
     - stop_mode_miss_black_awareness
     - start_mode_working_at_mcdowells
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_miss_black_awareness_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_pageant, color: cta_gold }

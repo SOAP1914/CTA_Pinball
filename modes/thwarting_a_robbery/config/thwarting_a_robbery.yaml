@@ -22,3 +22,11 @@ event_player:
     - stop_mode_thwarting_a_robbery
     - start_mode_would_you_like_to_dance
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_thwarting_a_robbery_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_robbery, color: cta_gold }

@@ -48,3 +48,12 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
+
+light_player:
+  mode_attract_started:
+    gi: warm_gi
+
+show_player:
+  mode_attract_started:
+    vertical_sweep_up:
+      loops: -1

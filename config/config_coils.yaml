@@ -25,3 +25,10 @@ coils:
   c_upper_pop: { number: pf_upper-15, default_pulse_ms: 40, label: c_upper_pop } #2, label: "c_upper_pop"B
   c_lower_pf_magnet: { number: pf_upper-11, label: "c_lower_pf_magnet"}
   c_upper_pf_magnet: { number: pf_upper-14, label: "c_upper_pf_magnet"}
+
+  # Cabinet I/O J1-L3 = tilt bob ground (FAST Cabinet wiring doc).
+  # Must stay ON or s_tilt_bob can never close. Same as Bootleggers c_tilt_control.
+  c_tilt_control:
+    number: cab-3
+    allow_enable: true
+    enable_events: mode_attract_started, mode_base_started

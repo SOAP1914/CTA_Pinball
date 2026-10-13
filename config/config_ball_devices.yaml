@@ -29,17 +29,17 @@ autofire_coils:
     switch: s_upper_pop
     coil: c_upper_pop
     enable_events: mode_base_started
-    disable_events: mode_base_will_stop
+    disable_events: mode_base_will_stop, service_mode_entered
   slingshot_left:
     switch: s_slingshot_left
     coil: c_left_sling
     enable_events: mode_base_started
-    disable_events: mode_base_will_stop
+    disable_events: mode_base_will_stop, service_mode_entered
   slingshot_right:
     switch: s_slingshot_right
     coil: c_right_sling
     enable_events: mode_base_started
-    disable_events: mode_base_will_stop
+    disable_events: mode_base_will_stop, service_mode_entered
 
 
 drop_targets:
@@ -60,7 +60,7 @@ drop_targets:
   drop_mcdowell_1: { switch: s_mcdowell_inline_1 }
   drop_mcdowell_2: { switch: s_mcdowell_inline_2 }
   drop_mcdowell_3: { switch: s_mcdowell_inline_3 }
-  drop_left_ramp: { switch: s_left_ramp_drop }
+  drop_left_ramp: { switch: s_left_ramp_drop, reset_coil: c_left_ramp_drop_reset }
 
 drop_target_banks:
   dropbank_soul:

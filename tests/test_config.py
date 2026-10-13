@@ -67,3 +67,17 @@ class TestMachineConfig(MpfGameTestCase):
         One assertion, maximum coverage.
         """
         self.assertModeRunning('attract')
+
+    def test_machine_enters_game(self):
+        """
+        Pattern from Bootleggers tests/test_config.py: start a real game and
+        make sure base mode comes up. Catches errors in base / location_select
+        / queens / zamunda configs that the attract-only test never loads.
+        """
+        self.start_game()
+        self.advance_time_and_run(2)
+        self.assertModeRunning('base')
+        self.post_event('set_location_queens')
+        self.post_event('location_choice_done')
+        self.advance_time_and_run(2)
+        self.assertModeRunning('queens')

@@ -22,3 +22,11 @@ event_player:
     - stop_mode_sparring_with_semmi
     - start_mode_the_royal_wedding
 
+
+# Mode insert flashes while this mode runs (stops automatically when the mode stops)
+show_player:
+  mode_sparring_with_semmi_started:
+    flash_color:
+      key: mode_insert
+      speed: 4
+      show_tokens: { lights: l_mode_sparring, color: cta_gold }
