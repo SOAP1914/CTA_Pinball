@@ -50,15 +50,19 @@ lights:
   l_drop_soul_l:
     number: exp_led-1-11
     type: rgb
+    tags: soul_glo_letters
   l_drop_soul_u:
     number: exp_led-1-12
     type: rgb
+    tags: soul_glo_letters
   l_drop_soul_o:
     number: exp_led-1-13
     type: rgb
+    tags: soul_glo_letters
   l_drop_soul_s:
     number: exp_led-1-14
     type: rgb
+    tags: soul_glo_letters
   l_lane_left_ramp:
     number: exp_led-1-15
     type: rgb
@@ -197,12 +201,15 @@ lights:
   l_drop_glo_o:
     number: exp_led-8-8
     type: rgb
+    tags: soul_glo_letters
   l_drop_glo_l:
     number: exp_led-8-9
     type: rgb
+    tags: soul_glo_letters
   l_drop_glo_g:
     number: exp_led-8-10
     type: rgb
+    tags: soul_glo_letters
   l_zamunda:
     number: exp_led-8-11
     type: rgb

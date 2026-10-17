@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_a_royal_celebration
 
 shots:
-  z_cele_1: { switch: s_left_orbit_made,  profile: single_hit }
-  z_cele_2: { switch: s_right_ramp_made,  profile: single_hit }
-  z_cele_3: { switch: s_center_vuk,       profile: single_hit }
+  z_cele_1: { switch: s_left_orbit_made, profile: mode_shot, show_tokens: { lights: lane_left_orbit } }
+  z_cele_2: { switch: s_right_ramp_made, profile: mode_shot, show_tokens: { lights: lane_right_ramp } }
+  z_cele_3: { switch: s_center_vuk, profile: mode_shot, show_tokens: { lights: inline_drop_arrow } }
 
 counters:
   z_cele_seq:
-    count_events: (z_cele_1_complete, z_cele_2_complete, z_cele_3_complete)
+    count_events: z_cele_1_ready_hit, z_cele_2_ready_hit, z_cele_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: a_royal_celebration_complete

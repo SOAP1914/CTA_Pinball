@@ -5,6 +5,7 @@ modes:
   - service
   - tilt
   - base
+  - soul_glo_multiball
   - location_select
   - queens
   - zamunda

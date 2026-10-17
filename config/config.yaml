@@ -165,6 +165,16 @@ shot_profiles:
     states:
       - name: ready
       - name: complete
+  # Story-mode shots: insert flashes gold while the shot is still needed,
+  # goes dark once it is made.
+  mode_shot:
+    advance_on_hit: true
+    states:
+      - name: ready
+        show: flash_color
+        speed: 4
+        show_tokens: { color: cta_gold }
+      - name: complete
 
 # ---- Lighting (pattern from Bootleggers colors.yaml / ball_saves.yaml) ----
 named_colors:

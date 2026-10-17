@@ -1,0 +1,71 @@
+#config_version=6
+
+# modes/soul_glo_multiball/config/soul_glo_multiball.yaml
+# SOUL GLO MULTIBALL - qualified in base.yaml by completing BOTH drop banks
+# (S-O-U-L + G-L-O = all 7 targets). 3 balls total, 15 s ball save.
+# Jackpot = center VUK while multiball is running.
+
+mode:
+  start_events: start_mode_soul_glo_multiball
+  stop_events: stop_mode_soul_glo_multiball
+  priority: 600   # above Queens/Zamunda sub-modes (300) and location select (500)
+
+multiballs:
+  soul_glo_mb:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 15s
+    start_events: mode_soul_glo_multiball_started
+
+event_player:
+  multiball_soul_glo_mb_ended: stop_mode_soul_glo_multiball
+
+variable_player:
+  mode_soul_glo_multiball_started:
+    score: 100000
+  balldevice_bd_center_vuk_ball_entered:
+    score: 500000
+
+# --- Playfield monitor ---
+slide_player:
+  mode_soul_glo_multiball_started:
+    pf_soul_glo_mb:
+      target: playfield
+      priority: 100
+
+# --- Song (audio pulled from video 44, see sounds/music/soul_glo_song.wav) ---
+sound_player:
+  mode_soul_glo_multiball_started:
+    soul_glo_song:
+      bus: music
+      loops: -1
+  mode_soul_glo_multiball_will_stop:
+    soul_glo_song:
+      action: stop
+      fade_out: 1s
+  balldevice_bd_center_vuk_ball_entered:
+    sfx_jackpot:
+      bus: effects
+
+# --- LEDs (all stop automatically when the mode ends) ---
+show_player:
+  mode_soul_glo_multiball_started:
+    flash_color:
+      key: sg_letters
+      speed: 6
+      show_tokens: { lights: soul_glo_letters, color: purple }
+    sg_insert:
+      show: flash_color
+      key: sg_insert
+      speed: 8
+      show_tokens: { lights: l_soul_glo, color: cta_gold }
+    sg_mb_insert:
+      show: flash_color
+      key: sg_mb_insert
+      speed: 8
+      show_tokens: { lights: multiball, color: cta_gold }
+    sg_jackpot:
+      show: flash_color
+      key: sg_jackpot
+      speed: 5
+      show_tokens: { lights: l_jackpot, color: red }

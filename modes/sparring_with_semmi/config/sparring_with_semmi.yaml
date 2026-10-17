@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_sparring_with_semmi
 
 shots:
-  z_spar_1: { switch: s_left_ramp_made,   profile: single_hit }
-  z_spar_2: { switch: s_right_ramp_made,  profile: single_hit }
-  z_spar_3: { switch: s_center_vuk,       profile: single_hit }
+  z_spar_1: { switch: s_left_ramp_made, profile: mode_shot, show_tokens: { lights: l_lane_left_ramp } }
+  z_spar_2: { switch: s_right_ramp_made, profile: mode_shot, show_tokens: { lights: lane_right_ramp } }
+  z_spar_3: { switch: s_center_vuk, profile: mode_shot, show_tokens: { lights: inline_drop_arrow } }
 
 counters:
   z_spar_seq:
-    count_events: (z_spar_1_complete, z_spar_2_complete, z_spar_3_complete)
+    count_events: z_spar_1_ready_hit, z_spar_2_ready_hit, z_spar_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: sparring_with_semmi_complete

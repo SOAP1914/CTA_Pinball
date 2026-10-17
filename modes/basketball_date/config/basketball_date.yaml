@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_basketball_date
 
 shots:
-  q_ball_1: { switch: s_left_orbit_made,  profile: single_hit }
-  q_ball_2: { switch: s_right_orbit_made, profile: single_hit }
-  q_ball_3: { switch: s_left_ramp_made,   profile: single_hit }
+  q_ball_1: { switch: s_left_orbit_made, profile: mode_shot, show_tokens: { lights: lane_left_orbit } }
+  q_ball_2: { switch: s_right_orbit_made, profile: mode_shot, show_tokens: { lights: lane_right_orbit } }
+  q_ball_3: { switch: s_left_ramp_made, profile: mode_shot, show_tokens: { lights: l_lane_left_ramp } }
 
 counters:
   q_ball_seq:
-    count_events: (q_ball_1_complete, q_ball_2_complete, q_ball_3_complete)
+    count_events: q_ball_1_ready_hit, q_ball_2_ready_hit, q_ball_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: basketball_date_complete

@@ -20,14 +20,43 @@ autofire_coils:
   bumper:
     ball_search_order: 12
 
+# Drop banks + left ramp drop: 0 = built-in search off. The event_player /
+# coil_player block at the bottom fires every drop reset coil instead, so
+# nothing gets pulsed twice.
 drop_target_banks:
   dropbank_mcdowell:
-    ball_search_order: 30
+    ball_search_order: 0
   dropbank_soul:
-    ball_search_order: 31
+    ball_search_order: 0
   dropbank_glo:
-    ball_search_order: 32
+    ball_search_order: 0
+
+drop_targets:
+  drop_left_ramp:
+    ball_search_order: 0
 
 ball_devices:
   bd_center_vuk:
     ball_search_order: 20
+
+# Fire EVERY drop reset coil on every ball search iteration, whether the
+# targets are up or down. (MPF's own bank search skips banks that are all up.)
+# Staggered 300 ms apart so the coils never fire at the same time.
+event_player:
+  ball_search_phase_1: bs_drop_soul, bs_drop_glo|300ms, bs_drop_mcd|600ms, bs_drop_ramp|900ms
+  ball_search_phase_2: bs_drop_soul, bs_drop_glo|300ms, bs_drop_mcd|600ms, bs_drop_ramp|900ms
+  ball_search_phase_3: bs_drop_soul, bs_drop_glo|300ms, bs_drop_mcd|600ms, bs_drop_ramp|900ms
+
+coil_player:
+  bs_drop_soul:
+    c_soul_drop_reset:
+      action: pulse
+  bs_drop_glo:
+    c_glo_drop_reset:
+      action: pulse
+  bs_drop_mcd:
+    c_mcdowell_inline_reset:
+      action: pulse
+  bs_drop_ramp:
+    c_left_ramp_drop_reset:
+      action: pulse

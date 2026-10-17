@@ -7,13 +7,13 @@ mode:
 
 # TODO: wire real shots; placeholders below
 shots:
-  q_arrive_1: { switch: s_left_orbit_made,  profile: single_hit }
-  q_arrive_2: { switch: s_right_orbit_made, profile: single_hit }
-  q_arrive_3: { switch: s_center_vuk,      profile: single_hit }
+  q_arrive_1: { switch: s_left_orbit_made, profile: mode_shot, show_tokens: { lights: lane_left_orbit } }
+  q_arrive_2: { switch: s_right_orbit_made, profile: mode_shot, show_tokens: { lights: lane_right_orbit } }
+  q_arrive_3: { switch: s_center_vuk, profile: mode_shot, show_tokens: { lights: inline_drop_arrow } }
 
 counters:
   q_arrive_group:
-    count_events: (q_arrive_1_complete, q_arrive_2_complete, q_arrive_3_complete)
+    count_events: q_arrive_1_ready_hit, q_arrive_2_ready_hit, q_arrive_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: arriving_in_queens_complete

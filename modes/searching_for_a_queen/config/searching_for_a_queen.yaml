@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_searching_for_a_queen
 
 shots:
-  q_search_1: { switch: s_left_ramp_made,  profile: single_hit }
-  q_search_2: { switch: s_right_ramp_made, profile: single_hit }
-  q_search_3: { switch: s_spinner,         profile: single_hit }
+  q_search_1: { switch: s_left_ramp_made, profile: mode_shot, show_tokens: { lights: l_lane_left_ramp } }
+  q_search_2: { switch: s_right_ramp_made, profile: mode_shot, show_tokens: { lights: lane_right_ramp } }
+  q_search_3: { switch: s_spinner, profile: single_hit }  # no insert for this switch
 
 counters:
   q_search_seq:
-    count_events: (q_search_1_complete, q_search_2_complete, q_search_3_complete)
+    count_events: q_search_1_ready_hit, q_search_2_ready_hit, q_search_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: searching_for_a_queen_complete

@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_the_barbershop
 
 shots:
-  q_barber_1: { switch: s_left_orbit_made,  profile: single_hit }
-  q_barber_2: { switch: s_right_inlane,     profile: single_hit }
-  q_barber_3: { switch: s_left_inlane,      profile: single_hit }
+  q_barber_1: { switch: s_left_orbit_made, profile: mode_shot, show_tokens: { lights: lane_left_orbit } }
+  q_barber_2: { switch: s_right_inlane, profile: mode_shot, show_tokens: { lights: l_return_lane_right } }
+  q_barber_3: { switch: s_left_inlane, profile: mode_shot, show_tokens: { lights: l_return_lane_left } }
 
 counters:
   q_barber_seq:
-    count_events: (q_barber_1_complete, q_barber_2_complete, q_barber_3_complete)
+    count_events: q_barber_1_ready_hit, q_barber_2_ready_hit, q_barber_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: the_barbershop_complete

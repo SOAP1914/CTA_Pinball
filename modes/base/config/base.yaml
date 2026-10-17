@@ -14,6 +14,8 @@ event_player:
     - start_mode_location_select{current_player.selected_location==0}
     - start_mode_queens{current_player.selected_location == 1}
     - start_mode_zamunda{current_player.selected_location == 2}
+  # SOUL GLO MULTIBALL (accrual soul_glo_mb_qualify at bottom of this file)
+  soul_glo_mb_qualified{not mode.soul_glo_multiball.active}: start_mode_soul_glo_multiball
 
 # Block game flow until player picks a location
 queue_relay_player:
@@ -227,3 +229,13 @@ light_player:
   sparring_with_semmi_complete: { l_mode_sparring: purple }
   the_royal_wedding_complete: { l_mode_wedding: purple }
   a_royal_celebration_complete: { l_mode_celebrate: purple }
+
+# ---- SOUL GLO MULTIBALL qualify: complete SOUL bank AND GLO bank (all 7 drops) ----
+accruals:
+  soul_glo_mb_qualify:
+    events:
+      - drop_target_bank_dropbank_soul_down
+      - drop_target_bank_dropbank_glo_down
+    events_when_complete: soul_glo_mb_qualified
+    reset_on_complete: true
+    persist_state: true   # progress carries over between balls (per player)

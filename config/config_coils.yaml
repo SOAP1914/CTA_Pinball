@@ -10,7 +10,7 @@ coils:
 
   # Ball devices (pf_lower drivers 4 and 5)
   c_trough_eject: { number: pf_lower-4, default_pulse_ms: 25 , label: "c_trough_eject"}
-  c_autoplunger: { number: pf_lower-5, default_pulse_ms: 20, label: "c_autoplunger" } # remove if manual plunge, label: "c_autoplunger"r
+  c_autoplunger: { number: pf_lower-5, default_pulse_ms: 15, label: "c_autoplunger" } # remove if manual plunge, label: "c_autoplunger"r
 
   # Slings (pf_lower drivers 0 and 1)
   c_right_sling: { number: pf_lower-1, default_pulse_ms: 12 , label: "c_right_sling"}

@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_pleading_your_case
 
 shots:
-  q_plead_1: { switch: s_left_ramp_made,   profile: single_hit }
-  q_plead_2: { switch: s_right_ramp_made,  profile: single_hit }
-  q_plead_3: { switch: s_spinner,          profile: single_hit }
+  q_plead_1: { switch: s_left_ramp_made, profile: mode_shot, show_tokens: { lights: l_lane_left_ramp } }
+  q_plead_2: { switch: s_right_ramp_made, profile: mode_shot, show_tokens: { lights: lane_right_ramp } }
+  q_plead_3: { switch: s_spinner, profile: single_hit }  # no insert for this switch
 
 counters:
   q_plead_seq:
-    count_events: (q_plead_1_complete, q_plead_2_complete, q_plead_3_complete)
+    count_events: q_plead_1_ready_hit, q_plead_2_ready_hit, q_plead_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: pleading_your_case_complete

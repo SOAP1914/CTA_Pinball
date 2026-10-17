@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_miss_black_awareness
 
 shots:
-  q_mba_1: { switch: s_right_orbit_made, profile: single_hit }
-  q_mba_2: { switch: s_left_ramp_made,   profile: single_hit }
-  q_mba_3: { switch: s_center_vuk,       profile: single_hit }
+  q_mba_1: { switch: s_right_orbit_made, profile: mode_shot, show_tokens: { lights: lane_right_orbit } }
+  q_mba_2: { switch: s_left_ramp_made, profile: mode_shot, show_tokens: { lights: l_lane_left_ramp } }
+  q_mba_3: { switch: s_center_vuk, profile: mode_shot, show_tokens: { lights: inline_drop_arrow } }
 
 counters:
   q_mba_seq:
-    count_events: (q_mba_1_complete, q_mba_2_complete, q_mba_3_complete)
+    count_events: q_mba_1_ready_hit, q_mba_2_ready_hit, q_mba_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: miss_black_awareness_complete

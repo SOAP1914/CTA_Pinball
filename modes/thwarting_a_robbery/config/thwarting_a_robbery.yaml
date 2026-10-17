@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_thwarting_a_robbery
 
 shots:
-  q_rob_1: { switch: s_right_ramp_made, profile: single_hit }
-  q_rob_2: { switch: s_left_inlane,     profile: single_hit }
-  q_rob_3: { switch: s_center_vuk,      profile: single_hit }
+  q_rob_1: { switch: s_right_ramp_made, profile: mode_shot, show_tokens: { lights: lane_right_ramp } }
+  q_rob_2: { switch: s_left_inlane, profile: mode_shot, show_tokens: { lights: l_return_lane_left } }
+  q_rob_3: { switch: s_center_vuk, profile: mode_shot, show_tokens: { lights: inline_drop_arrow } }
 
 counters:
   q_rob_seq:
-    count_events: (q_rob_1_complete, q_rob_2_complete, q_rob_3_complete)
+    count_events: q_rob_1_ready_hit, q_rob_2_ready_hit, q_rob_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: thwarting_a_robbery_complete

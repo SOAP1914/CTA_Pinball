@@ -6,13 +6,13 @@ mode:
   stop_events: stop_mode_would_you_like_to_dance
 
 shots:
-  q_dance_1: { switch: s_left_inlane,     profile: single_hit }
-  q_dance_2: { switch: s_right_inlane,    profile: single_hit }
-  q_dance_3: { switch: s_right_orbit_made, profile: single_hit }
+  q_dance_1: { switch: s_left_inlane, profile: mode_shot, show_tokens: { lights: l_return_lane_left } }
+  q_dance_2: { switch: s_right_inlane, profile: mode_shot, show_tokens: { lights: l_return_lane_right } }
+  q_dance_3: { switch: s_right_orbit_made, profile: mode_shot, show_tokens: { lights: lane_right_orbit } }
 
 counters:
   q_dance_seq:
-    count_events: (q_dance_1_complete, q_dance_2_complete, q_dance_3_complete)
+    count_events: q_dance_1_ready_hit, q_dance_2_ready_hit, q_dance_3_ready_hit
     count_complete_value: 3
     reset_on_complete: true
     events_when_complete: would_you_like_to_dance_complete
